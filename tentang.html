@@ -2264,24 +2264,10 @@
         background-color: #f3f3f3;
       }
     </style>
-    <link
-      rel="icon"
-      href="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/03/cropped-RumahCoding-Icon-150x150-1.png?fit=32%2C32&#038;ssl=1"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/03/cropped-RumahCoding-Icon-150x150-1.png?fit=192%2C192&#038;ssl=1"
-      sizes="192x192"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/03/cropped-RumahCoding-Icon-150x150-1.png?fit=180%2C180&#038;ssl=1"
-    />
-    <meta
-      name="msapplication-TileImage"
-      content="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/03/cropped-RumahCoding-Icon-150x150-1.png?fit=270%2C270&#038;ssl=1"
-    />
+    <link rel="icon" href="/img/ico.webp" sizes="32x32" />
+    <link rel="icon" href="/img/ico.webp" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/img/ico.webp" />
+    <meta name="msapplication-TileImage" content="/img/ico.webp" />
     <style type="text/css" id="wp-custom-css">
       .footer-big ul li a {
         text-transform: none !important;
@@ -2478,6 +2464,44 @@
           data-element_type="section"
           data-settings='{"background_background":"classic"}'
         >
+        <!-- Particles.js container -->
+        <div id="particles-js" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></div>
+        <!-- Particles.js script -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script>
+          particlesJS("particles-js", {
+            "particles": {
+              "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+              "color": { "value": "#1e73be" },
+              "shape": { "type": "circle" },
+              "opacity": { "value": 0.3, "random": true },
+              "size": { "value": 4, "random": true },
+              "line_linked": { "enable": true, "distance": 150, "color": "#1e73be", "opacity": 0.2, "width": 1 },
+              "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false }
+            },
+            "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                "onhover": { "enable": true, "mode": "repulse" },
+                "onclick": { "enable": true, "mode": "push" }
+              },
+              "modes": {
+                "repulse": { "distance": 100 },
+                "push": { "particles_nb": 4 }
+              }
+            },
+            "retina_detect": true
+          });
+        </script>
+        <style>
+          #particles-js {
+            pointer-events: none;
+          }
+          .elementor-container {
+            position: relative;
+            z-index: 1;
+          }
+        </style>
           <div class="elementor-container elementor-column-gap-no">
             <div
               class="elementor-column elementor-top-column elementor-element elementor-element-715db780"
@@ -2491,10 +2515,11 @@
                   data-element_type="widget"
                   data-settings='{"_animation":"fadeIn"}'
                   data-widget_type="heading.default"
-                ><br><br><br><br><br><br><br>
+                >
+                  <br /><br /><br /><br /><br /><br /><br />
                   <div class="elementor-widget-container">
                     <h1 class="elementor-heading-title elementor-size-default">
-                      Tentang Alfatech
+                      Selamat Datang di Alfatech
                     </h1>
                   </div>
                 </div>
@@ -2507,158 +2532,42 @@
                 >
                   <div class="elementor-widget-container">
                     <p class="elementor-heading-title elementor-size-default">
-                      Selamat datang di Alfatech, sebuah perusahaan yang
-                      berdedikasi dalam menyediakan layanan pelatihan dan
-                      layanan Teknologi Informasi (TI) yang inovatif dan
+                      Sebuah perusahaan yang
+                      berdedikasi dalam menyediakan solusi berupa pelatihan digital dan
+                      pengembangan Teknologi Informasi (TI) yang inovatif dan
                       berkualitas tinggi. Berbasis di bawah PT. Alfatech Digital
                       Solution, kami bertekad menjadi mitra terpercaya bagi
-                      berbagai perusahaan, baik dari sektor swasta maupun
-                      pemerintahan.
+                      berbagai perusahaan, baik dari UMKM, perusahaan swasta maupun dari
+                      pemerintahan, serta individu yang ingin
+					            meningkatkan keterampilan digital mereka.
                     </p>
                   </div>
-                </div><br><br><br><br><br><br><br>
-                <div class="elementor-element elementor-element-31f05a9e animated-slow elementor-widget__width-auto elementor-invisible elementor-widget elementor-widget-button"
-								data-id="31f05a9e" data-element_type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:900}"
-								data-widget_type="button.default">
-								<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-										<a class="elementor-button elementor-button-link elementor-size-lg elementor-animation-pulse"
-											href="https://drive.google.com/file/d/13gN-BAjNuwzYWEzEJN5Kn610dGMvWkf1/view?usp=drive_link">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Legalitas</span>
-											</span>
-										</a>
-									</div>
-								</div>
-							</div>
-              </div>
-            </div>
-            
-            <!-- <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6755f28" data-id="6755f28" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-1bf17f47 animated-slow elementor-invisible elementor-widget elementor-widget-image" data-id="1bf17f47" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img fetchpriority="high" decoding="async" width="800" height="519" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20519'%3E%3C/svg%3E" data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/03/it-company-rumah-coding-jpg-e1711753880725.webp?fit=800%2C519&amp;ssl=1" class="attachment-full size-full wp-image-28045 lazy" alt="Jasa Profesional Training dan IT Service" />															</div>
-				</div>
-					</div>
-		</div> -->
-          </div>
-        </section>
-        <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-485e4590 elementor-section-full_width elementor-section-content-middle elementor-reverse-mobile elementor-section-height-default elementor-section-height-default"
-          data-id="485e4590"
-          data-element_type="section"
-          data-settings='{"background_background":"classic"}'
-        >
-          <div class="elementor-container elementor-column-gap-no">
-            <div
-              class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4531f9ef"
-              data-id="4531f9ef"
-              data-element_type="column"
-            >
-              <div class="elementor-widget-wrap elementor-element-populated">
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br><br><br><br><br><br><br>
                 <div
-                  class="elementor-element elementor-element-4bf682c9 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image"
-                  data-id="4bf682c9"
+                  class="elementor-element elementor-element-31f05a9e animated-slow elementor-widget__width-auto elementor-invisible elementor-widget elementor-widget-button"
+                  data-id="31f05a9e"
                   data-element_type="widget"
-                  data-settings='{"_position":"absolute"}'
-                  data-widget_type="image.default"
+                  data-settings='{"_animation":"fadeIn","_animation_delay":900}'
+                  data-widget_type="button.default"
                 >
                   <div class="elementor-widget-container">
-                    <img
-                      decoding="async"
-                      width="108"
-                      height="108"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20108%20108'%3E%3C/svg%3E"
-                      data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?fit=108%2C108&amp;ssl=1"
-                      class="attachment-full size-full wp-image-26402 lazy"
-                      alt=""
-                      data-srcset="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?w=108&amp;ssl=1 108w, https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?resize=100%2C100&amp;ssl=1 100w"
-                      data-sizes="(max-width: 108px) 100vw, 108px"
-                    />
-                  </div>
-                </div>
-                <!-- <section
-                  class="elementor-section elementor-inner-section elementor-element elementor-element-37b0cf6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                  data-id="37b0cf6"
-                  data-element_type="section"
-                >
-                  <div class="elementor-container elementor-column-gap-default">
-                    <div
-                      class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-36243c0"
-                      data-id="36243c0"
-                      data-element_type="column"
-                    >
-                      <div
-                        class="elementor-widget-wrap elementor-element-populated"
+                    <div class="elementor-button-wrapper">
+                      <a
+                        class="elementor-button elementor-button-link elementor-size-lg elementor-animation-pulse"
+                        href="https://drive.google.com/file/d/13gN-BAjNuwzYWEzEJN5Kn610dGMvWkf1/view?usp=drive_link"
                       >
-                        <div
-                          class="elementor-element elementor-element-528e8019 animated-slow elementor-invisible elementor-widget elementor-widget-heading"
-                          data-id="528e8019"
-                          data-element_type="widget"
-                          data-settings='{"_animation":"fadeIn","_animation_delay":100}'
-                          data-widget_type="heading.default"
-                        >
-                          <div class="elementor-widget-container">
-                            <h2
-                              class="elementor-heading-title elementor-size-default"
-                            >
-                              Sejarah Perusahaan
-                            </h2>
-                          </div>
-                        </div>
-                        <div
-                          class="elementor-element elementor-element-821b8ad animated-slow elementor-invisible elementor-widget elementor-widget-heading"
-                          data-id="821b8ad"
-                          data-element_type="widget"
-                          data-settings='{"_animation":"fadeIn","_animation_delay":600}'
-                          data-widget_type="heading.default"
-                        >
-                          <div class="elementor-widget-container">
-                            <p
-                              class="elementor-heading-title elementor-size-default"
-                            >
-                              Alfatech tidak dimulai sebagai perusahaan besar
-                              yang terlihat hari ini. Sejak didirikan pada tahun
-                              2013 di bawah naungan PT. Sahoot Indonesia
-                              Pratama, kami adalah produk dari semangat dan
-                              dedikasi untuk membawa perubahan positif dalam
-                              industri Teknologi Informasi (TI).<br /><br />
-
-                              Awalnya, Alfatech didirikan oleh sekelompok
-                              individu yang berbagi minat yang sama dalam dunia
-                              pemrograman dan pengembangan perangkat lunak. Dari
-                              ruang kecil yang berfungsi sebagai kelas pelatihan
-                              sederhana, kami mulai memberikan pelatihan TI
-                              kepada komunitas lokal. Pada saat itu, fokus kami
-                              adalah memberikan akses ke keterampilan TI kepada
-                              individu yang mungkin sebelumnya tidak memiliki
-                              kesempatan atau sumber daya untuk belajar.<br /><br />
-
-                              Seiring waktu, kebutuhan akan layanan pelatihan
-                              dan solusi TI yang berkualitas meningkat pesat di
-                              kalangan perusahaan dan organisasi di seluruh
-                              Indonesia. Kami merespons permintaan ini dengan
-                              memperluas jangkauan layanan kami, termasuk
-                              pelatihan karyawan perusahaan, pengembangan
-                              aplikasi khusus, dan konsultasi TI.<br /><br />
-
-                              Dengan menjaga kualitas dan fokus pada kepuasan
-                              pelanggan, Alfatech mulai mendapatkan reputasi
-                              sebagai mitra terpercaya dalam memenuhi kebutuhan
-                              TI yang kompleks dan beragam. Setiap proyek dan
-                              klien yang kami layani membantu kami tumbuh dan
-                              berkembang sebagai perusahaan.<br /><br />
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                        <span class="elementor-button-content-wrapper">
+                          <span class="elementor-button-text">Legalitas</span>
+                        </span>
+                      </a>
                     </div>
                   </div>
-                </section> -->
+                </div>
               </div>
             </div>
+
+            
           </div>
         </section>
         <section
@@ -2667,6 +2576,35 @@
           data-element_type="section"
           data-settings='{"background_background":"classic"}'
         >
+        <!-- Particles.js container -->
+				<div id="particles-js" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></div>
+				<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+				<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					particlesJS("particles-js", {
+						"particles": {
+							"number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+							"color": { "value": "#1e73be" },
+							"shape": { "type": "circle" },
+							"opacity": { "value": 0.2, "random": true },
+							"size": { "value": 4, "random": true },
+							"line_linked": { "enable": true, "distance": 120, "color": "#1e73be", "opacity": 0.15, "width": 1 },
+							"move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+						},
+						"interactivity": {
+							"detect_on": "canvas",
+							"events": {
+								"onhover": { "enable": true, "mode": "repulse" },
+								"onclick": { "enable": false }
+							},
+							"modes": {
+								"repulse": { "distance": 80, "duration": 0.4 }
+							}
+						},
+						"retina_detect": true
+					});
+				});
+				</script>
           <div class="elementor-container elementor-column-gap-no">
             <div
               class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9168451"
@@ -2681,19 +2619,7 @@
                   data-settings='{"_position":"absolute"}'
                   data-widget_type="image.default"
                 >
-                  <div class="elementor-widget-container">
-                    <img
-                      decoding="async"
-                      width="108"
-                      height="108"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20108%20108'%3E%3C/svg%3E"
-                      data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?fit=108%2C108&amp;ssl=1"
-                      class="attachment-full size-full wp-image-26402 lazy"
-                      alt=""
-                      data-srcset="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?w=108&amp;ssl=1 108w, https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?resize=100%2C100&amp;ssl=1 100w"
-                      data-sizes="(max-width: 108px) 100vw, 108px"
-                    />
-                  </div>
+                  
                 </div>
                 <section
                   class="elementor-section elementor-inner-section elementor-element elementor-element-7552039 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -3057,9 +2983,7 @@
                               Jawa timur.<br /><br />
                               <a
                                 href="/cdn-cgi/l/email-protection#b1d2c2f1c3c4dcd0d9d2ded5d8dfd69fd2de9fd8d5"
-                                ><span
-                                  >digitalalfatech@gmail.com</span
-                                ></a
+                                ><span>digitalalfatech@gmail.com</span></a
                               >
                             </p>
                           </div>
@@ -3146,7 +3070,6 @@
                                         name="_wpcf7_posted_data_hash"
                                         value=""
                                       />
-                                      
                                     </div>
                                     <p>
                                       <span
@@ -3218,1270 +3141,6 @@
             </div>
           </div>
         </section>
-        <!-- <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-c014aea elementor-section-full_width elementor-section-content-middle elementor-reverse-mobile elementor-section-height-default elementor-section-height-default"
-          data-id="c014aea"
-          data-element_type="section"
-          data-settings='{"background_background":"classic"}'
-        >
-          <div class="elementor-container elementor-column-gap-no">
-            <div
-              class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4214872"
-              data-id="4214872"
-              data-element_type="column"
-            >
-              <div class="elementor-widget-wrap elementor-element-populated">
-                <div
-                  class="elementor-element elementor-element-22dd3f4 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image"
-                  data-id="22dd3f4"
-                  data-element_type="widget"
-                  data-settings='{"_position":"absolute"}'
-                  data-widget_type="image.default"
-                >
-                  <div class="elementor-widget-container">
-                    <img
-                      decoding="async"
-                      width="108"
-                      height="108"
-                      src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20108%20108'%3E%3C/svg%3E"
-                      data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?fit=108%2C108&amp;ssl=1"
-                      class="attachment-full size-full wp-image-26402 lazy"
-                      alt=""
-                      data-srcset="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?w=108&amp;ssl=1 108w, https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/2024/02/ec662a31-sl-key-features-layer.png?resize=100%2C100&amp;ssl=1 100w"
-                      data-sizes="(max-width: 108px) 100vw, 108px"
-                    />
-                  </div>
-                </div>
-                <section
-                  class="elementor-section elementor-inner-section elementor-element elementor-element-ca70955 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                  data-id="ca70955"
-                  data-element_type="section"
-                >
-                  <div class="elementor-container elementor-column-gap-default">
-                    <div
-                      class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d61b1a7"
-                      data-id="d61b1a7"
-                      data-element_type="column"
-                    >
-                      <div
-                        class="elementor-widget-wrap elementor-element-populated"
-                      >
-                        <div
-                          class="elementor-element elementor-element-8f78b12 animated-slow elementor-invisible elementor-widget elementor-widget-heading"
-                          data-id="8f78b12"
-                          data-element_type="widget"
-                          data-settings='{"_animation":"fadeIn","_animation_delay":100}'
-                          data-widget_type="heading.default"
-                        >
-                          <div class="elementor-widget-container">
-                            <h2
-                              class="elementor-heading-title elementor-size-default"
-                            >
-                              Ikuti Kami
-                            </h2>
-                          </div>
-                        </div>
-                        <div
-                          class="elementor-element elementor-element-132fab9 elementor-widget elementor-widget-sbi-widget"
-                          data-id="132fab9"
-                          data-element_type="widget"
-                          data-widget_type="sbi-widget.default"
-                        >
-                          <div class="elementor-widget-container">
-                            <div
-                              id="sb_instagram"
-                              class="sbi sbi_mob_col_1 sbi_tab_col_2 sbi_col_4 sbi_width_resp"
-                              style="padding-bottom: 10px"
-                              data-feedid="*2"
-                              data-res="auto"
-                              data-cols="4"
-                              data-colsmobile="1"
-                              data-colstablet="2"
-                              data-num="20"
-                              data-nummobile="20"
-                              data-item-padding="5"
-                              data-shortcode-atts='{"feed":"2"}'
-                              data-postid="28042"
-                              data-locatornonce="7b23d71cde"
-                              data-imageaspectratio="1:1"
-                              data-sbi-flags="favorLocal"
-                            >
-                              <div class="sb_instagram_header sbi_medium">
-                                <a
-                                  class="sbi_header_link"
-                                  target="_blank"
-                                  rel="nofollow noopener"
-                                  href="https://www.instagram.com/idrumahcoding/"
-                                  title="@idrumahcoding"
-                                >
-                                  <div class="sbi_header_text">
-                                    <div
-                                      class="sbi_header_img"
-                                      data-avatar-url="https://scontent-sin2-1.xx.fbcdn.net/v/t51.2885-15/414698473_896935095427521_3801399132636340418_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=7d201b&amp;_nc_eui2=AeFUpw0CV6t5p3zztNVW_u9aNNSuG1URYSU01K4bVRFhJV71G1ZUIkJ3Vgfv0xK183M&amp;_nc_ohc=p7Pd41KlExYQ7kNvwFSVOED&amp;_nc_oc=AdlHN9vO7ECAOg7znk_U1twlFYczVKAMjCzvgKj7e5Bvwz4iEmv7jVPriIOJ9Wt3it8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.xx&amp;edm=AL-3X8kEAAAA&amp;oh=00_AfLuYXAWITawkjIF2ruOUfReX7sEKTlafFdTxSenmUY28Q&amp;oe=68217E96"
-                                    >
-                                      <div class="sbi_header_img_hover">
-                                        <svg
-                                          class="sbi_new_logo fa-instagram fa-w-14"
-                                          aria-hidden="true"
-                                          data-fa-processed=""
-                                          aria-label="Instagram"
-                                          data-prefix="fab"
-                                          data-icon="instagram"
-                                          role="img"
-                                          viewBox="0 0 448 512"
-                                        >
-                                          <path
-                                            fill="currentColor"
-                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                                          ></path>
-                                        </svg>
-                                      </div>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/uploads/sb-instagram-feed-images/idrumahcoding.webp?resize=50%2C50&#038;ssl=1"
-                                        alt=""
-                                        width="50"
-                                        height="50"
-                                      />
-                                    </div>
-
-                                    <div class="sbi_feedtheme_header_text">
-                                      <h3>idrumahcoding</h3>
-                                      <p class="sbi_bio">
-                                        Tempatnya belajar ngoding
-                                      </p>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-
-                              <div id="sbi_images" style="gap: 10px">
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17851140573446665"
-                                  data-date="1746608679"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJWL6LPRfaK/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin6-3.cdninstagram.com/v/t51.75761-15/495994657_18309066829238996_5830541439607383959_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=106&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFqLC0O6uw12-EiB2YUipGfJ1V5tccdLU0nVXm1xx0tTWLmMR-sqj-bfNLBmxdBhFM&#038;_nc_ohc=d5OwXuyBKGgQ7kNvwElWonN&#038;_nc_oc=AdkJB49sEfW8SGwXo9AL-pEV18ThrwVm4DUV4sWDxlP2bqwESSh-Yhic1pVcjY8nulY&#038;_nc_zt=23&#038;_nc_ht=scontent-sin6-3.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfK64dq56_As5lkO8MvM-W4lAXpXgviQDZQ0XtWiu984AQ&#038;oe=68218269"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495994657_18309066829238996_5830541439607383959_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqLC0O6uw12-EiB2YUipGfJ1V5tccdLU0nVXm1xx0tTWLmMR-sqj-bfNLBmxdBhFM&amp;_nc_ohc=d5OwXuyBKGgQ7kNvwElWonN&amp;_nc_oc=AdkJB49sEfW8SGwXo9AL-pEV18ThrwVm4DUV4sWDxlP2bqwESSh-Yhic1pVcjY8nulY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK64dq56_As5lkO8MvM-W4lAXpXgviQDZQ0XtWiu984AQ&amp;oe=68218269","150":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495994657_18309066829238996_5830541439607383959_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqLC0O6uw12-EiB2YUipGfJ1V5tccdLU0nVXm1xx0tTWLmMR-sqj-bfNLBmxdBhFM&amp;_nc_ohc=d5OwXuyBKGgQ7kNvwElWonN&amp;_nc_oc=AdkJB49sEfW8SGwXo9AL-pEV18ThrwVm4DUV4sWDxlP2bqwESSh-Yhic1pVcjY8nulY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK64dq56_As5lkO8MvM-W4lAXpXgviQDZQ0XtWiu984AQ&amp;oe=68218269","320":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495994657_18309066829238996_5830541439607383959_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqLC0O6uw12-EiB2YUipGfJ1V5tccdLU0nVXm1xx0tTWLmMR-sqj-bfNLBmxdBhFM&amp;_nc_ohc=d5OwXuyBKGgQ7kNvwElWonN&amp;_nc_oc=AdkJB49sEfW8SGwXo9AL-pEV18ThrwVm4DUV4sWDxlP2bqwESSh-Yhic1pVcjY8nulY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK64dq56_As5lkO8MvM-W4lAXpXgviQDZQ0XtWiu984AQ&amp;oe=68218269","640":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495994657_18309066829238996_5830541439607383959_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqLC0O6uw12-EiB2YUipGfJ1V5tccdLU0nVXm1xx0tTWLmMR-sqj-bfNLBmxdBhFM&amp;_nc_ohc=d5OwXuyBKGgQ7kNvwElWonN&amp;_nc_oc=AdkJB49sEfW8SGwXo9AL-pEV18ThrwVm4DUV4sWDxlP2bqwESSh-Yhic1pVcjY8nulY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK64dq56_As5lkO8MvM-W4lAXpXgviQDZQ0XtWiu984AQ&amp;oe=68218269"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Tingkatkan UI React-mu! Mau bikin
-                                        tampilan web yan</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Tingkatkan UI React-mu!
-Mau bikin tampilan web yang cepat, rapi, dan tetap fleksibel? 
-Yuk pelajari cara menggabungkan Tailwind CSS dengan React dan Styled Components!
-Gabungan ini bikin development makin efisien dan komponen tetap modular. 🔥
-
-#ReactJS #TailwindCSS #StyledComponents #WebDevelopment #FrontendDev #ReactTips #CodingIndonesia #BelajarCoding #UIUXDesign #JavaScriptID #TailwindReact"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18078636883695710"
-                                  data-date="1746522277"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJTnHK3Ruva/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin6-3.cdninstagram.com/v/t51.75761-15/495928185_18308958184238996_2801239765748775595_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=106&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeEgXXYlaeykcNozzNWKqEQolHuBTo7jbqWUe4FOjuNupbD4arO0iAJSCUIctBaA5EY&#038;_nc_ohc=EGw4TffLOKYQ7kNvwFFTASk&#038;_nc_oc=AdnX1OJyJZE_hs3LQnucU3FlCYXMfjRd9eSeIduTVp9yD76TCbaaF2k86j-U2qtxDhY&#038;_nc_zt=23&#038;_nc_ht=scontent-sin6-3.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfJ-ZJpMeE67F3xFOp7cnGftGknFvUVFia-6uiSvOocbKw&#038;oe=68215688"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495928185_18308958184238996_2801239765748775595_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEgXXYlaeykcNozzNWKqEQolHuBTo7jbqWUe4FOjuNupbD4arO0iAJSCUIctBaA5EY&amp;_nc_ohc=EGw4TffLOKYQ7kNvwFFTASk&amp;_nc_oc=AdnX1OJyJZE_hs3LQnucU3FlCYXMfjRd9eSeIduTVp9yD76TCbaaF2k86j-U2qtxDhY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ-ZJpMeE67F3xFOp7cnGftGknFvUVFia-6uiSvOocbKw&amp;oe=68215688","150":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495928185_18308958184238996_2801239765748775595_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEgXXYlaeykcNozzNWKqEQolHuBTo7jbqWUe4FOjuNupbD4arO0iAJSCUIctBaA5EY&amp;_nc_ohc=EGw4TffLOKYQ7kNvwFFTASk&amp;_nc_oc=AdnX1OJyJZE_hs3LQnucU3FlCYXMfjRd9eSeIduTVp9yD76TCbaaF2k86j-U2qtxDhY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ-ZJpMeE67F3xFOp7cnGftGknFvUVFia-6uiSvOocbKw&amp;oe=68215688","320":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495928185_18308958184238996_2801239765748775595_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEgXXYlaeykcNozzNWKqEQolHuBTo7jbqWUe4FOjuNupbD4arO0iAJSCUIctBaA5EY&amp;_nc_ohc=EGw4TffLOKYQ7kNvwFFTASk&amp;_nc_oc=AdnX1OJyJZE_hs3LQnucU3FlCYXMfjRd9eSeIduTVp9yD76TCbaaF2k86j-U2qtxDhY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ-ZJpMeE67F3xFOp7cnGftGknFvUVFia-6uiSvOocbKw&amp;oe=68215688","640":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/495928185_18308958184238996_2801239765748775595_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=106&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEgXXYlaeykcNozzNWKqEQolHuBTo7jbqWUe4FOjuNupbD4arO0iAJSCUIctBaA5EY&amp;_nc_ohc=EGw4TffLOKYQ7kNvwFFTASk&amp;_nc_oc=AdnX1OJyJZE_hs3LQnucU3FlCYXMfjRd9eSeIduTVp9yD76TCbaaF2k86j-U2qtxDhY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ-ZJpMeE67F3xFOp7cnGftGknFvUVFia-6uiSvOocbKw&amp;oe=68215688"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Ingin aplikasi React-mu lebih cepat dan
-                                        responsif?</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Ingin aplikasi React-mu lebih cepat dan responsif? 
-Yuk kenalan dengan Code Splitting!!
-Teknik ini memungkinkan aplikasi hanya memuat kode yang dibutuhkan saat itu juga—hasilnya, performa meningkat drastis dan pengguna makin puas! 
-Pelajari caranya dan optimalkan aplikasimu sekarang.
-
-#ReactJS #CodeSplitting #ReactPerformance #WebDevelopment #FrontendTips #JavaScript #ReactOptimization #DevTips #CodingIndonesia #BelajarReact"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18055197122267008"
-                                  data-date="1746435882"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJRCU6dRyCZ/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-2.cdninstagram.com/v/t51.75761-15/495607972_18308845660238996_7319439346364180174_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=103&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeG00dJ4v9m9JiwgdeVe61zhrEiz7u_AJYusSLPu78Ali-Y-jITFavwOVIwPMgFgCTQ&#038;_nc_ohc=-Qjz1NklrVQQ7kNvwEGGt4S&#038;_nc_oc=AdloJRBFCA7GlEw_e6KiyJ6BebUPguPTVyKAul2UWqLMRIIIF5kDAELZVRUQpjh1Kr4&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfIQ_Tp4r4awPCitnKc_AD6KqrdS5mo27j6BCg2AWuHbww&#038;oe=6821639D"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/495607972_18308845660238996_7319439346364180174_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeG00dJ4v9m9JiwgdeVe61zhrEiz7u_AJYusSLPu78Ali-Y-jITFavwOVIwPMgFgCTQ&amp;_nc_ohc=-Qjz1NklrVQQ7kNvwEGGt4S&amp;_nc_oc=AdloJRBFCA7GlEw_e6KiyJ6BebUPguPTVyKAul2UWqLMRIIIF5kDAELZVRUQpjh1Kr4&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIQ_Tp4r4awPCitnKc_AD6KqrdS5mo27j6BCg2AWuHbww&amp;oe=6821639D","150":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/495607972_18308845660238996_7319439346364180174_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeG00dJ4v9m9JiwgdeVe61zhrEiz7u_AJYusSLPu78Ali-Y-jITFavwOVIwPMgFgCTQ&amp;_nc_ohc=-Qjz1NklrVQQ7kNvwEGGt4S&amp;_nc_oc=AdloJRBFCA7GlEw_e6KiyJ6BebUPguPTVyKAul2UWqLMRIIIF5kDAELZVRUQpjh1Kr4&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIQ_Tp4r4awPCitnKc_AD6KqrdS5mo27j6BCg2AWuHbww&amp;oe=6821639D","320":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/495607972_18308845660238996_7319439346364180174_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeG00dJ4v9m9JiwgdeVe61zhrEiz7u_AJYusSLPu78Ali-Y-jITFavwOVIwPMgFgCTQ&amp;_nc_ohc=-Qjz1NklrVQQ7kNvwEGGt4S&amp;_nc_oc=AdloJRBFCA7GlEw_e6KiyJ6BebUPguPTVyKAul2UWqLMRIIIF5kDAELZVRUQpjh1Kr4&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIQ_Tp4r4awPCitnKc_AD6KqrdS5mo27j6BCg2AWuHbww&amp;oe=6821639D","640":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/495607972_18308845660238996_7319439346364180174_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeG00dJ4v9m9JiwgdeVe61zhrEiz7u_AJYusSLPu78Ali-Y-jITFavwOVIwPMgFgCTQ&amp;_nc_ohc=-Qjz1NklrVQQ7kNvwEGGt4S&amp;_nc_oc=AdloJRBFCA7GlEw_e6KiyJ6BebUPguPTVyKAul2UWqLMRIIIF5kDAELZVRUQpjh1Kr4&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIQ_Tp4r4awPCitnKc_AD6KqrdS5mo27j6BCg2AWuHbww&amp;oe=6821639D"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Cara Menulis Test di TypeScript Pakai
-                                        Jest Jangan
-                                      </span>
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Cara Menulis Test di TypeScript Pakai Jest
-Jangan cuma nulis kode—pastikan juga kodenya berfungsi dengan baik! 
-Di postingan kali ini, kita bahas langkah-langkah menulis unit test dengan Jest di proyek TypeScript. 
-Cocok buat kamu yang ingin mulai testing tapi masih bingung mulai dari mana. Yuk belajar bareng! 
-
-Siapa bilang testing itu ribet? Dengan Jest, semua jadi lebih simpel!
-
-#TypeScript #Jest #UnitTesting #CodeQuality #BelajarCoding #WebDevIndonesia #ProgrammingTips #NgodingAsik #DevLife #Pemrograman #BelajarBareng"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18032096726357854"
-                                  data-date="1746176683"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJJT8K-vjhJ/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-3.cdninstagram.com/v/t51.75761-15/495488814_18308501347238996_2878221345578353554_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=107&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeGZ1n9mPG06ePgC0r39vZzXfVxi6i_LTDd9XGLqL8tMNwv5T35g3jlYI9ykbDWjdTI&#038;_nc_ohc=cuqdZTOyIK8Q7kNvwG_ws1B&#038;_nc_oc=AdloeMhWv-eU7S1tv7yAXQp1NefkhwPabFuloLFnU5isdXNhA2Jlf72-8-P7Ul7Zgrk&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-3.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfLzyheAW3ftxduf_uamrjwIgOsmBcbnGNr1D1Kh5gP5qQ&#038;oe=68218E84"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/495488814_18308501347238996_2878221345578353554_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGZ1n9mPG06ePgC0r39vZzXfVxi6i_LTDd9XGLqL8tMNwv5T35g3jlYI9ykbDWjdTI&amp;_nc_ohc=cuqdZTOyIK8Q7kNvwG_ws1B&amp;_nc_oc=AdloeMhWv-eU7S1tv7yAXQp1NefkhwPabFuloLFnU5isdXNhA2Jlf72-8-P7Ul7Zgrk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLzyheAW3ftxduf_uamrjwIgOsmBcbnGNr1D1Kh5gP5qQ&amp;oe=68218E84","150":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/495488814_18308501347238996_2878221345578353554_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGZ1n9mPG06ePgC0r39vZzXfVxi6i_LTDd9XGLqL8tMNwv5T35g3jlYI9ykbDWjdTI&amp;_nc_ohc=cuqdZTOyIK8Q7kNvwG_ws1B&amp;_nc_oc=AdloeMhWv-eU7S1tv7yAXQp1NefkhwPabFuloLFnU5isdXNhA2Jlf72-8-P7Ul7Zgrk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLzyheAW3ftxduf_uamrjwIgOsmBcbnGNr1D1Kh5gP5qQ&amp;oe=68218E84","320":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/495488814_18308501347238996_2878221345578353554_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGZ1n9mPG06ePgC0r39vZzXfVxi6i_LTDd9XGLqL8tMNwv5T35g3jlYI9ykbDWjdTI&amp;_nc_ohc=cuqdZTOyIK8Q7kNvwG_ws1B&amp;_nc_oc=AdloeMhWv-eU7S1tv7yAXQp1NefkhwPabFuloLFnU5isdXNhA2Jlf72-8-P7Ul7Zgrk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLzyheAW3ftxduf_uamrjwIgOsmBcbnGNr1D1Kh5gP5qQ&amp;oe=68218E84","640":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/495488814_18308501347238996_2878221345578353554_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGZ1n9mPG06ePgC0r39vZzXfVxi6i_LTDd9XGLqL8tMNwv5T35g3jlYI9ykbDWjdTI&amp;_nc_ohc=cuqdZTOyIK8Q7kNvwG_ws1B&amp;_nc_oc=AdloeMhWv-eU7S1tv7yAXQp1NefkhwPabFuloLFnU5isdXNhA2Jlf72-8-P7Ul7Zgrk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLzyheAW3ftxduf_uamrjwIgOsmBcbnGNr1D1Kh5gP5qQ&amp;oe=68218E84"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Belajar Python dalam 1 Menit: Kenalan
-                                        dengan f-str</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Belajar Python dalam 1 Menit: Kenalan dengan f-string!
-Mau cetak teks dan variabel di Python dengan cara paling simpel? 
-Gunakan f-string!
-Lebih bersih, lebih cepat, dan pastinya lebih Pythonic.
-
-Cocok buat kamu yang pengen ngoding efisien 💡
-
-#BelajarPython #PythonTips #NgodingCepat #FString #PythonIndonesia #Coding1Menit #BelajarNgoding #NgodingSantai #TipsNgoding #ProgrammerPemula"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17902215792083189"
-                                  data-date="1746090275"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJGvIkUxaKc/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-3.cdninstagram.com/v/t51.75761-15/494636014_18308382925238996_7372293943696176635_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=107&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeHotVN9DapAuCmaNtIzNuwvub_rsanu5ha5v-uxqe7mFgKaXL4JpEDuzU3hH3yDciU&#038;_nc_ohc=aRZka5bbfEYQ7kNvwHgCBgI&#038;_nc_oc=Adm3RI18FJYTeC3ZxVqgf9XiYYCPt8xWEfzDb4Ow0w63x45j8exSWFL21ioFryL5Z0Y&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-3.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfIjmUGX70Vc1BidoIdSyTNB_6cf6yUooSdqrNP6ZxysNw&#038;oe=682182F7"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/494636014_18308382925238996_7372293943696176635_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHotVN9DapAuCmaNtIzNuwvub_rsanu5ha5v-uxqe7mFgKaXL4JpEDuzU3hH3yDciU&amp;_nc_ohc=aRZka5bbfEYQ7kNvwHgCBgI&amp;_nc_oc=Adm3RI18FJYTeC3ZxVqgf9XiYYCPt8xWEfzDb4Ow0w63x45j8exSWFL21ioFryL5Z0Y&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIjmUGX70Vc1BidoIdSyTNB_6cf6yUooSdqrNP6ZxysNw&amp;oe=682182F7","150":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/494636014_18308382925238996_7372293943696176635_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHotVN9DapAuCmaNtIzNuwvub_rsanu5ha5v-uxqe7mFgKaXL4JpEDuzU3hH3yDciU&amp;_nc_ohc=aRZka5bbfEYQ7kNvwHgCBgI&amp;_nc_oc=Adm3RI18FJYTeC3ZxVqgf9XiYYCPt8xWEfzDb4Ow0w63x45j8exSWFL21ioFryL5Z0Y&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIjmUGX70Vc1BidoIdSyTNB_6cf6yUooSdqrNP6ZxysNw&amp;oe=682182F7","320":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/494636014_18308382925238996_7372293943696176635_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHotVN9DapAuCmaNtIzNuwvub_rsanu5ha5v-uxqe7mFgKaXL4JpEDuzU3hH3yDciU&amp;_nc_ohc=aRZka5bbfEYQ7kNvwHgCBgI&amp;_nc_oc=Adm3RI18FJYTeC3ZxVqgf9XiYYCPt8xWEfzDb4Ow0w63x45j8exSWFL21ioFryL5Z0Y&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIjmUGX70Vc1BidoIdSyTNB_6cf6yUooSdqrNP6ZxysNw&amp;oe=682182F7","640":"https:\/\/scontent-sin2-3.cdninstagram.com\/v\/t51.75761-15\/494636014_18308382925238996_7372293943696176635_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=107&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHotVN9DapAuCmaNtIzNuwvub_rsanu5ha5v-uxqe7mFgKaXL4JpEDuzU3hH3yDciU&amp;_nc_ohc=aRZka5bbfEYQ7kNvwHgCBgI&amp;_nc_oc=Adm3RI18FJYTeC3ZxVqgf9XiYYCPt8xWEfzDb4Ow0w63x45j8exSWFL21ioFryL5Z0Y&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIjmUGX70Vc1BidoIdSyTNB_6cf6yUooSdqrNP6ZxysNw&amp;oe=682182F7"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Kelola Database Lebih Mudah di Go
-                                        dengan GORM! Pak</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Kelola Database Lebih Mudah di Go dengan GORM!
-Pakai Go tapi masih bingung urus database? Coba GORM! ORM powerful ini bikin kerja dengan SQL jadi lebih simpel dan terstruktur.
-
-Pelajari cara integrasi GORM di project Go-mu dan mulai kelola data dengan efisien! 🔥
-
-#GoLang #GORM #BackendDeveloper #DatabaseManagement #BelajarGolang #WebDevIndonesia #CodingTips #SQL #FullstackDeveloper #NgodingSantai #ORM"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18091799395593151"
-                                  data-date="1746003873"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJEKVaTO1oz/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin6-1.cdninstagram.com/v/t51.75761-15/491451145_18308272075238996_8397014522304680035_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=111&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeEyxfo-Kb6ng2U7y6Lz4Eo_8tnI1HP5k7fy2cjUc_mTt_2pjeXs4-VwsF1uV2U43DM&#038;_nc_ohc=vU9vYs7pVLYQ7kNvwEZ_zcn&#038;_nc_oc=AdmtNqz-nilPHlZeDcJSMMrDCAuPq7jCGtmZJqnBnlw5ERMsC6OPJzArbtOAoRyNe0k&#038;_nc_zt=23&#038;_nc_ht=scontent-sin6-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfJ_boxW2_HQekzlt4rpiavKmR1yh-MCH83n8vvbVjivNQ&#038;oe=68218B74"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin6-1.cdninstagram.com\/v\/t51.75761-15\/491451145_18308272075238996_8397014522304680035_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=111&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEyxfo-Kb6ng2U7y6Lz4Eo_8tnI1HP5k7fy2cjUc_mTt_2pjeXs4-VwsF1uV2U43DM&amp;_nc_ohc=vU9vYs7pVLYQ7kNvwEZ_zcn&amp;_nc_oc=AdmtNqz-nilPHlZeDcJSMMrDCAuPq7jCGtmZJqnBnlw5ERMsC6OPJzArbtOAoRyNe0k&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ_boxW2_HQekzlt4rpiavKmR1yh-MCH83n8vvbVjivNQ&amp;oe=68218B74","150":"https:\/\/scontent-sin6-1.cdninstagram.com\/v\/t51.75761-15\/491451145_18308272075238996_8397014522304680035_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=111&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEyxfo-Kb6ng2U7y6Lz4Eo_8tnI1HP5k7fy2cjUc_mTt_2pjeXs4-VwsF1uV2U43DM&amp;_nc_ohc=vU9vYs7pVLYQ7kNvwEZ_zcn&amp;_nc_oc=AdmtNqz-nilPHlZeDcJSMMrDCAuPq7jCGtmZJqnBnlw5ERMsC6OPJzArbtOAoRyNe0k&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ_boxW2_HQekzlt4rpiavKmR1yh-MCH83n8vvbVjivNQ&amp;oe=68218B74","320":"https:\/\/scontent-sin6-1.cdninstagram.com\/v\/t51.75761-15\/491451145_18308272075238996_8397014522304680035_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=111&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEyxfo-Kb6ng2U7y6Lz4Eo_8tnI1HP5k7fy2cjUc_mTt_2pjeXs4-VwsF1uV2U43DM&amp;_nc_ohc=vU9vYs7pVLYQ7kNvwEZ_zcn&amp;_nc_oc=AdmtNqz-nilPHlZeDcJSMMrDCAuPq7jCGtmZJqnBnlw5ERMsC6OPJzArbtOAoRyNe0k&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ_boxW2_HQekzlt4rpiavKmR1yh-MCH83n8vvbVjivNQ&amp;oe=68218B74","640":"https:\/\/scontent-sin6-1.cdninstagram.com\/v\/t51.75761-15\/491451145_18308272075238996_8397014522304680035_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=111&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEyxfo-Kb6ng2U7y6Lz4Eo_8tnI1HP5k7fy2cjUc_mTt_2pjeXs4-VwsF1uV2U43DM&amp;_nc_ohc=vU9vYs7pVLYQ7kNvwEZ_zcn&amp;_nc_oc=AdmtNqz-nilPHlZeDcJSMMrDCAuPq7jCGtmZJqnBnlw5ERMsC6OPJzArbtOAoRyNe0k&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ_boxW2_HQekzlt4rpiavKmR1yh-MCH83n8vvbVjivNQ&amp;oe=68218B74"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Trik Cepat Ubah Kata dalam Kalimat
-                                        dengan Regex! P</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Trik Cepat Ubah Kata dalam Kalimat dengan Regex!
-Pernah pusing harus ganti banyak kata dalam teks satu per satu? Coba pakai regex! Dengan satu baris kode, kamu bisa ubah pola teks dengan mudah dan efisien.
-Yuk pelajari triknya dan bikin pekerjaanmu makin cepat! 💻
-
-#BelajarRegex #TipsNgoding #CodingIndonesia #WebDevelopment #RegexTricks #NgodingSantai #DeveloperLife #BelajarProgramming #CodingTips #Pemrograman"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17973422570846043"
-                                  data-date="1745917655"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DJBl47egsDQ/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-2.cdninstagram.com/v/t51.75761-15/491425875_18308163007238996_2274354178558429630_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=108&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeHJsE3uVx4sq_5iHbQjPWb_idnAYIWp9MGJ2cBghan0wR8ulsoMjvW4Un45sQPE4aI&#038;_nc_ohc=JffvHFchTtAQ7kNvwFCvIat&#038;_nc_oc=Adnrr7XcY9Z3icKRh4ppp418mix65KrQZDRL00ThmIAp7Q77z31f1O55hojGIxsu05Q&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfJ3p6xsZjriG36Siw3UJknE-A8L9HdwK6B-71m4YDkcHQ&#038;oe=682184DF"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491425875_18308163007238996_2274354178558429630_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHJsE3uVx4sq_5iHbQjPWb_idnAYIWp9MGJ2cBghan0wR8ulsoMjvW4Un45sQPE4aI&amp;_nc_ohc=JffvHFchTtAQ7kNvwFCvIat&amp;_nc_oc=Adnrr7XcY9Z3icKRh4ppp418mix65KrQZDRL00ThmIAp7Q77z31f1O55hojGIxsu05Q&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ3p6xsZjriG36Siw3UJknE-A8L9HdwK6B-71m4YDkcHQ&amp;oe=682184DF","150":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491425875_18308163007238996_2274354178558429630_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHJsE3uVx4sq_5iHbQjPWb_idnAYIWp9MGJ2cBghan0wR8ulsoMjvW4Un45sQPE4aI&amp;_nc_ohc=JffvHFchTtAQ7kNvwFCvIat&amp;_nc_oc=Adnrr7XcY9Z3icKRh4ppp418mix65KrQZDRL00ThmIAp7Q77z31f1O55hojGIxsu05Q&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ3p6xsZjriG36Siw3UJknE-A8L9HdwK6B-71m4YDkcHQ&amp;oe=682184DF","320":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491425875_18308163007238996_2274354178558429630_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHJsE3uVx4sq_5iHbQjPWb_idnAYIWp9MGJ2cBghan0wR8ulsoMjvW4Un45sQPE4aI&amp;_nc_ohc=JffvHFchTtAQ7kNvwFCvIat&amp;_nc_oc=Adnrr7XcY9Z3icKRh4ppp418mix65KrQZDRL00ThmIAp7Q77z31f1O55hojGIxsu05Q&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ3p6xsZjriG36Siw3UJknE-A8L9HdwK6B-71m4YDkcHQ&amp;oe=682184DF","640":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491425875_18308163007238996_2274354178558429630_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHJsE3uVx4sq_5iHbQjPWb_idnAYIWp9MGJ2cBghan0wR8ulsoMjvW4Un45sQPE4aI&amp;_nc_ohc=JffvHFchTtAQ7kNvwFCvIat&amp;_nc_oc=Adnrr7XcY9Z3icKRh4ppp418mix65KrQZDRL00ThmIAp7Q77z31f1O55hojGIxsu05Q&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ3p6xsZjriG36Siw3UJknE-A8L9HdwK6B-71m4YDkcHQ&amp;oe=682184DF"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Scrolling panjang? Lemot? Tenang, ada
-                                        solusinya! P</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Scrolling panjang? Lemot?
-Tenang, ada solusinya!
-Pelajari cara menangani list besar di aplikasi React dengan React Virtualization. Lebih ringan, lebih cepat, dan efisien! ⚡
-
-Yuk, upgrade performa aplikasimu sekarang! 
-
-#ReactJS #ReactVirtualization #WebDevelopment #FrontendTips #CodingIndonesia #BelajarCoding #RumahCoding #ReactTips #ProgrammerLife #DevTips #TechIndonesia"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17954814047945807"
-                                  data-date="1745831084"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DI_Aw-fuOVI/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-2.cdninstagram.com/v/t51.75761-15/491443981_18308059105238996_6227872343475398914_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=108&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFqSRTQlyoh9DMHXBZSE_jQyF2ZICAHErLIXZkgIAcSstiNAlVdgOpQ1AcJ_m71Yug&#038;_nc_ohc=CRLfMK1hnUwQ7kNvwH0zN_C&#038;_nc_oc=AdkclXlGKOirohUaQ7hjc9J7MxHdAqkmqocHbgh3lygrU9Te-KefOAAZs3TAl_HBIvk&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKWtgnRSNm-yWNDM-pJItIqQ9vZXuBG1Tv9u8vnxlRykA&#038;oe=68216CDF"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491443981_18308059105238996_6227872343475398914_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqSRTQlyoh9DMHXBZSE_jQyF2ZICAHErLIXZkgIAcSstiNAlVdgOpQ1AcJ_m71Yug&amp;_nc_ohc=CRLfMK1hnUwQ7kNvwH0zN_C&amp;_nc_oc=AdkclXlGKOirohUaQ7hjc9J7MxHdAqkmqocHbgh3lygrU9Te-KefOAAZs3TAl_HBIvk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKWtgnRSNm-yWNDM-pJItIqQ9vZXuBG1Tv9u8vnxlRykA&amp;oe=68216CDF","150":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491443981_18308059105238996_6227872343475398914_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqSRTQlyoh9DMHXBZSE_jQyF2ZICAHErLIXZkgIAcSstiNAlVdgOpQ1AcJ_m71Yug&amp;_nc_ohc=CRLfMK1hnUwQ7kNvwH0zN_C&amp;_nc_oc=AdkclXlGKOirohUaQ7hjc9J7MxHdAqkmqocHbgh3lygrU9Te-KefOAAZs3TAl_HBIvk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKWtgnRSNm-yWNDM-pJItIqQ9vZXuBG1Tv9u8vnxlRykA&amp;oe=68216CDF","320":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491443981_18308059105238996_6227872343475398914_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqSRTQlyoh9DMHXBZSE_jQyF2ZICAHErLIXZkgIAcSstiNAlVdgOpQ1AcJ_m71Yug&amp;_nc_ohc=CRLfMK1hnUwQ7kNvwH0zN_C&amp;_nc_oc=AdkclXlGKOirohUaQ7hjc9J7MxHdAqkmqocHbgh3lygrU9Te-KefOAAZs3TAl_HBIvk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKWtgnRSNm-yWNDM-pJItIqQ9vZXuBG1Tv9u8vnxlRykA&amp;oe=68216CDF","640":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491443981_18308059105238996_6227872343475398914_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFqSRTQlyoh9DMHXBZSE_jQyF2ZICAHErLIXZkgIAcSstiNAlVdgOpQ1AcJ_m71Yug&amp;_nc_ohc=CRLfMK1hnUwQ7kNvwH0zN_C&amp;_nc_oc=AdkclXlGKOirohUaQ7hjc9J7MxHdAqkmqocHbgh3lygrU9Te-KefOAAZs3TAl_HBIvk&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKWtgnRSNm-yWNDM-pJItIqQ9vZXuBG1Tv9u8vnxlRykA&amp;oe=68216CDF"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Type Narrowing di TypeScript Bingung
-                                        sama tipe dat</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Type Narrowing di TypeScript
-Bingung sama tipe data yang dinamis di TypeScript? 
-
-Yuk kenalan dengan Type Narrowing! Dengan teknik ini, kita bisa membuat kode lebih aman dan lebih mudah dipahami.
-Coding jadi lebih rapi, error bisa diminimalisir. 
-
-#TypeScript #TypeNarrowing #BelajarCoding #Pemrograman #WebDevIndonesia #CodingIndonesia #FrontendDev #TypeScriptTips #BelajarTypeScript #NgodingYuk #ProgrammerLife"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18052038539203927"
-                                  data-date="1745571884"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DI3SYZhuKdG/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-1.cdninstagram.com/v/t51.75761-15/491446054_18307721107238996_5226068018530870563_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=100&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeHtuaaz1rwtQYmKfE4j1ljLaRovXtNEaiZpGi9e00RqJhsWd3M8z24hocG9ZyevMNA&#038;_nc_ohc=6YugUggU2qsQ7kNvwGCRjX-&#038;_nc_oc=AdneTgbWFCPPyeSpWz7cjYI9FVzW6m7FQivBbjqRhF0yVf72wiPD1PIs6nE0rltFWjE&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKOVED5adJtrv_XMscK4NFpVChN1nQ5SP5qRrs_PSMOEA&#038;oe=68216B74"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491446054_18307721107238996_5226068018530870563_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHtuaaz1rwtQYmKfE4j1ljLaRovXtNEaiZpGi9e00RqJhsWd3M8z24hocG9ZyevMNA&amp;_nc_ohc=6YugUggU2qsQ7kNvwGCRjX-&amp;_nc_oc=AdneTgbWFCPPyeSpWz7cjYI9FVzW6m7FQivBbjqRhF0yVf72wiPD1PIs6nE0rltFWjE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKOVED5adJtrv_XMscK4NFpVChN1nQ5SP5qRrs_PSMOEA&amp;oe=68216B74","150":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491446054_18307721107238996_5226068018530870563_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHtuaaz1rwtQYmKfE4j1ljLaRovXtNEaiZpGi9e00RqJhsWd3M8z24hocG9ZyevMNA&amp;_nc_ohc=6YugUggU2qsQ7kNvwGCRjX-&amp;_nc_oc=AdneTgbWFCPPyeSpWz7cjYI9FVzW6m7FQivBbjqRhF0yVf72wiPD1PIs6nE0rltFWjE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKOVED5adJtrv_XMscK4NFpVChN1nQ5SP5qRrs_PSMOEA&amp;oe=68216B74","320":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491446054_18307721107238996_5226068018530870563_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHtuaaz1rwtQYmKfE4j1ljLaRovXtNEaiZpGi9e00RqJhsWd3M8z24hocG9ZyevMNA&amp;_nc_ohc=6YugUggU2qsQ7kNvwGCRjX-&amp;_nc_oc=AdneTgbWFCPPyeSpWz7cjYI9FVzW6m7FQivBbjqRhF0yVf72wiPD1PIs6nE0rltFWjE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKOVED5adJtrv_XMscK4NFpVChN1nQ5SP5qRrs_PSMOEA&amp;oe=68216B74","640":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491446054_18307721107238996_5226068018530870563_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHtuaaz1rwtQYmKfE4j1ljLaRovXtNEaiZpGi9e00RqJhsWd3M8z24hocG9ZyevMNA&amp;_nc_ohc=6YugUggU2qsQ7kNvwGCRjX-&amp;_nc_oc=AdneTgbWFCPPyeSpWz7cjYI9FVzW6m7FQivBbjqRhF0yVf72wiPD1PIs6nE0rltFWjE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKOVED5adJtrv_XMscK4NFpVChN1nQ5SP5qRrs_PSMOEA&amp;oe=68216B74"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >5 Trik Go untuk Menulis Code yang Lebih
-                                        Cepat &amp; Ef</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="5 Trik Go untuk Menulis Code yang Lebih Cepat &amp; Efisien
-Bikin kodingan kamu makin cepat, ringkas, dan powerful!
-
-Dengan 5 trik ini, kamu bisa tulis kode Go yang lebih cepat, bersih, dan efisien!
-
-Trik favoritmu yang mana? Atau kamu punya trik lain? Share di komentar ya! 
-
-#Golang #GoTips #EfficientCode #Golang #GoLangTips #GoDeveloper #CleanCode #CodingTips #DevProductivity #CodeEfficiency #BackendDev #GoLangTricks #ProgrammerLife"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17978009576838917"
-                                  data-date="1745485482"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DI0tlUwOeDS/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin6-2.cdninstagram.com/v/t51.75761-15/491448860_18307613581238996_8361502183139900360_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=109&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeGWlLJA6LRAYgDREshh22QkEc4qh59B5gURziqHn0HmBSDda_zQrKNVogIFXfhNijo&#038;_nc_ohc=j4FRndp2iAIQ7kNvwH5SNPH&#038;_nc_oc=AdnA_2hvUgDzhPEXrYNGVNzaYdCSZaYmZ1uWqSlfGcvvj0PsC56jfurq9Yf38qYZSz8&#038;_nc_zt=23&#038;_nc_ht=scontent-sin6-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfLU1aTm4xZmkgoI1A4Tb9sSx--zC41tEJh8EZdDtpsQHQ&#038;oe=68215AA6"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin6-2.cdninstagram.com\/v\/t51.75761-15\/491448860_18307613581238996_8361502183139900360_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=109&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGWlLJA6LRAYgDREshh22QkEc4qh59B5gURziqHn0HmBSDda_zQrKNVogIFXfhNijo&amp;_nc_ohc=j4FRndp2iAIQ7kNvwH5SNPH&amp;_nc_oc=AdnA_2hvUgDzhPEXrYNGVNzaYdCSZaYmZ1uWqSlfGcvvj0PsC56jfurq9Yf38qYZSz8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLU1aTm4xZmkgoI1A4Tb9sSx--zC41tEJh8EZdDtpsQHQ&amp;oe=68215AA6","150":"https:\/\/scontent-sin6-2.cdninstagram.com\/v\/t51.75761-15\/491448860_18307613581238996_8361502183139900360_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=109&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGWlLJA6LRAYgDREshh22QkEc4qh59B5gURziqHn0HmBSDda_zQrKNVogIFXfhNijo&amp;_nc_ohc=j4FRndp2iAIQ7kNvwH5SNPH&amp;_nc_oc=AdnA_2hvUgDzhPEXrYNGVNzaYdCSZaYmZ1uWqSlfGcvvj0PsC56jfurq9Yf38qYZSz8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLU1aTm4xZmkgoI1A4Tb9sSx--zC41tEJh8EZdDtpsQHQ&amp;oe=68215AA6","320":"https:\/\/scontent-sin6-2.cdninstagram.com\/v\/t51.75761-15\/491448860_18307613581238996_8361502183139900360_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=109&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGWlLJA6LRAYgDREshh22QkEc4qh59B5gURziqHn0HmBSDda_zQrKNVogIFXfhNijo&amp;_nc_ohc=j4FRndp2iAIQ7kNvwH5SNPH&amp;_nc_oc=AdnA_2hvUgDzhPEXrYNGVNzaYdCSZaYmZ1uWqSlfGcvvj0PsC56jfurq9Yf38qYZSz8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLU1aTm4xZmkgoI1A4Tb9sSx--zC41tEJh8EZdDtpsQHQ&amp;oe=68215AA6","640":"https:\/\/scontent-sin6-2.cdninstagram.com\/v\/t51.75761-15\/491448860_18307613581238996_8361502183139900360_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=109&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGWlLJA6LRAYgDREshh22QkEc4qh59B5gURziqHn0HmBSDda_zQrKNVogIFXfhNijo&amp;_nc_ohc=j4FRndp2iAIQ7kNvwH5SNPH&amp;_nc_oc=AdnA_2hvUgDzhPEXrYNGVNzaYdCSZaYmZ1uWqSlfGcvvj0PsC56jfurq9Yf38qYZSz8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLU1aTm4xZmkgoI1A4Tb9sSx--zC41tEJh8EZdDtpsQHQ&amp;oe=68215AA6"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Mengubah JavaScript ke TypeScript bukan
-                                        cuma soal
-                                      </span>
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Mengubah JavaScript ke TypeScript bukan cuma soal sintaks—ini soal menyiapkan codebase agar lebih scalable, maintainable, dan minim bug. 
-
-Yuk, mulai refactor dari sekarang sebelum project makin besar! 
-
-#TypeScript #JavaScript #RefactorCode #WebDev #CleanCode #CodeImprovement #DevTips #FrontendDev #CodingLife"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18065669848985783"
-                                  data-date="1745399075"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIyIxi9RcJm/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-2.cdninstagram.com/v/t51.75761-15/491443104_18307504288238996_8167095002722355219_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=103&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeHWuUh3bSTNc96HHMZdRKOLlo_-rxDVMISWj_6vENUwhIdWM5zfr1wBVps8Z6J8CV0&#038;_nc_ohc=wNJZiJBNtIsQ7kNvwH6MsBz&#038;_nc_oc=Adm2Y3frHlUKXLHn4BJD7ixFfhB2DHBhI8bvuNVkT8z4X4ZFGRxVbz8dwak-mHK4Pg0&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKFx0C8y4fLoZSx1j7XiIugsNuHfKIgJwZvJS2QYJUEAA&#038;oe=68216E46"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491443104_18307504288238996_8167095002722355219_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHWuUh3bSTNc96HHMZdRKOLlo_-rxDVMISWj_6vENUwhIdWM5zfr1wBVps8Z6J8CV0&amp;_nc_ohc=wNJZiJBNtIsQ7kNvwH6MsBz&amp;_nc_oc=Adm2Y3frHlUKXLHn4BJD7ixFfhB2DHBhI8bvuNVkT8z4X4ZFGRxVbz8dwak-mHK4Pg0&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKFx0C8y4fLoZSx1j7XiIugsNuHfKIgJwZvJS2QYJUEAA&amp;oe=68216E46","150":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491443104_18307504288238996_8167095002722355219_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHWuUh3bSTNc96HHMZdRKOLlo_-rxDVMISWj_6vENUwhIdWM5zfr1wBVps8Z6J8CV0&amp;_nc_ohc=wNJZiJBNtIsQ7kNvwH6MsBz&amp;_nc_oc=Adm2Y3frHlUKXLHn4BJD7ixFfhB2DHBhI8bvuNVkT8z4X4ZFGRxVbz8dwak-mHK4Pg0&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKFx0C8y4fLoZSx1j7XiIugsNuHfKIgJwZvJS2QYJUEAA&amp;oe=68216E46","320":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491443104_18307504288238996_8167095002722355219_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHWuUh3bSTNc96HHMZdRKOLlo_-rxDVMISWj_6vENUwhIdWM5zfr1wBVps8Z6J8CV0&amp;_nc_ohc=wNJZiJBNtIsQ7kNvwH6MsBz&amp;_nc_oc=Adm2Y3frHlUKXLHn4BJD7ixFfhB2DHBhI8bvuNVkT8z4X4ZFGRxVbz8dwak-mHK4Pg0&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKFx0C8y4fLoZSx1j7XiIugsNuHfKIgJwZvJS2QYJUEAA&amp;oe=68216E46","640":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491443104_18307504288238996_8167095002722355219_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeHWuUh3bSTNc96HHMZdRKOLlo_-rxDVMISWj_6vENUwhIdWM5zfr1wBVps8Z6J8CV0&amp;_nc_ohc=wNJZiJBNtIsQ7kNvwH6MsBz&amp;_nc_oc=Adm2Y3frHlUKXLHn4BJD7ixFfhB2DHBhI8bvuNVkT8z4X4ZFGRxVbz8dwak-mHK4Pg0&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKFx0C8y4fLoZSx1j7XiIugsNuHfKIgJwZvJS2QYJUEAA&amp;oe=68216E46"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Mengelola Dependensi di Rust dengan
-                                        Cargo.toml Kam</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Mengelola Dependensi di Rust dengan Cargo.toml
-Kamu baru mulai ngoding pakai Rust? 
-Yuk kenalan lebih dalam dengan Cargo.toml — kunci utama buat ngatur dependensi, versi crate, sampai konfigurasi proyekmu! 
-
-Belajar ngoding nggak harus ribet, asal tahu alatnya. Yuk eksplor lebih dalam bareng kami! 💻
-
-#RustLang #CargoToml #NgodingAsik #BelajarRust #PemrogramanRust #SoftwareDevelopment #OpenSource #RustProgramming #TechTips #CodingLife #ProgrammerIndonesia #RumahCoding"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_17977950251831450"
-                                  data-date="1745312680"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIvj_K4RGyX/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-1.cdninstagram.com/v/t51.75761-15/491493841_18307403773238996_4153862294264094100_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=104&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFjQliLMBWrP8w6JDUF1umYkkeAjHJcRDWSR4CMclxENZwkXhKtCuuvfQcnoU4MysE&#038;_nc_ohc=-KjYC4Kn2xEQ7kNvwH7h9_R&#038;_nc_oc=Adlo4R4iTaMvdJaef9NSM4sncZOood9gXbBfDcAyYbwlRiqi5LrYxRtFUqupU316wPE&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKazqLAsTIljQKWN9c9ZU-B2H6UQ_pvW7AxUvfVWBjFWw&#038;oe=68217DC0"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491493841_18307403773238996_4153862294264094100_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFjQliLMBWrP8w6JDUF1umYkkeAjHJcRDWSR4CMclxENZwkXhKtCuuvfQcnoU4MysE&amp;_nc_ohc=-KjYC4Kn2xEQ7kNvwH7h9_R&amp;_nc_oc=Adlo4R4iTaMvdJaef9NSM4sncZOood9gXbBfDcAyYbwlRiqi5LrYxRtFUqupU316wPE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKazqLAsTIljQKWN9c9ZU-B2H6UQ_pvW7AxUvfVWBjFWw&amp;oe=68217DC0","150":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491493841_18307403773238996_4153862294264094100_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFjQliLMBWrP8w6JDUF1umYkkeAjHJcRDWSR4CMclxENZwkXhKtCuuvfQcnoU4MysE&amp;_nc_ohc=-KjYC4Kn2xEQ7kNvwH7h9_R&amp;_nc_oc=Adlo4R4iTaMvdJaef9NSM4sncZOood9gXbBfDcAyYbwlRiqi5LrYxRtFUqupU316wPE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKazqLAsTIljQKWN9c9ZU-B2H6UQ_pvW7AxUvfVWBjFWw&amp;oe=68217DC0","320":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491493841_18307403773238996_4153862294264094100_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFjQliLMBWrP8w6JDUF1umYkkeAjHJcRDWSR4CMclxENZwkXhKtCuuvfQcnoU4MysE&amp;_nc_ohc=-KjYC4Kn2xEQ7kNvwH7h9_R&amp;_nc_oc=Adlo4R4iTaMvdJaef9NSM4sncZOood9gXbBfDcAyYbwlRiqi5LrYxRtFUqupU316wPE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKazqLAsTIljQKWN9c9ZU-B2H6UQ_pvW7AxUvfVWBjFWw&amp;oe=68217DC0","640":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491493841_18307403773238996_4153862294264094100_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFjQliLMBWrP8w6JDUF1umYkkeAjHJcRDWSR4CMclxENZwkXhKtCuuvfQcnoU4MysE&amp;_nc_ohc=-KjYC4Kn2xEQ7kNvwH7h9_R&amp;_nc_oc=Adlo4R4iTaMvdJaef9NSM4sncZOood9gXbBfDcAyYbwlRiqi5LrYxRtFUqupU316wPE&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKazqLAsTIljQKWN9c9ZU-B2H6UQ_pvW7AxUvfVWBjFWw&amp;oe=68217DC0"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Automasi Email dengan Python? Bisa
-                                        Banget! Kamu s</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Automasi Email dengan Python? Bisa Banget!
-
-Kamu sering kirim email yang sama berulang kali?
-Coba pakai Python untuk kirim email otomatis, cepat, dan efisien 💨
-
-Dengan bantuan smtplib dan email, kamu bisa: 
-- Kirim email massal
-- Kirim laporan otomatis
-- Kirim notifikasi dari sistem
-
-💡 Tambahkan schedule untuk automasi harian
-
-💬 Sudah pernah coba automasi email pakai Python?
-Komentar dong!
-📎 Save postingan ini untuk referensi kamu nanti ya~
-
-#PythonIndonesia #AutomasiEmail #BelajarPython #PythonTricks #NgodingSantai #PemrogramanPython #EmailAutomation #PythonDaily #PythonLife"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18049371578094066"
-                                  data-date="1745226272"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIs_LU4Rgrl/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-1.cdninstagram.com/v/t51.75761-15/491269708_18307300306238996_9107784215824381437_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=104&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeEluxX8f-VLQYwEJsu7HWHAMYDm8sYaNpoxgObyxho2mmsbEiPKDTqCGdturjhBVYY&#038;_nc_ohc=HxEMeDqk7UQQ7kNvwEVHZkk&#038;_nc_oc=AdmrNgTCXaDazA7d9of3PClUcKDAEzg1FZB70ocgEL_5g9fgB56RhZ0PoJdVLDrSTuw&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfISpd0bJT_vUtJm35WovJLXtHQdWuuFG75GWGj0rf5rAw&#038;oe=68217598"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491269708_18307300306238996_9107784215824381437_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEluxX8f-VLQYwEJsu7HWHAMYDm8sYaNpoxgObyxho2mmsbEiPKDTqCGdturjhBVYY&amp;_nc_ohc=HxEMeDqk7UQQ7kNvwEVHZkk&amp;_nc_oc=AdmrNgTCXaDazA7d9of3PClUcKDAEzg1FZB70ocgEL_5g9fgB56RhZ0PoJdVLDrSTuw&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfISpd0bJT_vUtJm35WovJLXtHQdWuuFG75GWGj0rf5rAw&amp;oe=68217598","150":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491269708_18307300306238996_9107784215824381437_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEluxX8f-VLQYwEJsu7HWHAMYDm8sYaNpoxgObyxho2mmsbEiPKDTqCGdturjhBVYY&amp;_nc_ohc=HxEMeDqk7UQQ7kNvwEVHZkk&amp;_nc_oc=AdmrNgTCXaDazA7d9of3PClUcKDAEzg1FZB70ocgEL_5g9fgB56RhZ0PoJdVLDrSTuw&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfISpd0bJT_vUtJm35WovJLXtHQdWuuFG75GWGj0rf5rAw&amp;oe=68217598","320":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491269708_18307300306238996_9107784215824381437_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEluxX8f-VLQYwEJsu7HWHAMYDm8sYaNpoxgObyxho2mmsbEiPKDTqCGdturjhBVYY&amp;_nc_ohc=HxEMeDqk7UQQ7kNvwEVHZkk&amp;_nc_oc=AdmrNgTCXaDazA7d9of3PClUcKDAEzg1FZB70ocgEL_5g9fgB56RhZ0PoJdVLDrSTuw&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfISpd0bJT_vUtJm35WovJLXtHQdWuuFG75GWGj0rf5rAw&amp;oe=68217598","640":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491269708_18307300306238996_9107784215824381437_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEluxX8f-VLQYwEJsu7HWHAMYDm8sYaNpoxgObyxho2mmsbEiPKDTqCGdturjhBVYY&amp;_nc_ohc=HxEMeDqk7UQQ7kNvwEVHZkk&amp;_nc_oc=AdmrNgTCXaDazA7d9of3PClUcKDAEzg1FZB70ocgEL_5g9fgB56RhZ0PoJdVLDrSTuw&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfISpd0bJT_vUtJm35WovJLXtHQdWuuFG75GWGj0rf5rAw&amp;oe=68217598"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Zustand: Alternatif Simpel untuk Redux
-                                        dan Context</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Zustand: Alternatif Simpel untuk Redux dan Context API
-Kalau kamu capek sama boilerplate Redux atau ribetnya Context API, kenalan dulu sama Zustand!
-
-State management jadi lebih simpel, ringan, dan cocok banget buat proyek React kecil maupun besar.
-🚀 Minimal setup, 💡 clean code, dan tetap powerful!
-
-Udah coba belum?
-
-#ReactJS #Zustand #ReduxAlternative #ContextAPI #FrontendDev #StateManagement #ReactIndonesia #WebDev #CodingLife #BelajarCoding #ProgrammerLife #ReactTips #JSFrameworks #TechTips #NgodingSantai"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18024887996472319"
-                                  data-date="1745053472"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIn1lvCRh8_/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-2.cdninstagram.com/v/t51.75761-15/491444047_18307089001238996_8026910174621843743_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=108&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeGHn09SWn4cPpMLdeCXewzNdSZnX1-RABd1JmdfX5EAF_SBRyqrzX8roy60RSxH3UA&#038;_nc_ohc=jUC5h6Wg3pAQ7kNvwFCY1Vo&#038;_nc_oc=AdmepAvteoKl_AgcecFKl39kRdcL6PKobFwBaAVG3ExTgd-7bNxULqjanj5jJn-cHZY&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfIgS5L6xfLt9MnzpMJx6A7sAsfZbV4Pmk7kC8rasXYwyg&#038;oe=6821664E"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444047_18307089001238996_8026910174621843743_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGHn09SWn4cPpMLdeCXewzNdSZnX1-RABd1JmdfX5EAF_SBRyqrzX8roy60RSxH3UA&amp;_nc_ohc=jUC5h6Wg3pAQ7kNvwFCY1Vo&amp;_nc_oc=AdmepAvteoKl_AgcecFKl39kRdcL6PKobFwBaAVG3ExTgd-7bNxULqjanj5jJn-cHZY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIgS5L6xfLt9MnzpMJx6A7sAsfZbV4Pmk7kC8rasXYwyg&amp;oe=6821664E","150":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444047_18307089001238996_8026910174621843743_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGHn09SWn4cPpMLdeCXewzNdSZnX1-RABd1JmdfX5EAF_SBRyqrzX8roy60RSxH3UA&amp;_nc_ohc=jUC5h6Wg3pAQ7kNvwFCY1Vo&amp;_nc_oc=AdmepAvteoKl_AgcecFKl39kRdcL6PKobFwBaAVG3ExTgd-7bNxULqjanj5jJn-cHZY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIgS5L6xfLt9MnzpMJx6A7sAsfZbV4Pmk7kC8rasXYwyg&amp;oe=6821664E","320":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444047_18307089001238996_8026910174621843743_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGHn09SWn4cPpMLdeCXewzNdSZnX1-RABd1JmdfX5EAF_SBRyqrzX8roy60RSxH3UA&amp;_nc_ohc=jUC5h6Wg3pAQ7kNvwFCY1Vo&amp;_nc_oc=AdmepAvteoKl_AgcecFKl39kRdcL6PKobFwBaAVG3ExTgd-7bNxULqjanj5jJn-cHZY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIgS5L6xfLt9MnzpMJx6A7sAsfZbV4Pmk7kC8rasXYwyg&amp;oe=6821664E","640":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444047_18307089001238996_8026910174621843743_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGHn09SWn4cPpMLdeCXewzNdSZnX1-RABd1JmdfX5EAF_SBRyqrzX8roy60RSxH3UA&amp;_nc_ohc=jUC5h6Wg3pAQ7kNvwFCY1Vo&amp;_nc_oc=AdmepAvteoKl_AgcecFKl39kRdcL6PKobFwBaAVG3ExTgd-7bNxULqjanj5jJn-cHZY&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfIgS5L6xfLt9MnzpMJx6A7sAsfZbV4Pmk7kC8rasXYwyg&amp;oe=6821664E"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Tahukah kamu kalau password yang lemah
-                                        bisa dengan</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Tahukah kamu kalau password yang lemah bisa dengan mudah diretas? 
-Yuk, pelajari cara memvalidasi format password dengan Regex yang kuat. 
-Dengan teknik ini, kamu bisa memastikan user hanya menggunakan password yang aman dan sulit ditebak! 💡
-
-👉 Cocok buat developer, UI/UX, dan siapa pun yang peduli dengan keamanan data.
-
-#KeepItSecure #CodingTips #PasswordValidation #RegexIndonesia #CyberSecurity #WebDevID #BelajarNgoding #InfoTechID #TipsProgramming #DevLife #SecureCoding #NgodingAman #BelajarRegex"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18046498142108399"
-                                  data-date="1744967089"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIlQ07IP3UN/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-1.cdninstagram.com/v/t51.75761-15/491340737_18306980896238996_3152950297464533315_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=100&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeH-AXQ8bxS6isQhxKU1bW7Bck46QW8mm71yTjpBbyabvdqjQvIkukxAZKOhLSRKexw&#038;_nc_ohc=y5kpLzpFWGoQ7kNvwEMyR1s&#038;_nc_oc=AdnhMgiacG07xYWHZubAuDWI_9QTe8l_-C9O8enhvg04iny6c4MsDjS3ZkNUW3_Y8rA&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKuBaU6j5pcKTu7FL5BDzJsYXkhhz62XspGcLud6Meugw&#038;oe=68218204"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491340737_18306980896238996_3152950297464533315_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeH-AXQ8bxS6isQhxKU1bW7Bck46QW8mm71yTjpBbyabvdqjQvIkukxAZKOhLSRKexw&amp;_nc_ohc=y5kpLzpFWGoQ7kNvwEMyR1s&amp;_nc_oc=AdnhMgiacG07xYWHZubAuDWI_9QTe8l_-C9O8enhvg04iny6c4MsDjS3ZkNUW3_Y8rA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKuBaU6j5pcKTu7FL5BDzJsYXkhhz62XspGcLud6Meugw&amp;oe=68218204","150":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491340737_18306980896238996_3152950297464533315_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeH-AXQ8bxS6isQhxKU1bW7Bck46QW8mm71yTjpBbyabvdqjQvIkukxAZKOhLSRKexw&amp;_nc_ohc=y5kpLzpFWGoQ7kNvwEMyR1s&amp;_nc_oc=AdnhMgiacG07xYWHZubAuDWI_9QTe8l_-C9O8enhvg04iny6c4MsDjS3ZkNUW3_Y8rA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKuBaU6j5pcKTu7FL5BDzJsYXkhhz62XspGcLud6Meugw&amp;oe=68218204","320":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491340737_18306980896238996_3152950297464533315_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeH-AXQ8bxS6isQhxKU1bW7Bck46QW8mm71yTjpBbyabvdqjQvIkukxAZKOhLSRKexw&amp;_nc_ohc=y5kpLzpFWGoQ7kNvwEMyR1s&amp;_nc_oc=AdnhMgiacG07xYWHZubAuDWI_9QTe8l_-C9O8enhvg04iny6c4MsDjS3ZkNUW3_Y8rA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKuBaU6j5pcKTu7FL5BDzJsYXkhhz62XspGcLud6Meugw&amp;oe=68218204","640":"https:\/\/scontent-sin2-1.cdninstagram.com\/v\/t51.75761-15\/491340737_18306980896238996_3152950297464533315_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeH-AXQ8bxS6isQhxKU1bW7Bck46QW8mm71yTjpBbyabvdqjQvIkukxAZKOhLSRKexw&amp;_nc_ohc=y5kpLzpFWGoQ7kNvwEMyR1s&amp;_nc_oc=AdnhMgiacG07xYWHZubAuDWI_9QTe8l_-C9O8enhvg04iny6c4MsDjS3ZkNUW3_Y8rA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKuBaU6j5pcKTu7FL5BDzJsYXkhhz62XspGcLud6Meugw&amp;oe=68218204"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Reusable code is not just a
-                                        nice-to-have, it&#039;s a m</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Reusable code is not just a nice-to-have, it&#039;s a must.
-Dengan generics di Rust, kita bisa membangun fungsi dan struct yang fleksibel, aman, dan tetap strongly typed. Ini bukan cuma soal efisiensi, tapi juga soal desain sistem yang solid.
-
-Kenapa Generics Penting?
-- Reusable: Kurangi duplikasi kode
-- Fleksibel: Bisa menangani banyak tipe
-- Performa: Compiler melakukan monomorphization → Tidak ada runtime cost
-- Aman: Tetap tipe-safe dan dicek saat compile time 
-
-Belajar generics tuh kayak ngasah pedang — awalnya ribet, lama-lama tajam!!
-
-#RustLang #BelajarRust #GenericsRust #NgodingSantai #KodeRapi #Pemrograman #NgodingCerdas #RustaceanIndonesia #TipsNgoding"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18053727047271483"
-                                  data-date="1744880680"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIisA9dAANi/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-1.cdninstagram.com/v/t51.75761-15/491096229_18306879136238996_2692214912217708029_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=104&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeGaTEnOAkcq-pS_BftgtdfGs-lXD53xkeCz6VcPnfGR4FfPRfcgf8D5fCBNxdlfk24&#038;_nc_ohc=im0etDcTylwQ7kNvwFK2KMN&#038;_nc_oc=AdmXETrwMD_Fm6FdXxUcQjMkGiTZI4p-Ag-hR5AkqTSTb3zlS0cig5qXk_ubUmwGhck&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKUM047itfss7kmj1IlHL34_xAURaaJsoQcy6CCp1swIw&#038;oe=68218A1F"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491096229_18306879136238996_2692214912217708029_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGaTEnOAkcq-pS_BftgtdfGs-lXD53xkeCz6VcPnfGR4FfPRfcgf8D5fCBNxdlfk24&amp;_nc_ohc=im0etDcTylwQ7kNvwFK2KMN&amp;_nc_oc=AdmXETrwMD_Fm6FdXxUcQjMkGiTZI4p-Ag-hR5AkqTSTb3zlS0cig5qXk_ubUmwGhck&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKUM047itfss7kmj1IlHL34_xAURaaJsoQcy6CCp1swIw&amp;oe=68218A1F","150":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491096229_18306879136238996_2692214912217708029_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGaTEnOAkcq-pS_BftgtdfGs-lXD53xkeCz6VcPnfGR4FfPRfcgf8D5fCBNxdlfk24&amp;_nc_ohc=im0etDcTylwQ7kNvwFK2KMN&amp;_nc_oc=AdmXETrwMD_Fm6FdXxUcQjMkGiTZI4p-Ag-hR5AkqTSTb3zlS0cig5qXk_ubUmwGhck&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKUM047itfss7kmj1IlHL34_xAURaaJsoQcy6CCp1swIw&amp;oe=68218A1F","320":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491096229_18306879136238996_2692214912217708029_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGaTEnOAkcq-pS_BftgtdfGs-lXD53xkeCz6VcPnfGR4FfPRfcgf8D5fCBNxdlfk24&amp;_nc_ohc=im0etDcTylwQ7kNvwFK2KMN&amp;_nc_oc=AdmXETrwMD_Fm6FdXxUcQjMkGiTZI4p-Ag-hR5AkqTSTb3zlS0cig5qXk_ubUmwGhck&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKUM047itfss7kmj1IlHL34_xAURaaJsoQcy6CCp1swIw&amp;oe=68218A1F","640":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491096229_18306879136238996_2692214912217708029_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeGaTEnOAkcq-pS_BftgtdfGs-lXD53xkeCz6VcPnfGR4FfPRfcgf8D5fCBNxdlfk24&amp;_nc_ohc=im0etDcTylwQ7kNvwFK2KMN&amp;_nc_oc=AdmXETrwMD_Fm6FdXxUcQjMkGiTZI4p-Ag-hR5AkqTSTb3zlS0cig5qXk_ubUmwGhck&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKUM047itfss7kmj1IlHL34_xAURaaJsoQcy6CCp1swIw&amp;oe=68218A1F"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Level up skill TypeScript kamu! Menulis
-                                        function y</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Level up skill TypeScript kamu!
-Menulis function yang rapi, efisien, dan scalable itu penting — apalagi di project besar. Di postingan kali ini, kita bahas cara bikin function yang efektif dan strongly typed biar gak ada lagi bug nyeleneh✨
-
-Yuk pelajari: 
-- Tipe parameter &amp; return yang jelas
-- Gunakan interface/type alias
-- Hindari any, sayangi type inference
-- Manfaatkan fitur default &amp; optional parameter
-- Pahami kapan pakai generic function
-
-💬 Pernah punya pengalaman function berujung chaos? Share di komen ya!
-
-#TypeScript #CleanCode #WebDevTips #CodeBetter #FunctionDesign #DeveloperLife #BelajarTypeScript #NgodingSantai #CodeSmart #NgodingAsik"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18053672045187523"
-                                  data-date="1744794276"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIgHNlfxg6W/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin6-3.cdninstagram.com/v/t51.75761-15/490358460_18306779593238996_3874610653324223713_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=110&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFb1yJFHPB_nfJ3EMJHyzFUehTJR9io90R6FMlH2Kj3RN6ZB5Bb_dMSZn_nczaZKlc&#038;_nc_ohc=a3MO2UEJO7AQ7kNvwHll4zS&#038;_nc_oc=AdldeL-KOEaj0riroC-PMR-AaNgKb3Mn3y_Kbq3IiXuFUsb8Kg3VIdbCuQSIPiUhbMM&#038;_nc_zt=23&#038;_nc_ht=scontent-sin6-3.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfK8fDvtkLkWq6h9EDj0RACb6j7b7aZoHSWO9mAaW5IZQg&#038;oe=68217409"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/490358460_18306779593238996_3874610653324223713_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFb1yJFHPB_nfJ3EMJHyzFUehTJR9io90R6FMlH2Kj3RN6ZB5Bb_dMSZn_nczaZKlc&amp;_nc_ohc=a3MO2UEJO7AQ7kNvwHll4zS&amp;_nc_oc=AdldeL-KOEaj0riroC-PMR-AaNgKb3Mn3y_Kbq3IiXuFUsb8Kg3VIdbCuQSIPiUhbMM&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK8fDvtkLkWq6h9EDj0RACb6j7b7aZoHSWO9mAaW5IZQg&amp;oe=68217409","150":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/490358460_18306779593238996_3874610653324223713_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFb1yJFHPB_nfJ3EMJHyzFUehTJR9io90R6FMlH2Kj3RN6ZB5Bb_dMSZn_nczaZKlc&amp;_nc_ohc=a3MO2UEJO7AQ7kNvwHll4zS&amp;_nc_oc=AdldeL-KOEaj0riroC-PMR-AaNgKb3Mn3y_Kbq3IiXuFUsb8Kg3VIdbCuQSIPiUhbMM&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK8fDvtkLkWq6h9EDj0RACb6j7b7aZoHSWO9mAaW5IZQg&amp;oe=68217409","320":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/490358460_18306779593238996_3874610653324223713_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFb1yJFHPB_nfJ3EMJHyzFUehTJR9io90R6FMlH2Kj3RN6ZB5Bb_dMSZn_nczaZKlc&amp;_nc_ohc=a3MO2UEJO7AQ7kNvwHll4zS&amp;_nc_oc=AdldeL-KOEaj0riroC-PMR-AaNgKb3Mn3y_Kbq3IiXuFUsb8Kg3VIdbCuQSIPiUhbMM&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK8fDvtkLkWq6h9EDj0RACb6j7b7aZoHSWO9mAaW5IZQg&amp;oe=68217409","640":"https:\/\/scontent-sin6-3.cdninstagram.com\/v\/t51.75761-15\/490358460_18306779593238996_3874610653324223713_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFb1yJFHPB_nfJ3EMJHyzFUehTJR9io90R6FMlH2Kj3RN6ZB5Bb_dMSZn_nczaZKlc&amp;_nc_ohc=a3MO2UEJO7AQ7kNvwHll4zS&amp;_nc_oc=AdldeL-KOEaj0riroC-PMR-AaNgKb3Mn3y_Kbq3IiXuFUsb8Kg3VIdbCuQSIPiUhbMM&amp;_nc_zt=23&amp;_nc_ht=scontent-sin6-3.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfK8fDvtkLkWq6h9EDj0RACb6j7b7aZoHSWO9mAaW5IZQg&amp;oe=68217409"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Boost performa React-mu! Kapan terakhir
-                                        kali kamu
-                                      </span>
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Boost performa React-mu!
-Kapan terakhir kali kamu cek performa komponen React yang lambat karena re-render berlebih?
-⠀
-Kenalan lebih dalam dengan useMemo dan useCallback — dua hooks andalan untuk optimasi performa, menghindari proses yang tidak perlu, dan menjaga aplikasi tetap ringan dan responsif.
-
-Cocok buat kamu yang udah main React, tapi pengen naik level ke development yang lebih efisien! 🔥
-⠀
-#StayPerformant #ReactTips #ReactJS #ReactHooks #useMemo #useCallback #WebDevelopment #FrontendTips #PerformanceOptimization"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18042811643410608"
-                                  data-date="1744707880"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIdibMbxkTX/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-1.cdninstagram.com/v/t51.75761-15/491441101_18306677827238996_8176058286063210352_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=105&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeEt7yXJWdliJNG0biC_RnDBLF7YddNx6M4sXth103HozoF_Nnpv8NBTPkApAl8xsQc&#038;_nc_ohc=nv56MgIXdSoQ7kNvwHCL4zq&#038;_nc_oc=AdmtEppCqD2sF3OGV8lNZzbUeB_idMk93yMyOu0W70akVhAOIbu3N3yz38n1QAeLj3U&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-1.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfJ5lcHmWxY0ipefB8ZMC3D1kR-sNiqZMwjnO6z0JN3iKQ&#038;oe=682171D1"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491441101_18306677827238996_8176058286063210352_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=105&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEt7yXJWdliJNG0biC_RnDBLF7YddNx6M4sXth103HozoF_Nnpv8NBTPkApAl8xsQc&amp;_nc_ohc=nv56MgIXdSoQ7kNvwHCL4zq&amp;_nc_oc=AdmtEppCqD2sF3OGV8lNZzbUeB_idMk93yMyOu0W70akVhAOIbu3N3yz38n1QAeLj3U&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ5lcHmWxY0ipefB8ZMC3D1kR-sNiqZMwjnO6z0JN3iKQ&amp;oe=682171D1","150":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491441101_18306677827238996_8176058286063210352_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=105&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEt7yXJWdliJNG0biC_RnDBLF7YddNx6M4sXth103HozoF_Nnpv8NBTPkApAl8xsQc&amp;_nc_ohc=nv56MgIXdSoQ7kNvwHCL4zq&amp;_nc_oc=AdmtEppCqD2sF3OGV8lNZzbUeB_idMk93yMyOu0W70akVhAOIbu3N3yz38n1QAeLj3U&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ5lcHmWxY0ipefB8ZMC3D1kR-sNiqZMwjnO6z0JN3iKQ&amp;oe=682171D1","320":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491441101_18306677827238996_8176058286063210352_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=105&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEt7yXJWdliJNG0biC_RnDBLF7YddNx6M4sXth103HozoF_Nnpv8NBTPkApAl8xsQc&amp;_nc_ohc=nv56MgIXdSoQ7kNvwHCL4zq&amp;_nc_oc=AdmtEppCqD2sF3OGV8lNZzbUeB_idMk93yMyOu0W70akVhAOIbu3N3yz38n1QAeLj3U&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ5lcHmWxY0ipefB8ZMC3D1kR-sNiqZMwjnO6z0JN3iKQ&amp;oe=682171D1","640":"https:\/\/scontent-sin11-1.cdninstagram.com\/v\/t51.75761-15\/491441101_18306677827238996_8176058286063210352_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=105&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeEt7yXJWdliJNG0biC_RnDBLF7YddNx6M4sXth103HozoF_Nnpv8NBTPkApAl8xsQc&amp;_nc_ohc=nv56MgIXdSoQ7kNvwHCL4zq&amp;_nc_oc=AdmtEppCqD2sF3OGV8lNZzbUeB_idMk93yMyOu0W70akVhAOIbu3N3yz38n1QAeLj3U&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfJ5lcHmWxY0ipefB8ZMC3D1kR-sNiqZMwjnO6z0JN3iKQ&amp;oe=682171D1"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Optimalkan Python Anda dengan
-                                        Generator! Kamu ser</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Optimalkan Python Anda dengan Generator!
-
-Kamu sering mengolah data besar atau proses looping panjang?
-Gunakan generator biar lebih hemat memori &amp; efisien.
-
-Kenapa generator keren?
-- Hemat memori
-- Proses cepat
-- Tidak perlu menyimpan semua data sekaligus
-
-Coba deh ganti return jadi yield dan lihat bedanya!
-
-💬 Sudah pernah pakai yield? Ceritain dong!
-📎 Jangan lupa save &amp; share ke teman Python-mu!
-
-#PythonTips #BelajarPython #PythonIndonesia #PythonTricks #PemrogramanPython #CodingSantai #PythonGenerator #EfficientCode #PythonDev #NgodingAsik"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18064401887479520"
-                                  data-date="1744621478"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIa9oCiNDlS/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin2-2.cdninstagram.com/v/t51.75761-15/491102537_18306574699238996_8277107665055086411_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=103&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFyMU-KbXA2dPZQbJ72VU9a27WtpCdoSobbta2kJ2hKhsXcpt1-i1tKtVtLgr9jNME&#038;_nc_ohc=gbnDNUTzCPAQ7kNvwEdtXGe&#038;_nc_oc=AdmFFM8bT8zTr0-tpMZW2IlqsFPYnabCkDDpwm2YqB2FCAuqDNlr0aPuak5MlS7nRU8&#038;_nc_zt=23&#038;_nc_ht=scontent-sin2-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfKGeZpp-Q62QZnMuF_ow5DiXoMKk2n2bPIgnfofh-m04A&#038;oe=68215741"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491102537_18306574699238996_8277107665055086411_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFyMU-KbXA2dPZQbJ72VU9a27WtpCdoSobbta2kJ2hKhsXcpt1-i1tKtVtLgr9jNME&amp;_nc_ohc=gbnDNUTzCPAQ7kNvwEdtXGe&amp;_nc_oc=AdmFFM8bT8zTr0-tpMZW2IlqsFPYnabCkDDpwm2YqB2FCAuqDNlr0aPuak5MlS7nRU8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKGeZpp-Q62QZnMuF_ow5DiXoMKk2n2bPIgnfofh-m04A&amp;oe=68215741","150":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491102537_18306574699238996_8277107665055086411_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFyMU-KbXA2dPZQbJ72VU9a27WtpCdoSobbta2kJ2hKhsXcpt1-i1tKtVtLgr9jNME&amp;_nc_ohc=gbnDNUTzCPAQ7kNvwEdtXGe&amp;_nc_oc=AdmFFM8bT8zTr0-tpMZW2IlqsFPYnabCkDDpwm2YqB2FCAuqDNlr0aPuak5MlS7nRU8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKGeZpp-Q62QZnMuF_ow5DiXoMKk2n2bPIgnfofh-m04A&amp;oe=68215741","320":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491102537_18306574699238996_8277107665055086411_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFyMU-KbXA2dPZQbJ72VU9a27WtpCdoSobbta2kJ2hKhsXcpt1-i1tKtVtLgr9jNME&amp;_nc_ohc=gbnDNUTzCPAQ7kNvwEdtXGe&amp;_nc_oc=AdmFFM8bT8zTr0-tpMZW2IlqsFPYnabCkDDpwm2YqB2FCAuqDNlr0aPuak5MlS7nRU8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKGeZpp-Q62QZnMuF_ow5DiXoMKk2n2bPIgnfofh-m04A&amp;oe=68215741","640":"https:\/\/scontent-sin2-2.cdninstagram.com\/v\/t51.75761-15\/491102537_18306574699238996_8277107665055086411_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=103&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFyMU-KbXA2dPZQbJ72VU9a27WtpCdoSobbta2kJ2hKhsXcpt1-i1tKtVtLgr9jNME&amp;_nc_ohc=gbnDNUTzCPAQ7kNvwEdtXGe&amp;_nc_oc=AdmFFM8bT8zTr0-tpMZW2IlqsFPYnabCkDDpwm2YqB2FCAuqDNlr0aPuak5MlS7nRU8&amp;_nc_zt=23&amp;_nc_ht=scontent-sin2-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfKGeZpp-Q62QZnMuF_ow5DiXoMKk2n2bPIgnfofh-m04A&amp;oe=68215741"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Belajar Regex yuk! Tahu nggak sih, kita
-                                        bisa pakai</span
-                                      >
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Belajar Regex yuk!
-Tahu nggak sih, kita bisa pakai regex (regular expression) buat menangkap angka desimal di dalam teks dengan super cepat dan efisien. Cocok banget buat kamu yang lagi ngulik data, bikin validasi input, atau ngoding parsing teks!
-
-Udah coba implementasiin regex di project kamu?
-Tag teman yang butuh belajar regex juga!!
-
-#StayCurious #BelajarCoding#Regex #RegularExpression #DataScience #PythonTips #NgodingAsik#BelajarNgoding #MachineLearning #DataAnalysis #NgodingSantai #NgodingIndonesia #TechTips #DevLife #DataGeek #PemrogramanPython"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                                <div
-                                  class="sbi_item sbi_type_carousel sbi_new sbi_transition"
-                                  id="sbi_18003661850759420"
-                                  data-date="1744535080"
-                                >
-                                  <div class="sbi_photo_wrap">
-                                    <a
-                                      class="sbi_photo"
-                                      href="https://www.instagram.com/p/DIYY1caN8u7/"
-                                      target="_blank"
-                                      rel="noopener nofollow"
-                                      data-full-res="https://scontent-sin11-2.cdninstagram.com/v/t51.75761-15/491444667_18306468688238996_1863669766048557395_n.jpg?stp=dst-jpg_e35_tt6&#038;_nc_cat=101&#038;ccb=7-5&#038;_nc_sid=18de74&#038;_nc_eui2=AeFQyNYiuVtXlIoUtAcTuho6gXsZfFnO80qBexl8Wc7zShgCZZyGpSH7IfP9aqZDIuk&#038;_nc_ohc=gQw2VbE6Qy0Q7kNvwGzJs_h&#038;_nc_oc=AdllclD7Sm_yx_KVJGWoIh8jf9gWz5gd2fddnXANpfP7HEsAcxrwZRtqCWAfgI5xTjA&#038;_nc_zt=23&#038;_nc_ht=scontent-sin11-2.cdninstagram.com&#038;edm=AM6HXa8EAAAA&#038;_nc_gid=lMRy8nG51d0zIXX23tBgbw&#038;oh=00_AfLIaB4xXMz0DUnYAwlEOsbY3bRErW2LEolw8EhHnGpnLQ&#038;oe=68216B1C"
-                                      data-img-src-set='{"d":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444667_18306468688238996_1863669766048557395_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFQyNYiuVtXlIoUtAcTuho6gXsZfFnO80qBexl8Wc7zShgCZZyGpSH7IfP9aqZDIuk&amp;_nc_ohc=gQw2VbE6Qy0Q7kNvwGzJs_h&amp;_nc_oc=AdllclD7Sm_yx_KVJGWoIh8jf9gWz5gd2fddnXANpfP7HEsAcxrwZRtqCWAfgI5xTjA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLIaB4xXMz0DUnYAwlEOsbY3bRErW2LEolw8EhHnGpnLQ&amp;oe=68216B1C","150":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444667_18306468688238996_1863669766048557395_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFQyNYiuVtXlIoUtAcTuho6gXsZfFnO80qBexl8Wc7zShgCZZyGpSH7IfP9aqZDIuk&amp;_nc_ohc=gQw2VbE6Qy0Q7kNvwGzJs_h&amp;_nc_oc=AdllclD7Sm_yx_KVJGWoIh8jf9gWz5gd2fddnXANpfP7HEsAcxrwZRtqCWAfgI5xTjA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLIaB4xXMz0DUnYAwlEOsbY3bRErW2LEolw8EhHnGpnLQ&amp;oe=68216B1C","320":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444667_18306468688238996_1863669766048557395_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFQyNYiuVtXlIoUtAcTuho6gXsZfFnO80qBexl8Wc7zShgCZZyGpSH7IfP9aqZDIuk&amp;_nc_ohc=gQw2VbE6Qy0Q7kNvwGzJs_h&amp;_nc_oc=AdllclD7Sm_yx_KVJGWoIh8jf9gWz5gd2fddnXANpfP7HEsAcxrwZRtqCWAfgI5xTjA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLIaB4xXMz0DUnYAwlEOsbY3bRErW2LEolw8EhHnGpnLQ&amp;oe=68216B1C","640":"https:\/\/scontent-sin11-2.cdninstagram.com\/v\/t51.75761-15\/491444667_18306468688238996_1863669766048557395_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;_nc_eui2=AeFQyNYiuVtXlIoUtAcTuho6gXsZfFnO80qBexl8Wc7zShgCZZyGpSH7IfP9aqZDIuk&amp;_nc_ohc=gQw2VbE6Qy0Q7kNvwGzJs_h&amp;_nc_oc=AdllclD7Sm_yx_KVJGWoIh8jf9gWz5gd2fddnXANpfP7HEsAcxrwZRtqCWAfgI5xTjA&amp;_nc_zt=23&amp;_nc_ht=scontent-sin11-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=lMRy8nG51d0zIXX23tBgbw&amp;oh=00_AfLIaB4xXMz0DUnYAwlEOsbY3bRErW2LEolw8EhHnGpnLQ&amp;oe=68216B1C"}'
-                                    >
-                                      <span class="sbi-screenreader"
-                                        >Mengelola banyak goroutine tanpa
-                                        konflik? Kenalan
-                                      </span>
-                                      <svg
-                                        class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon"
-                                        aria-hidden="true"
-                                        aria-label="Clone"
-                                        data-fa-proƒcessed=""
-                                        data-prefix="far"
-                                        data-icon="clone"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                      >
-                                        <path
-                                          fill="currentColor"
-                                          d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"
-                                        ></path>
-                                      </svg>
-                                      <img
-                                        class="lazy"
-                                        data-recalc-dims="1"
-                                        decoding="async"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                                        data-src="https://i0.wp.com/rumahcoding.co.id/wp-content/plugins/instagram-feed/img/placeholder.png?w=750&#038;ssl=1"
-                                        alt="Mengelola banyak goroutine tanpa konflik?
-Kenalan yuk sama Mutex di Go, kunci utama buat menghindari race condition saat menghadapi concurrency! 
-
-Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman dan efisien. Cocok banget buat kamu yang lagi ngulik backend atau sistem paralel di Golang! 
-
-#CodingTips #GolangID#Golang #GoLangIndonesia #Mutex #Concurrency #BackendDev #DevTips #NgodingSantai #BelajarGolang #ProgrammingLife #CodeSmart #TechIndonesia #SoftwareEngineering #RaceCondition #CodingDiWeekend"
-                                        aria-hidden="true"
-                                      />
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div id="sbi_load">
-                                <button class="sbi_load_btn" type="button">
-                                  <span class="sbi_btn_text">Load More</span>
-                                  <span
-                                    class="sbi_loader sbi_hidden"
-                                    style="background-color: rgb(255, 255, 255)"
-                                    aria-hidden="true"
-                                  ></span>
-                                </button>
-
-                                <span class="sbi_follow_btn sbi_custom">
-                                  <a
-                                    target="_blank"
-                                    rel="nofollow noopener"
-                                    href="https://www.instagram.com/idrumahcoding/"
-                                    style="background: rgb(64, 139, 209)"
-                                  >
-                                    <svg
-                                      class="svg-inline--fa fa-instagram fa-w-14"
-                                      aria-hidden="true"
-                                      data-fa-processed=""
-                                      aria-label="Instagram"
-                                      data-prefix="fab"
-                                      data-icon="instagram"
-                                      role="img"
-                                      viewBox="0 0 448 512"
-                                    >
-                                      <path
-                                        fill="currentColor"
-                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                                      ></path>
-                                    </svg>
-                                    <span>Follow on Instagram</span>
-                                  </a>
-                                </span>
-                              </div>
-                              <span
-                                class="sbi_resized_image_data"
-                                data-feed-id="*2"
-                                data-resized='{"18003661850759420":{"id":"491444667_18306468688238996_1863669766048557395_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18064401887479520":{"id":"491102537_18306574699238996_8277107665055086411_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18042811643410608":{"id":"491441101_18306677827238996_8176058286063210352_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18053672045187523":{"id":"490358460_18306779593238996_3874610653324223713_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18053727047271483":{"id":"491096229_18306879136238996_2692214912217708029_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18046498142108399":{"id":"491340737_18306980896238996_3152950297464533315_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18024887996472319":{"id":"491444047_18307089001238996_8026910174621843743_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18049371578094066":{"id":"491269708_18307300306238996_9107784215824381437_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17977950251831450":{"id":"491493841_18307403773238996_4153862294264094100_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18052038539203927":{"id":"491446054_18307721107238996_5226068018530870563_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17978009576838917":{"id":"491448860_18307613581238996_8361502183139900360_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18065669848985783":{"id":"491443104_18307504288238996_8167095002722355219_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17954814047945807":{"id":"491443981_18308059105238996_6227872343475398914_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17973422570846043":{"id":"491425875_18308163007238996_2274354178558429630_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18091799395593151":{"id":"491451145_18308272075238996_8397014522304680035_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17902215792083189":{"id":"494636014_18308382925238996_7372293943696176635_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18032096726357854":{"id":"495488814_18308501347238996_2878221345578353554_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18055197122267008":{"id":"495607972_18308845660238996_7319439346364180174_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18078636883695710":{"id":"495928185_18308958184238996_2801239765748775595_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17851140573446665":{"id":"495994657_18309066829238996_5830541439607383959_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"}}'
-                              >
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </section> -->
       </div>
       <footer class="footer footer-black footer-big">
         <div class="container">
@@ -4507,93 +3166,6 @@ Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman
                         <a
                           href="/profesional-training-web-fullstack-untuk-perusahaan/"
                           >Fullstack Web (Laravel)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27155"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27155"
-                      >
-                        <a
-                          href="/profesional-training-mobile-app-flutter-untuk-perusahaan/"
-                          >Mobile App (Flutter)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27821"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27821"
-                      >
-                        <a href="/training-java-spring-boot-untuk-perusahaan/"
-                          >Java Spring Boot</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-29210"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29210"
-                      >
-                        <a
-                          href="/training-single-page-application-spa-dengan-vue-js-go/"
-                          >Single Page Application (Vue + Go)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27153"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27153"
-                      >
-                        <a
-                          href="/profesional-training-data-science-untuk-perusahaan/"
-                          >Data Science</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27454"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27454"
-                      >
-                        <a
-                          href="/training-pengembangan-aplikasi-llm-large-language-model/"
-                          >Generative AI (LLM)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27527"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27527"
-                      >
-                        <a
-                          href="/peningkatan-kompetensi-digital-training-computer-vision-untuk-tim-it-perusahaan/"
-                          >Computer Vision</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28645"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28645"
-                      >
-                        <a
-                          href="/training-deep-learning-menggunakan-tensorflow/"
-                          >Deep Learning</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-27152"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27152"
-                      >
-                        <a
-                          href="/profesional-training-plc-and-hmi-untuk-perusahaan/"
-                          >PLC &#038; HMI</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28533"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28533"
-                      >
-                        <a href="/training-web-security-untuk-perusahaan/"
-                          >Web Security</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-29532"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29532"
-                      >
-                        <a href="/training-pengembangan-game-dengan-unity/"
-                          >Unity Game Dev</a
                         >
                       </li>
                       <li
@@ -4628,41 +3200,6 @@ Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman
                         <a
                           href="/jasa-profesional-pembuatan-aplikasi-web-untuk-perusahaan/"
                           >Aplikasi Web</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28777"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28777"
-                      >
-                        <a
-                          href="/jasa-profesional-pembuatan-aplikasi-mobile-untuk-perusahaan/"
-                          >Aplikasi Mobile (Android &#038; iOs)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28290"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28290"
-                      >
-                        <a href="/jasa-profesional-analisis-data-perusahaan/"
-                          >Analisis Data</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28767"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28767"
-                      >
-                        <a
-                          href="/jasa-profesional-pengembangan-internet-of-thing-iot/"
-                          >Internet of Things (IoT)</a
-                        >
-                      </li>
-                      <li
-                        id="menu-item-28317"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28317"
-                      >
-                        <a
-                          href="/jasa-profesional-pengembangan-erp-berbasis-odoo/"
-                          >Solusi ERP (Odoo)</a
                         >
                       </li>
                     </ul>
@@ -4720,14 +3257,14 @@ Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman
           <hr />
           <div class="hestia-bottom-footer-content">
             <div class="copyright pull-right">
-              Hestia | Developed by
-              <a href="https://themeisle.com" rel="nofollow">ThemeIsle</a>
+              Developed by
+              <a href="https://themeisle.com" rel="nofollow">PT. Alfatech Digital Solution</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="speculationrules">
       {
         "prefetch": [
@@ -4981,13 +3518,13 @@ Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman
       src="https://rumahcoding.co.id/wp-content/plugins/notificationx/assets/public/js/frontend.js?ver=3.0.6"
       id="notificationx-public-js"
     ></script>
-   
+
     <script
       type="text/javascript"
       src="https://c0.wp.com/c/6.8.1/wp-includes/js/dist/vendor/wp-polyfill.min.js"
       id="wp-polyfill-js"
     ></script>
-    
+
     <script type="text/javascript" id="eael-general-js-extra">
       /* <![CDATA[ */
       var localize = {
@@ -5328,12 +3865,4 @@ Dengan Mutex, kamu bisa sinkronisasi akses ke resource bersama dengan lebih aman
   </body>
 </html>
 
-<!--
-Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 0/1261 objects using Redis
-Page Caching using Disk: Enhanced 
-Lazy Loading
-
-Served from: rumahcoding.co.id @ 2025-05-08 11:13:53 by W3 Total Cache
--->
