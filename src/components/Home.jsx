@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="space-y-20 mx-auto">
           {/* Main content */}
           <div className="text-center space-y-6">
-            <h1 className="text-6xl sm:text-7xl font-bold tracking-tight text-slate-900 lg:text-8xl">
+            <h1 className="text-6xl sm:text-7xl font-extrabold tracking-tight text-slate-900 lg:text-8xl">
               Mulai Langkah
               <span className="block mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
                 Digitalmu Hari Ini

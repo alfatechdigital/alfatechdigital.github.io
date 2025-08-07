@@ -12,6 +12,7 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 // Wrapper component to handle scroll to top on route change
 const ScrollToTop = () => {
@@ -31,7 +32,10 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <main>{children}</main>
+      <main>
+        {children}
+        <DarkModeToggle />
+      </main>
       <Footer />
     </div>
   );
