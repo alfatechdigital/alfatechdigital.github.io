@@ -5,16 +5,14 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
+
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import DarkModeToggle from "./components/DarkModeToggle";
 
-// Wrapper component to handle scroll to top on route change
+import { Home, About } from "./pages";
+import { DarkModeToggle, Navbar, Footer } from "./components";
+
 const ScrollToTop = () => {
   const location = useLocation();
 

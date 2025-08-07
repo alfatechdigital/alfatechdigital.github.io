@@ -1,4 +1,12 @@
-import { FiPhone, FiClock, FiMapPin, FiMail } from "react-icons/fi";
+import {
+  FiPhone,
+  FiClock,
+  FiMapPin,
+  FiMail,
+  FiBookOpen,
+  FiGlobe,
+  FiTool,
+} from "react-icons/fi";
 import {
   FaXTwitter,
   FaFacebookF,
@@ -6,12 +14,9 @@ import {
   FaLinkedinIn,
   FaLaptopCode,
   FaComputer,
+  FaChalkboardUser,
 } from "react-icons/fa6";
-import {
-  IoRocketOutline,
-  IoEyeOutline,
-  IoPeopleOutline,
-} from "react-icons/io5";
+import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const menuItems = [
@@ -133,4 +138,38 @@ const stats = [
   { number: "1-on-1", label: "Pendekatan Personal untuk Tiap Klien" },
 ];
 
-export { menuItems, contactInfo, socialLinks, services, principles, stats };
+const choices = [
+  {
+    icon: FiBookOpen,
+    label: "Pembelajaran Dari Dasar",
+    description: "Materi disusun dengan bahasa sederhana dan bertahap.",
+  },
+  {
+    icon: FiTool,
+    label: "Pendekatan Praktis",
+    description:
+      "Langsung praktik! Belajar sambil mengerjakan proyek nyata agar lebih mudah dipahami dan diterapkan.",
+  },
+  {
+    icon: FaChalkboardUser,
+    label: "Instruktur Berpengalaman",
+    description:
+      "Didampingi oleh pengajar yang ahli di bidangnya dan siap membimbing hingga tuntas.",
+  },
+  {
+    icon: FiGlobe,
+    label: "Solusi Digital Terpadu",
+    description:
+      "Selain kursus, kami juga menyediakan layanan pembuatan website untuk kebutuhan bisnis.",
+  },
+];
+
+export {
+  menuItems,
+  contactInfo,
+  socialLinks,
+  services,
+  principles,
+  stats,
+  choices,
+};

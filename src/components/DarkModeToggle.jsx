@@ -32,13 +32,11 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <div className="fixed bottom-9 left-9 z-50">
+    <div className="fixed bottom-5 left-5 z-50">
       <button
         onClick={toggleTheme}
         className={`p-2 border rounded-xl shadow transition duration-300 ${
-          isDark
-            ? "bg-slate-900 text-slate-200"
-            : "bg-slate-text-slate-200 text-indigo-9bg-slate-900"
+          isDark ? "bg-slate-900 text-slate-200" : "bg-slate-200 text-slate-900"
         } cursor-pointer`}
       >
         {isDark ? (

@@ -1,4 +1,3 @@
-import { FaPhone, FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import { menuItems, socialLinks, contactInfo } from "../constant";
 
 const Footer = () => {
@@ -74,31 +73,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Newsletter */}
-          {/* <div className="space-y-6">
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              Newsletter
-            </h3>
-            <p className="text-slate-300">
-              Subscribe to our newsletter for updates and insights.
-            </p>
-            <form className="space-y-3">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-violet-400 text-white placeholder-slate-400 transition-colors"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full px-4 py-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div> */}
         </div>
 
         {/* Footer Bottom */}
