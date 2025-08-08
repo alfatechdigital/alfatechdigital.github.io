@@ -3,3 +3,31 @@
 @theme {
   --font-sans: "Poppins";
 }
+
+.heading {
+  @apply text-slate-900 dark:text-slate-50;
+}
+
+.sub-heading {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
+.page-background {
+  @apply bg-slate-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-indigo-900;
+}
+
+.gradient {
+  @apply bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-400;
+}
+
+.card {
+  @apply relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+}
+
+.card-light-gradient {
+  @apply bg-gradient-to-r from-slate-50 to-white;
+}
+
+.card-dark-gradient {
+  @apply bg-gradient-to-r from-slate-900 to-indigo-600;
+}

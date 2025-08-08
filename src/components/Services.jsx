@@ -43,7 +43,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-slate-50">
+    <section className="relative py-32">
       {/* Gradient background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute w-full h-full">

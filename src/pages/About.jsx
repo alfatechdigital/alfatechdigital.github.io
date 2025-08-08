@@ -30,11 +30,11 @@ const About = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <article className="relative min-h-screen py-32 bg-slate-50">
+    <article className="relative min-h-screen">
       {/* Animated background elements */}
       <AnimatedBackgroundElement />
 
-      <div className="relative max-w-7xl mx-auto space-y-10 px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto space-y-10 px-4 sm:px-6 lg:px-8 py-32">
         {/* Section Header */}
         <section id="header">
           <SectionHeading
@@ -50,14 +50,17 @@ const About = () => {
 
         {/* Main*/}
         <section id="main-content">
-          <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-md p-8 border-t-8 border-indigo-600">
+          <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-md p-8 border-t-8 border-blue-600">
             {/* Header */}
             <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b border-slate-300 pb-2 mb-6">
-              <SectionHeading heading={"Tentang Kami"} />
+              <SectionHeading
+                heading={"Tentang Kami"}
+                style={"dark:text-slate-900!"}
+              />
               {/* Legality Modal Button */}
               <button
                 onClick={openModal}
-                className="justify-self-start md:justify-self-end px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition group inline-flex items-center cursor-pointer"
+                className="justify-self-start md:justify-self-end px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition group inline-flex items-center cursor-pointer"
               >
                 Legalitas
                 <GrCertificate className="ml-2" />

@@ -3,7 +3,7 @@ const Principle = (principle) => {
     <div key={principle.title}>
       <div className="relative">
         <div
-          className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${principle.gradient} text-white shadow-lg`}
+          className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient text-white shadow-lg`}
         >
           <principle.icon size={28} />
         </div>

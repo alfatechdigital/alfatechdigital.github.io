@@ -64,7 +64,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <div className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-violet-600 hover:bg-gray-100/50 focus:outline-none transition-colors">
+            <div className="inline-flex items-center justify-center p-2 rounded-lg heading hover:text-violet-600 hover:bg-gray-100/50 focus:outline-none transition-colors">
               <Hamburger
                 toggled={isOpen}
                 toggle={setIsOpen}

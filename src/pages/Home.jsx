@@ -11,7 +11,7 @@ import {
 
 const Home = () => {
   return (
-    <article className="relative min-h-screen flex items-center justify-center bg-[#fafafa] overflow-hidden">
+    <article className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background elements */}
       <AnimatedBackgroundElement />
 
@@ -19,13 +19,13 @@ const Home = () => {
         <div className="space-y-20 mx-auto">
           {/* Main content */}
           <section id="main-content" className="text-center space-y-6">
-            <h1 className="text-6xl sm:text-7xl font-extrabold tracking-tight text-slate-900 lg:text-8xl">
+            <h1 className="text-6xl sm:text-7xl font-extrabold tracking-tight heading lg:text-8xl">
               Mulai Langkah
-              <span className="block mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="block mt-2 gradient bg-clip-text text-transparent">
                 Digitalmu Hari Ini
               </span>
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl sub-heading leading-relaxed max-w-2xl mx-auto">
               Alfatech Digital Solution hadir untuk membantu Anda mengembangkan
               keterampilan digital dan mewujudkan ide menjadi solusi nyata.
             </p>
@@ -35,7 +35,7 @@ const Home = () => {
           <section id="cta-button" className="text-center">
             <Link
               to="/services"
-              className="px-8 py-4 rounded-full bg-slate-900 text-white font-medium hover:shadow-lg hover:shadow-slate-900/10 transition-all duration-300 transform hover:-translate-y-0.5 group inline-flex items-center"
+              className="px-8 py-4 rounded-full bg-slate-900 text-slate-50 dark:bg-slate-50 dark:text-slate-900 font-medium hover:shadow-lg hover:shadow-slate-900/10 transition-all duration-300 transform hover:-translate-y-0.5 group inline-flex items-center"
             >
               Lihat Layanan Kami
               <FiArrowUpRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

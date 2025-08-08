@@ -113,22 +113,13 @@ const principles = [
     description:
       "Menjadi mitra terpercaya dalam pengembangan keterampilan TI, yang mendukung kesuksesan jangka panjang di tengah perubahan teknologi yang cepat.",
     icon: IoEyeOutline,
-    gradient: "from-indigo-600 to-blue-600",
   },
   {
     title: "Misi Kami",
     description:
       "Memberdayakan individu dan organisasi melalui pelatihan TI yang relevan, praktis, dan berbasis proyek, guna membantu mereka mencapai potensi penuh di era digital.",
     icon: IoRocketOutline,
-    gradient: "from-violet-600 to-indigo-600",
   },
-  // {
-  //   title: "Prinsip Kami",
-  //   description:
-  //     "Fokus pada pembelajaran yang aplikatif, materi yang selalu diperbarui, dan hasil nyata yang dirasakan langsung oleh peserta.",
-  //   icon: IoPeopleOutline,
-  //   gradient: "from-blue-600 to-sky-600",
-  // },
 ];
 
 const stats = [
