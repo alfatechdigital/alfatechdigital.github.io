@@ -43,22 +43,30 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.url}
-                  className="group relative px-3 py-2 text-sm font-medium text-gray-700 dark:text-slate-100 hover:text-violet-600 dark:hover:text-slate-100 transition-colors duration-300"
-                >
-                  {item.name}
-                  <span
-                    className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-violet-600 to-indigo-600 transform origin-left transition-transform duration-300 ${
-                      location.pathname === item.url
-                        ? "scale-x-100"
-                        : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  />
-                </Link>
-              ))}
+              {menuItems.map((item) => {
+                const isActive =
+                  item.url === "/"
+                    ? location.pathname === "/"
+                    : location.pathname === item.url ||
+                      location.pathname.startsWith(item.url + "/");
+
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.url}
+                    className="group relative px-3 py-2 text-sm font-medium text-gray-700 dark:text-slate-100 hover:text-violet-600 dark:hover:text-slate-100 transition-colors duration-300"
+                  >
+                    {item.name}
+                    <span
+                      className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-violet-600 to-indigo-600 transform origin-left transition-transform duration-300 ${
+                        isActive
+                          ? "scale-x-100"
+                          : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -86,20 +94,26 @@ const Navbar = () => {
         }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.url}
-              className={`block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-violet-600 hover:bg-gray-50 transition-colors duration-300 ${
-                location.pathname === item.url
-                  ? "text-violet-600 bg-violet-50"
-                  : ""
-              }`}
-              onClick={closeMenu}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {menuItems.map((item) => {
+            const isActive =
+              item.url === "/"
+                ? location.pathname === "/"
+                : location.pathname === item.url ||
+                  location.pathname.startsWith(item.url + "/");
+
+            return (
+              <Link
+                key={item.name}
+                to={item.url}
+                className={`block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-violet-600 hover:bg-gray-50 transition-colors duration-300 ${
+                  isActive ? "text-violet-600 bg-violet-50" : ""
+                }`}
+                onClick={closeMenu}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

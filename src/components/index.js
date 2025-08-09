@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Modal from "./Modal";
 import LazyImage from "./LazyImage";
 import Card from "./Card";
+import CardWithList from "./CardWithList";
 import Principle from "./Principle";
 import ScrollToTopButton from "./ScrollToTopButton";
 import CtaButton from "./CtaButton";
@@ -21,6 +22,7 @@ export {
   Modal,
   LazyImage,
   Card,
+  CardWithList,
   Principle,
   ScrollToTopButton,
   CtaButton,
