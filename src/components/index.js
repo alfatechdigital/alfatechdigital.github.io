@@ -8,6 +8,8 @@ import Modal from "./Modal";
 import LazyImage from "./LazyImage";
 import Card from "./Card";
 import Principle from "./Principle";
+import ScrollToTopButton from "./ScrollToTopButton";
+import CTAButton from "./CTAButton";
 
 export {
   AnimatedBackgroundElement,
@@ -20,4 +22,6 @@ export {
   LazyImage,
   Card,
   Principle,
+  ScrollToTopButton,
+  CTAButton,
 };

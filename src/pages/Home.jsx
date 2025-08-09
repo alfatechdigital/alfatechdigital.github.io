@@ -7,6 +7,7 @@ import {
   SectionHeading,
   SectionSubHeading,
   AnimatedBackgroundElement,
+  CTAButton,
 } from "../components";
 
 const Home = () => {
@@ -32,14 +33,11 @@ const Home = () => {
           </section>
 
           {/* CTA buttons */}
-          <section id="cta-button" className="text-center">
-            <Link
-              to="/services"
-              className="px-8 py-4 rounded-full bg-slate-900 text-slate-50 dark:bg-slate-50 dark:text-slate-900 font-medium hover:shadow-lg hover:shadow-slate-900/10 transition-all duration-300 transform hover:-translate-y-0.5 group inline-flex items-center"
-            >
-              Lihat Layanan Kami
-              <FiArrowUpRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+          <section id="about-cta-button" className="text-center">
+            <CTAButton
+              link="/about"
+              description="Mari Berkenalan Dengan Kami"
+            />
           </section>
 
           {/* Why Choose Us */}
@@ -64,7 +62,12 @@ const Home = () => {
                 "Kami memberikan layanan edukasi dan solusi digital dalam satu tempat."
               }
             />
-            <ServicesList services={services} />
+            <ServicesList services={services} showLink={false} />
+
+            {/* CTA button */}
+            <section id="service-cta-button" className="text-center mt-10">
+              <CTAButton link="/services" description="Lihat Layanan Kami" />
+            </section>
           </section>
         </div>
       </div>

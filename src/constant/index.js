@@ -40,6 +40,7 @@ const services = [
       "Internet & email",
       "Manajemen file",
     ],
+    link: "kursus-komputer",
   },
   {
     icon: HiOutlineCommandLine,
@@ -53,6 +54,7 @@ const services = [
       "Proyek mini",
       "Latihan praktik",
     ],
+    link: "kursus-pemrograman",
   },
   {
     icon: FaLaptopCode,
@@ -66,6 +68,7 @@ const services = [
       "SEO friendly",
       "Dukungan teknis",
     ],
+    link: "web-development",
   },
 ];
 

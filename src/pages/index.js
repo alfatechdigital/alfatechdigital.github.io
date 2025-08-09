@@ -2,5 +2,6 @@ import Home from "./Home";
 import About from "./About";
 import ErrorPage from "./ErrorPage";
 import Service from "./Service";
+import DetailService from "./DetailService";
 
-export { Home, About, ErrorPage, Service };
+export { Home, About, ErrorPage, Service, DetailService };

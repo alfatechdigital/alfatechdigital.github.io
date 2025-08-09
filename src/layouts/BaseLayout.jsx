@@ -1,5 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { Navbar, Footer, DarkModeToggle } from "../components";
+import {
+  Navbar,
+  Footer,
+  DarkModeToggle,
+  ScrollToTopButton,
+} from "../components";
 import { useState } from "react";
 
 const BaseLayout = () => {
@@ -10,6 +15,7 @@ const BaseLayout = () => {
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Outlet />
       <DarkModeToggle />
+      <ScrollToTopButton />
       <Footer />
     </div>
   );

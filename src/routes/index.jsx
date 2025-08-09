@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import BaseLayout from "../layouts/BaseLayout";
-import { Home, About, ErrorPage, Service } from "../pages";
+import { Home, About, ErrorPage, Service, DetailService } from "../pages";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +20,10 @@ export const router = createBrowserRouter([
         path: "/services",
         element: <Service />,
       },
+      // {
+      //   path: "/services/:name",
+      //   element: <DetailService />,
+      // },
     ],
   },
 ]);
