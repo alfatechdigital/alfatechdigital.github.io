@@ -72,6 +72,14 @@ const services = [
   },
 ];
 
+const serviceDetail = [
+  {
+    id: "kursus-komputer",
+    label: "Kursus Komputer",
+    description: ["f"],
+  },
+];
+
 const contactInfo = [
   {
     icon: FiMapPin,
