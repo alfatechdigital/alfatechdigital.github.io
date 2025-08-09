@@ -1,7 +1,7 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const CTAButton = ({ link, description }) => {
+const CtaButton = ({ link, description }) => {
   return (
     <Link
       to={link}
@@ -13,4 +13,4 @@ const CTAButton = ({ link, description }) => {
   );
 };
 
-export default CTAButton;
+export default CtaButton;

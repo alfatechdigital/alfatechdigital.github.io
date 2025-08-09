@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
 import { services, choices } from "../constant";
-import { FiArrowUpRight } from "react-icons/fi";
 
 import { ServicesList, WhyChooseUsList } from "../fragments";
 import {
   SectionHeading,
   SectionSubHeading,
   AnimatedBackgroundElement,
-  // CTAButton,
+  CtaButton,
 } from "../components";
 
 const Home = () => {
@@ -33,12 +31,12 @@ const Home = () => {
           </section>
 
           {/* CTA buttons */}
-          {/* <section id="about-cta-button" className="text-center">
-            <CTAButton
+          <section id="about-cta-button" className="text-center">
+            <CtaButton
               link="/about"
               description="Mari Berkenalan Dengan Kami"
             />
-          </section> */}
+          </section>
 
           {/* Why Choose Us */}
           <section id="why-choose-us">
@@ -65,9 +63,9 @@ const Home = () => {
             <ServicesList services={services} showLink={false} />
 
             {/* CTA button */}
-            {/* <section id="service-cta-button" className="text-center mt-10">
-              <CTAButton link="/services" description="Lihat Layanan Kami" />
-            </section> */}
+            <section id="service-cta-button" className="text-center mt-10">
+              <CtaButton link="/services" description="Lihat Layanan Kami" />
+            </section>
           </section>
         </div>
       </div>

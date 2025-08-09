@@ -9,7 +9,7 @@ import LazyImage from "./LazyImage";
 import Card from "./Card";
 import Principle from "./Principle";
 import ScrollToTopButton from "./ScrollToTopButton";
-// import CTAButton from "./CTAButton";
+import CtaButton from "./CtaButton";
 
 export {
   AnimatedBackgroundElement,
@@ -23,5 +23,5 @@ export {
   Card,
   Principle,
   ScrollToTopButton,
-  // CTAButton,
+  CtaButton,
 };
