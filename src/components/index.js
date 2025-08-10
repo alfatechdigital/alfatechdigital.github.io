@@ -11,6 +11,8 @@ import CardWithList from "./CardWithList";
 import Principle from "./Principle";
 import ScrollToTopButton from "./ScrollToTopButton";
 import CtaButton from "./CtaButton";
+import Input from "./Input";
+import Option from "./Option";
 
 export {
   AnimatedBackgroundElement,
@@ -26,4 +28,6 @@ export {
   Principle,
   ScrollToTopButton,
   CtaButton,
+  Input,
+  Option,
 };

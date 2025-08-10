@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CardWithList = ({
   icon: Icon,
   label,
-  description,
+  shortDescription,
   features,
   link,
   showLink,
@@ -17,7 +17,7 @@ const CardWithList = ({
         <Icon size={50} className="text-sky-600" />
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-slate-900">{label}</h3>
-          <p className="text-slate-600 leading-relaxed">{description}</p>
+          <p className="text-slate-600 leading-relaxed">{shortDescription}</p>
         </div>
 
         <ul className="space-y-3">

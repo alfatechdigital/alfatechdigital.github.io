@@ -29,47 +29,106 @@ const menuItems = [
 
 const services = [
   {
+    link: "kursus-komputer",
     icon: FaComputer,
     label: "Kursus Komputer",
-    description:
+    heading: "Pelajari Komputer dari Dasar hingga Mahir",
+    shortDescription:
       "Mempelajari dasar komputer untuk menunjang belajar dan kegiatan harian.",
+    longDescription:
+      "Mulai dari pengenalan dasar hingga pembuatan dokumen, presentasi, dan pengolahan data dengan percaya diri.",
     gradient: "from-blue-500 to-blue-300",
     features: [
       "Dasar komputer",
       "Microsoft Office",
-      "Internet & email",
+      "Dasar Internet",
       "Manajemen file",
     ],
-    link: "kursus-komputer",
+    featuresDetail: [
+      {
+        title: "Mengenal Perangkat Komputer",
+        desc: "Belajar mengenal monitor, keyboard, mouse, dan fungsi masing-masing.",
+      },
+      {
+        title: "Penggunaan Dasar Komputer",
+        desc: "Membuka, menutup, dan berpindah aplikasi dengan mudah.",
+      },
+      {
+        title: "Microsoft Word",
+        desc: "Mengetik, mengatur teks, dan menyimpan dokumen.",
+      },
+      {
+        title: "Microsoft Excel",
+        desc: "Membuat tabel, menghitung otomatis, dan membuat grafik sederhana.",
+      },
+      {
+        title: "Microsoft PowerPoint",
+        desc: "Membuat slide presentasi menarik dengan gambar dan animasi.",
+      },
+      {
+        title: "Dasar Internet",
+        desc: "Mencari informasi di Google dan tips aman berselancar.",
+      },
+    ],
   },
   {
+    link: "kursus-pemrograman",
     icon: HiOutlineCommandLine,
     label: "Kursus Pemrograman",
-    description:
-      "Mengenal dasar pemrograman dan cara berpikir logis dalam menyusun solusi digital.",
+    heading: "Memulai Perjalanan Menjadi Programmer",
+    shortDescription:
+      "Belajar cara berpikir logis, memahami konsep dasar pemrograman, dan membuat program sederhana.",
+    longDescription:
+      "Kursus ini membantu kamu memahami apa itu pemrograman, bagaimana komputer memproses perintah, serta logika yang digunakan untuk menyelesaikan masalah.",
+
     gradient: "from-purple-500 to-indigo-400",
     features: [
       "Logika & algoritma",
-      "Bahasa populer",
-      "Proyek mini",
+      "Struktur program",
       "Latihan praktik",
+      "Membuat program sederhana",
     ],
-    link: "kursus-pemrograman",
-  },
-  {
-    icon: FaLaptopCode,
-    label: "Web Development",
-    description:
-      "Layanan pengembangan website yang responsif, aman, dan mudah diakses untuk berbagai kebutuhan bisnis.",
-    gradient: "from-green-500 to-teal-400",
-    features: [
-      "Desain responsif",
-      "Frontend & backend",
-      "SEO friendly",
-      "Dukungan teknis",
+    featuresDetail: [
+      {
+        title: "Computational Thinking",
+        desc: "Latihan mengubah masalah sehari-hari menjadi langkah-langkah logis.",
+      },
+      {
+        title: "Konsep Dasar Pemrograman",
+        desc: "Memahami apa itu perintah, alur eksekusi, dan output.",
+      },
+      {
+        title: "Variabel & Tipe Data",
+        desc: "Cara menyimpan dan mengolah informasi di dalam program.",
+      },
+      {
+        title: "Percabangan & Perulangan",
+        desc: "Membuat program yang bisa mengambil keputusan dan mengulang proses.",
+      },
+      {
+        title: "Program Mini",
+        desc: "Membuat program sederhana seperti kalkulator atau game tebak angka.",
+      },
+      {
+        title: "Langkah Menuju Proyek Nyata",
+        desc: "Pengenalan cara mengembangkan ide menjadi aplikasi sederhana.",
+      },
     ],
-    link: "web-development",
   },
+  // {
+  //   icon: FaLaptopCode,
+  //   label: "Web Development",
+  //   description:
+  //     "Layanan pengembangan website yang responsif, aman, dan mudah diakses untuk berbagai kebutuhan bisnis.",
+  //   gradient: "from-green-500 to-teal-400",
+  //   features: [
+  //     "Desain responsif",
+  //     "Frontend & backend",
+  //     "SEO friendly",
+  //     "Dukungan teknis",
+  //   ],
+  //   link: "web-development",
+  // },
 ];
 
 const contactInfo = [
