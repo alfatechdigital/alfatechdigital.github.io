@@ -13,6 +13,7 @@ import ScrollToTopButton from "./ScrollToTopButton";
 import CtaButton from "./CtaButton";
 import Input from "./Input";
 import Option from "./Option";
+import TextArea from "./TextArea";
 
 export {
   AnimatedBackgroundElement,
@@ -30,4 +31,5 @@ export {
   CtaButton,
   Input,
   Option,
+  TextArea,
 };

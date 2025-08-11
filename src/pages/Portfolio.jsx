@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LazyImage from "./LazyImage";
+import LazyImage from "../components/LazyImage";
 import { FiArrowUpRight, FiCode } from "react-icons/fi";
 
 const Portfolio = () => {
@@ -57,11 +57,6 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group mb-8">
-            <span className="text-sm font-medium">Our Portfolio</span>
-            <FiArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </div>
-
           <h2 className="text-5xl font-bold tracking-tight text-slate-900 lg:text-6xl">
             Showcase of Our
             <span className="block mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">

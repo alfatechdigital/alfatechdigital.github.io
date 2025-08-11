@@ -1,6 +1,8 @@
 const SectionSubHeading = ({ subHeading }) => {
   return (
-    <p className="sub-heading leading-relaxed text-center">{subHeading}</p>
+    <p className="color-description leading-relaxed text-center">
+      {subHeading}
+    </p>
   );
 };
 

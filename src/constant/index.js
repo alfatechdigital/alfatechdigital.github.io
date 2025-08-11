@@ -115,20 +115,94 @@ const services = [
       },
     ],
   },
-  // {
-  //   icon: FaLaptopCode,
-  //   label: "Web Development",
-  //   description:
-  //     "Layanan pengembangan website yang responsif, aman, dan mudah diakses untuk berbagai kebutuhan bisnis.",
-  //   gradient: "from-green-500 to-teal-400",
-  //   features: [
-  //     "Desain responsif",
-  //     "Frontend & backend",
-  //     "SEO friendly",
-  //     "Dukungan teknis",
-  //   ],
-  //   link: "web-development",
-  // },
+  {
+    icon: FaLaptopCode,
+    link: "web-development",
+    label: "Pembuatan Website",
+    heading: "Wujudkan Website Impian Anda",
+    shortDescription:
+      "Layanan pengembangan website yang responsif, aman, dan mudah diakses untuk berbagai kebutuhan bisnis.",
+    gradient: "from-green-500 to-teal-400",
+    features: [
+      "Desain responsif",
+      "Frontend & backend",
+      "SEO friendly",
+      "Dukungan teknis",
+    ],
+    featuresDetail: [
+      {
+        title: "Computational Thinking",
+        desc: "Latihan mengubah masalah sehari-hari menjadi langkah-langkah logis.",
+      },
+      {
+        title: "Konsep Dasar Pemrograman",
+        desc: "Memahami apa itu perintah, alur eksekusi, dan output.",
+      },
+      {
+        title: "Variabel & Tipe Data",
+        desc: "Cara menyimpan dan mengolah informasi di dalam program.",
+      },
+      {
+        title: "Percabangan & Perulangan",
+        desc: "Membuat program yang bisa mengambil keputusan dan mengulang proses.",
+      },
+      {
+        title: "Program Mini",
+        desc: "Membuat program sederhana seperti kalkulator atau game tebak angka.",
+      },
+      {
+        title: "Langkah Menuju Proyek Nyata",
+        desc: "Pengenalan cara mengembangkan ide menjadi aplikasi sederhana.",
+      },
+    ],
+  },
+];
+
+const webDevelopmentService = [
+  {
+    title: "Website Personal",
+    description: "Website sederhana untuk profil pribadi.",
+    price: "Rp 1.500.000",
+    details: [
+      "Desain sederhana & responsif",
+      "Halaman profil & kontak",
+      "Integrasi media sosial",
+      "Hosting & domain 1 tahun",
+    ],
+  },
+  {
+    title: "Website Bisnis",
+    description: "Website profesional untuk perusahaan atau usaha.",
+    price: "Rp 3.000.000",
+    details: [
+      "Desain profesional & responsif",
+      "Halaman layanan, galeri, dan kontak",
+      "SEO friendly",
+      "Hosting & domain 1 tahun",
+    ],
+  },
+  {
+    title: "Toko Online (E-Commerce)",
+    description: "Toko online custom untuk jualan produk.",
+    price: "Rp 4.000.000",
+    details: [
+      "Desain toko online profesional",
+      "Fitur keranjang & pembayaran",
+      "Manajemen produk & stok",
+      "Hosting & domain 1 tahun",
+    ],
+  },
+  {
+    title: "Landing Page Promosi",
+    description: "Halaman promosi produk atau event.",
+    price: "Rp 1.000.000",
+    details: [
+      "Desain fokus promosi",
+      "Formulir pendaftaran",
+      "Integrasi media sosial",
+      "Hosting & domain 1 tahun",
+    ],
+  },
 ];
 
 const contactInfo = [
@@ -225,4 +299,5 @@ export {
   principles,
   stats,
   choices,
+  webDevelopmentService,
 };

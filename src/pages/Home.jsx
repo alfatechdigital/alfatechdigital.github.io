@@ -24,7 +24,7 @@ const Home = () => {
                 Digitalmu Hari Ini
               </span>
             </h1>
-            <p className="text-xl sub-heading leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl color-description leading-relaxed max-w-2xl mx-auto">
               Alfatech Digital Solution hadir untuk membantu Anda mengembangkan
               keterampilan digital dan mewujudkan ide menjadi solusi nyata.
             </p>

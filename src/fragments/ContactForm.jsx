@@ -1,15 +1,7 @@
-import { Input, Option } from "../components";
+import { Input, TextArea } from "../components";
 import { FiArrowUpRight, FiLoader } from "react-icons/fi";
 
-const ComputerCourseForm = ({
-  handleSubmit,
-  form,
-  value,
-  setKelas,
-  valueOptions,
-  optionDescription,
-  isSubmitting,
-}) => {
+const ContactForm = ({ handleSubmit, form, isSubmitting }) => {
   return (
     <form
       onSubmit={handleSubmit}
@@ -18,35 +10,41 @@ const ComputerCourseForm = ({
       ref={form}
     >
       <Input
-        htmlFor={"name"}
+        htmlFor={"fullName"}
         label={"Nama Lengkap"}
-        inputId={"name"}
-        inputName={"name"}
+        inputId={"fullName"}
+        inputName={"fullName"}
         inputType={"text"}
         placeholder={"Nama Lengkap Anda"}
       />
       <Input
-        htmlFor={"school"}
-        label={"Asal Sekolah"}
-        inputId={"school"}
-        inputName={"school"}
-        inputType={"text"}
-        placeholder={"Asal Sekolah Anda"}
+        htmlFor={"email"}
+        label={"Email"}
+        inputId={"email"}
+        inputName={"email"}
+        inputType={"email"}
+        placeholder={"Alamat Surel Anda"}
       />
       <Input
         htmlFor={"phone"}
-        label={"Nomor Telepon"}
+        label={"Phone"}
         inputId={"phone"}
         inputName={"phone"}
         inputType={"number"}
         placeholder={"Nomor Telepon Anda"}
       />
-      <Option
-        label={"Pilih Jenis Kelas"}
-        value={value}
-        setKelas={setKelas}
-        valueOptions={valueOptions}
-        optionDescription={optionDescription}
+      <Input
+        htmlFor={"subject"}
+        label={"Subject"}
+        inputId={"subject"}
+        inputName={"subject"}
+        inputType={"text"}
+        placeholder={"Subject Surel"}
+      />
+      <TextArea
+        label={"Pesan"}
+        name={"message"}
+        placeholder={"Masukkan Pesan Anda"}
       />
       <button
         type="submit"
@@ -69,4 +67,4 @@ const ComputerCourseForm = ({
   );
 };
 
-export default ComputerCourseForm;
+export default ContactForm;

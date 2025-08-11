@@ -85,62 +85,83 @@ const DetailService = () => {
       <AnimatedBackgroundElement />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Information */}
-          <div className="flex flex-col justify-between p-6 sm:p-8">
-            {/* Heading */}
-            <p className="gradient bg-clip-text text-transparent uppercase tracking-widest font-semibold">
-              {service.label}
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
-              {service.heading}
-            </h2>
-            <p className="sub-heading mt-6 text-lg leading-relaxed">
-              {service.longDescription}
-            </p>
+        {service.link == "kursus-komputer" ||
+        service.link == "kursus-pemrograman" ? (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Information */}
+            <div className="flex flex-col justify-between p-6 sm:p-8">
+              {/* Heading */}
+              <p className="gradient bg-clip-text text-transparent uppercase tracking-widest font-semibold">
+                {service.label}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
+                {service.heading}
+              </h2>
+              <p className="color-description mt-6 text-lg leading-relaxed">
+                {service.longDescription}
+              </p>
 
-            {/* Daftar Materi */}
-            <h3 className="mt-10 mb-6 font-semibold text-2xl heading">
-              Apa yang Akan Dipelajari?
-            </h3>
-            <ul className="space-y-5">
-              {service.featuresDetail.map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <FiCheckCircle className="h-7 w-7 text-green-500 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-lg heading">{item.title}</p>
-                    <p className="sub-heading text-base">{item.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+              {/* Daftar Materi */}
+              <h3 className="mt-10 mb-6 font-semibold text-2xl heading">
+                Apa yang Akan Dipelajari?
+              </h3>
+              <ul className="space-y-5">
+                {service.featuresDetail.map((item, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <FiCheckCircle className="h-7 w-7 text-green-500 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-lg heading">
+                        {item.title}
+                      </p>
+                      <p className="color-description text-base">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Form */}
+            <div className="relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col space-y-4 h-fit">
+              <h2
+                className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2"
+                id="contact-form-title"
+              >
+                Segera Daftarkan Diri Anda
+              </h2>
+              <p className="text-slate-600 mb-4">
+                Jika tertarik mengikuti kursus ini, anda dapat mengisi form
+                berikut.
+              </p>
+
+              <StatusMessage status={submitStatus} />
+              <ComputerCourseForm
+                handleSubmit={handleSubmit}
+                form={form}
+                value={kelas}
+                setKelas={setKelas}
+                valueOptions={valueOptions}
+                optionDescription={optionDescription}
+                isSubmitting={isSubmitting}
+              />
+            </div>
           </div>
+        ) : (
+          <div className="space-y-20 mx-auto">
+            {/* Main content */}
+            <section id="header" className="text-center">
+              {/* Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
+                {service.heading}
+              </h2>
+              <p className="color-description text-lg leading-relaxed">
+                {service.shortDescription}
+              </p>
+            </section>
 
-          {/* Form */}
-          <div className="relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col space-y-4 h-fit">
-            <h2
-              className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2"
-              id="contact-form-title"
-            >
-              Segera Daftarkan Diri Anda
-            </h2>
-            <p className="text-slate-600 mb-4">
-              Jika tertarik mengikuti kursus ini, anda dapat mengisi form
-              berikut.
-            </p>
-
-            <StatusMessage status={submitStatus} />
-            <ComputerCourseForm
-              handleSubmit={handleSubmit}
-              form={form}
-              value={kelas}
-              setKelas={setKelas}
-              valueOptions={valueOptions}
-              optionDescription={optionDescription}
-              isSubmitting={isSubmitting}
-            />
+            {/* Packet */}
+            <section id="main-content"></section>
           </div>
-        </div>
+        )}
       </div>
     </article>
   );

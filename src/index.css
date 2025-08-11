@@ -8,7 +8,7 @@
   @apply text-slate-900 dark:text-slate-50;
 }
 
-.sub-heading {
+.color-description {
   @apply text-slate-600 dark:text-slate-300;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .gradient {
-  @apply bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-400;
+  @apply bg-gradient-to-r from-blue-600 to-sky-600 dark:from-blue-500 dark:to-sky-500;
 }
 
 .card {
