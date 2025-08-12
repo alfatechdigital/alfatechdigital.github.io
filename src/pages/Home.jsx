@@ -4,7 +4,7 @@ import { ServicesList, WhyChooseUsList } from "../fragments";
 import {
   SectionHeading,
   SectionSubHeading,
-  AnimatedBackgroundElement,
+  AnimatedBackground,
   CtaButton,
 } from "../components";
 
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <article className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background elements */}
-      <AnimatedBackgroundElement />
+      <AnimatedBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="space-y-20 mx-auto">

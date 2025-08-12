@@ -1,7 +1,7 @@
-import { Input, Option } from "../components";
+import { Button, Input, Option } from "../components";
 import { FiArrowUpRight, FiLoader } from "react-icons/fi";
 
-const ComputerCourseForm = ({
+const CourseForm = ({
   handleSubmit,
   form,
   value,
@@ -18,26 +18,20 @@ const ComputerCourseForm = ({
       ref={form}
     >
       <Input
-        htmlFor={"name"}
+        name={"name"}
         label={"Nama Lengkap"}
-        inputId={"name"}
-        inputName={"name"}
         inputType={"text"}
         placeholder={"Nama Lengkap Anda"}
       />
       <Input
-        htmlFor={"school"}
+        name={"school"}
         label={"Asal Sekolah"}
-        inputId={"school"}
-        inputName={"school"}
         inputType={"text"}
         placeholder={"Asal Sekolah Anda"}
       />
       <Input
-        htmlFor={"phone"}
+        name={"phone"}
         label={"Nomor Telepon"}
-        inputId={"phone"}
-        inputName={"phone"}
         inputType={"number"}
         placeholder={"Nomor Telepon Anda"}
       />
@@ -48,11 +42,7 @@ const ComputerCourseForm = ({
         valueOptions={valueOptions}
         optionDescription={optionDescription}
       />
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium px-6 py-3 rounded-xl shadow-lg shadow-violet-600/20 hover:shadow-xl hover:shadow-violet-600/30 transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:transform-none flex items-center justify-center cursor-pointer"
-      >
+      <Button type={"submit"} isSubmitting={isSubmitting}>
         {isSubmitting ? (
           <>
             <FiLoader className="animate-spin mr-2 h-5 w-5" />
@@ -64,9 +54,9 @@ const ComputerCourseForm = ({
             <FiArrowUpRight className="ml-2 w-4 h-4" />
           </>
         )}
-      </button>
+      </Button>
     </form>
   );
 };
 
-export default ComputerCourseForm;
+export default CourseForm;

@@ -1,4 +1,4 @@
-import AnimatedBackgroundElement from "./AnimatedBackgroundElement";
+import AnimatedBackground from "./AnimatedBackground";
 import DarkModeToggle from "./DarkModeToggle";
 import SectionHeading from "./SectionHeading";
 import SectionSubHeading from "./SectionSubHeading";
@@ -14,9 +14,10 @@ import CtaButton from "./CtaButton";
 import Input from "./Input";
 import Option from "./Option";
 import TextArea from "./TextArea";
+import Button from "./Button";
 
 export {
-  AnimatedBackgroundElement,
+  AnimatedBackground,
   DarkModeToggle,
   SectionHeading,
   SectionSubHeading,
@@ -32,4 +33,5 @@ export {
   Input,
   Option,
   TextArea,
+  Button,
 };

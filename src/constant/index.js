@@ -15,9 +15,25 @@ import {
   FaLaptopCode,
   FaComputer,
   FaChalkboardUser,
+  FaUsers,
+  FaCode,
+  FaStar,
+  FaRocket,
+  FaFileSignature,
+  FaBuilding,
+  FaStore,
+  FaPenFancy,
+  FaGraduationCap,
 } from "react-icons/fa6";
 import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
+import {
+  FaChalkboardTeacher,
+  FaCog,
+  FaDraftingCompass,
+  FaMoneyCheck,
+  FaTools,
+} from "react-icons/fa";
 
 const menuItems = [
   { name: "Beranda", url: "/" },
@@ -119,7 +135,7 @@ const services = [
     icon: FaLaptopCode,
     link: "web-development",
     label: "Pembuatan Website",
-    heading: "Wujudkan Website Impian Anda",
+    heading: "Wujudkan Website Profesional yang Mengangkat Bisnis Anda",
     shortDescription:
       "Layanan pengembangan website yang responsif, aman, dan mudah diakses untuk berbagai kebutuhan bisnis.",
     gradient: "from-green-500 to-teal-400",
@@ -158,50 +174,108 @@ const services = [
   },
 ];
 
-const webDevelopmentService = [
+const webDevelopmentSteps = [
   {
-    title: "Website Personal",
-    description: "Website sederhana untuk profil pribadi.",
-    price: "Rp 1.500.000",
-    details: [
-      "Desain sederhana & responsif",
-      "Halaman profil & kontak",
-      "Integrasi media sosial",
-      "Hosting & domain 1 tahun",
-    ],
+    icon: FaUsers,
+    title: "Konsultasi",
+    desc: "Diskusikan kebutuhan website Anda dengan tim developer kami.",
   },
   {
-    title: "Website Bisnis",
-    description: "Website profesional untuk perusahaan atau usaha.",
-    price: "Rp 3.000.000",
-    details: [
-      "Desain profesional & responsif",
-      "Halaman layanan, galeri, dan kontak",
-      "SEO friendly",
-      "Hosting & domain 1 tahun",
-    ],
+    icon: FaMoneyCheck,
+    title: "Melakukan Payment",
+    desc: "Selesaikan pembayaran pembuatan website terlebih dahulu agar dapat diproses.",
   },
   {
-    title: "Toko Online (E-Commerce)",
-    description: "Toko online custom untuk jualan produk.",
-    price: "Rp 4.000.000",
-    details: [
-      "Desain toko online profesional",
-      "Fitur keranjang & pembayaran",
-      "Manajemen produk & stok",
-      "Hosting & domain 1 tahun",
-    ],
+    icon: FaCode,
+    title: "Proses Pengerjaan",
+    desc: "Website sedang dalam proses pengerjaan. Waktu pengembangan website bervariasi tergantung kompleksitas proyek.",
   },
   {
-    title: "Landing Page Promosi",
-    description: "Halaman promosi produk atau event.",
-    price: "Rp 1.000.000",
-    details: [
-      "Desain fokus promosi",
-      "Formulir pendaftaran",
-      "Integrasi media sosial",
-      "Hosting & domain 1 tahun",
-    ],
+    icon: FaStar,
+    title: "Website Siap Digunakan",
+    desc: "Selamat! Website sudah jadi. Kami juga akan memberikan edukasi penggunaan website.",
+  },
+];
+
+const ourApproach = [
+  {
+    icon: FaFileSignature,
+    label: "1. Analisis Kebutuhan",
+    description:
+      "Kami memulai dengan memahami latar belakang, tujuan, dan prioritas Anda melalui diskusi dan riset mendalam.",
+  },
+  {
+    icon: FaDraftingCompass,
+    label: "2. Perancangan Solusi",
+    description:
+      "Menyusun konsep, rancangan antarmuka, serta rencana kerja yang terstruktur sebelum proses pengembangan dimulai.",
+  },
+  {
+    icon: FaCode,
+    label: "3. Pengembangan",
+    description:
+      "Membangun sistem secara bertahap dengan metode Agile, memastikan setiap fitur diuji dan disesuaikan.",
+  },
+  {
+    icon: FaTools,
+    label: "4. Pengujian",
+    description:
+      "Melakukan serangkaian tes untuk menjamin stabilitas, keamanan, dan performa terbaik.",
+  },
+  {
+    icon: FaRocket,
+    label: "5. Peluncuran",
+    description:
+      "Menerapkan sistem ke lingkungan produksi dengan pengawasan untuk memastikan transisi berjalan lancar.",
+  },
+  {
+    icon: FaCog,
+    label: "6. Pemeliharaan",
+    description:
+      "Memberikan dukungan teknis dan pembaruan berkala agar sistem tetap optimal seiring waktu.",
+  },
+];
+
+const websiteType = [
+  {
+    icon: FaBuilding,
+    label: "Website Profil Perusahaan",
+    shortDescription:
+      "Menampilkan informasi perusahaan, layanan, dan kontak secara profesional.",
+    features: ["Halaman profil & layanan", "Formulir kontak", "Peta lokasi"],
+  },
+  {
+    icon: FaStore,
+    label: "Website Toko Online",
+    shortDescription:
+      "Menjual produk secara online dengan tampilan yang menarik.",
+    features: ["Daftar produk", "Keranjang belanja", "Metode pembayaran"],
+  },
+  {
+    icon: FaLaptopCode,
+    label: "Website Aplikasi",
+    shortDescription:
+      "Aplikasi berbasis web yang dapat diakses dari berbagai perangkat.",
+    features: ["Tampilan dashboard", "Manajemen pengguna", "Integrasi data"],
+  },
+  {
+    icon: FaPenFancy,
+    label: "Blog",
+    shortDescription: "Media untuk menulis dan membagikan artikel atau berita.",
+    features: ["Posting artikel", "Kategori & tag", "Kolom komentar"],
+  },
+  {
+    icon: FaChalkboardTeacher,
+    label: "E-Course",
+    shortDescription:
+      "Platform pembelajaran online untuk membagikan materi dan video.",
+    features: ["Halaman kursus", "Materi video", "Quiz sederhana"],
+  },
+  {
+    icon: FaGraduationCap,
+    label: "E-Education",
+    shortDescription: "Sistem pembelajaran online untuk sekolah atau lembaga.",
+    features: ["Data siswa", "Materi pelajaran", "Pengumuman"],
   },
 ];
 
@@ -299,5 +373,7 @@ export {
   principles,
   stats,
   choices,
-  webDevelopmentService,
+  webDevelopmentSteps,
+  ourApproach,
+  websiteType,
 };

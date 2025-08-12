@@ -1,4 +1,4 @@
-const AnimatedBackgroundElement = () => {
+const AnimatedBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* Gradient circles */}
@@ -12,4 +12,4 @@ const AnimatedBackgroundElement = () => {
   );
 };
 
-export default AnimatedBackgroundElement;
+export default AnimatedBackground;

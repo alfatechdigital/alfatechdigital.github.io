@@ -1,5 +1,5 @@
 import {
-  AnimatedBackgroundElement,
+  AnimatedBackground,
   SectionHeading,
   SectionSubHeading,
 } from "../components";
@@ -10,7 +10,7 @@ const Service = () => {
   return (
     <article className="relative min-h-screen">
       {/* Animated background elements */}
-      <AnimatedBackgroundElement />
+      <AnimatedBackground />
 
       <div className="relative max-w-7xl mx-auto space-y-10 px-4 sm:px-6 lg:px-8 py-32">
         {/* Section Header */}

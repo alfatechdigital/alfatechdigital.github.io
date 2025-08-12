@@ -1,9 +1,14 @@
-import { AnimatedBackgroundElement } from "../components";
+import { AnimatedBackground, Button, Card, LazyImage } from "../components";
 import { useParams } from "react-router-dom";
-import { services } from "../constant";
+import {
+  ourApproach,
+  services,
+  webDevelopmentSteps,
+  websiteType,
+} from "../constant";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import { useRef, useState } from "react";
-import { ComputerCourseForm } from "../fragments";
+import { ApproachList, CourseForm, WebsiteTypeList } from "../fragments";
 
 const DetailService = () => {
   const { slug } = useParams();
@@ -82,7 +87,7 @@ const DetailService = () => {
   return (
     <article className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background elements */}
-      <AnimatedBackgroundElement />
+      <AnimatedBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {service.link == "kursus-komputer" ||
@@ -91,9 +96,6 @@ const DetailService = () => {
             {/* Information */}
             <div className="flex flex-col justify-between p-6 sm:p-8">
               {/* Heading */}
-              <p className="gradient bg-clip-text text-transparent uppercase tracking-widest font-semibold">
-                {service.label}
-              </p>
               <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
                 {service.heading}
               </h2>
@@ -134,7 +136,7 @@ const DetailService = () => {
               </p>
 
               <StatusMessage status={submitStatus} />
-              <ComputerCourseForm
+              <CourseForm
                 handleSubmit={handleSubmit}
                 form={form}
                 value={kelas}
@@ -146,20 +148,85 @@ const DetailService = () => {
             </div>
           </div>
         ) : (
-          <div className="space-y-20 mx-auto">
+          <div className="space-y-24 mx-auto">
             {/* Main content */}
-            <section id="header" className="text-center">
-              {/* Heading */}
-              <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
-                {service.heading}
-              </h2>
-              <p className="color-description text-lg leading-relaxed">
-                {service.shortDescription}
-              </p>
+            <section
+              id="header"
+              className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8"
+            >
+              <div className="space-y-5">
+                <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
+                  {service.heading}
+                </h2>
+                <p className="color-description text-lg leading-relaxed">
+                  {service.shortDescription}
+                </p>
+                <Button style={"w-fit!"}>
+                  <a href="#step">Buat Websitemu Sekarang</a>
+                </Button>
+              </div>
+              <LazyImage
+                src="/src/assets/web-development.svg"
+                className={"md:w-3/4 justify-self-center lg:justify-self-end"}
+              />
             </section>
 
-            {/* Packet */}
-            <section id="main-content"></section>
+            {/* Steps */}
+            <section className="py-12" id="step">
+              <div className="max-w-6xl mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 heading">
+                  Langkah Pembuatan Website
+                </h2>
+
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                  {webDevelopmentSteps.map((step, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center text-center"
+                    >
+                      <div className="heading text-6xl font-bold absolute opacity-10">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                      <step.icon className="text-sky-600 dark:text-slate-50 text-4xl mb-4" />
+                      <h3 className="text-lg font-semibold mt-2 heading">
+                        {step.title}
+                      </h3>
+                      <p className="color-description text-sm mt-2">
+                        {step.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Approach */}
+            <section id="approach" className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold heading">Pendekatan Kami</h2>
+                <p className="mt-2 color-description">
+                  Metode kerja yang terstruktur untuk menghasilkan solusi yang
+                  tepat dan berkelanjutan.
+                </p>
+              </div>
+
+              <ApproachList approaches={ourApproach} />
+            </section>
+
+            {/* Website Type */}
+            <section id="web-type" className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold heading">
+                  Pilihan Jenis Website yang Dapat Dibuat
+                </h2>
+                <p className="mt-2 color-description">
+                  Beragam jenis website yang dapat kami buat untuk mendukung
+                  kebutuhan Anda.
+                </p>
+              </div>
+
+              <WebsiteTypeList typeWebsite={websiteType} />
+            </section>
           </div>
         )}
       </div>

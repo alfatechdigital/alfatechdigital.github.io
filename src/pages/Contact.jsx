@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import { contactInfo } from "../constant";
 import { ContactForm } from "../fragments";
-import { AnimatedBackgroundElement } from "../components";
+import { AnimatedBackground } from "../components";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,7 +68,7 @@ const Contact = () => {
       className="relative min-h-screen py-20 sm:py-24 page-background"
       aria-label="Contact Us Section"
     >
-      <AnimatedBackgroundElement />
+      <AnimatedBackground />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
