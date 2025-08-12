@@ -9,6 +9,7 @@ import {
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import { useRef, useState } from "react";
 import { ApproachList, CourseForm, WebsiteTypeList } from "../fragments";
+import headingSvg from "/src/assets/web-development.svg";
 
 const DetailService = () => {
   const { slug } = useParams();
@@ -166,7 +167,7 @@ const DetailService = () => {
                 </Button>
               </div>
               <LazyImage
-                src="/src/assets/web-development.svg"
+                src={headingSvg}
                 className={"md:w-3/4 justify-self-center lg:justify-self-end"}
               />
             </section>
