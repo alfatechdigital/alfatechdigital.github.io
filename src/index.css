@@ -13,7 +13,7 @@
 }
 
 .page-background {
-  @apply bg-slate-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-indigo-900;
+  @apply bg-gradient-to-b to-[#ececeb] from-[#f2f3f2] dark:from-slate-900 dark:to-indigo-900;
 }
 
 .gradient {

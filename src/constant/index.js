@@ -18,8 +18,7 @@ import {
   FaUsers,
   FaCode,
   FaStar,
-  FaRocket,
-  FaFileSignature,
+  FaPaintbrush,
   FaBuilding,
   FaStore,
   FaPenFancy,
@@ -29,11 +28,11 @@ import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import {
   FaChalkboardTeacher,
-  FaCog,
   FaDraftingCompass,
   FaMoneyCheck,
-  FaTools,
 } from "react-icons/fa";
+import { MdOutlineDiscount } from "react-icons/md";
+import { LuMonitorSmartphone } from "react-icons/lu";
 
 const menuItems = [
   { name: "Beranda", url: "/" },
@@ -197,42 +196,22 @@ const webDevelopmentSteps = [
   },
 ];
 
-const ourApproach = [
+const whychooseUsWeb = [
   {
-    icon: FaFileSignature,
-    label: "1. Analisis Kebutuhan",
-    description:
-      "Kami memulai dengan memahami latar belakang, tujuan, dan prioritas Anda melalui diskusi dan riset mendalam.",
+    icon: MdOutlineDiscount,
+    label: "Harga Bersahabat",
+    description: "Kualitas premium dengan harga paling kompetitif di pasaran.",
   },
   {
-    icon: FaDraftingCompass,
-    label: "2. Perancangan Solusi",
-    description:
-      "Menyusun konsep, rancangan antarmuka, serta rencana kerja yang terstruktur sebelum proses pengembangan dimulai.",
+    icon: LuMonitorSmartphone,
+    label: "Mobile Responsive",
+    description: "Tampilan sempurna di semua perangkat smartphone dan tablet.",
   },
   {
-    icon: FaCode,
-    label: "3. Pengembangan",
+    icon: FaPaintbrush,
+    label: "Desain Premium & Modern",
     description:
-      "Membangun sistem secara bertahap dengan metode Agile, memastikan setiap fitur diuji dan disesuaikan.",
-  },
-  {
-    icon: FaTools,
-    label: "4. Pengujian",
-    description:
-      "Melakukan serangkaian tes untuk menjamin stabilitas, keamanan, dan performa terbaik.",
-  },
-  {
-    icon: FaRocket,
-    label: "5. Peluncuran",
-    description:
-      "Menerapkan sistem ke lingkungan produksi dengan pengawasan untuk memastikan transisi berjalan lancar.",
-  },
-  {
-    icon: FaCog,
-    label: "6. Pemeliharaan",
-    description:
-      "Memberikan dukungan teknis dan pembaruan berkala agar sistem tetap optimal seiring waktu.",
+      "Website tampil profesional dengan desain terkini dan menarik.",
   },
 ];
 
@@ -374,6 +353,6 @@ export {
   stats,
   choices,
   webDevelopmentSteps,
-  ourApproach,
+  whychooseUsWeb,
   websiteType,
 };

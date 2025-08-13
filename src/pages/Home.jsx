@@ -49,7 +49,7 @@ const Home = () => {
                 "Solusi edukatif yang dirancang untuk memberikan hasil maksimal."
               }
             />
-            <WhyChooseUsList choices={choices} />
+            <WhyChooseUsList choices={choices} style={"lg:grid-cols-4"} />
           </section>
 
           {/* Services */}

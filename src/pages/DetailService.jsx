@@ -1,15 +1,18 @@
-import { AnimatedBackground, Button, Card, LazyImage } from "../components";
-import { useParams } from "react-router-dom";
 import {
-  ourApproach,
-  services,
-  webDevelopmentSteps,
-  websiteType,
-} from "../constant";
+  AnimatedBackground,
+  Button,
+  LazyImage,
+  SectionHeading,
+  SectionSubHeading,
+} from "../components";
+import { useParams } from "react-router-dom";
+import { services, whychooseUsWeb } from "../constant";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import { useRef, useState } from "react";
-import { ApproachList, CourseForm, WebsiteTypeList } from "../fragments";
+import { CourseForm, WhyChooseUsList } from "../fragments";
 import headingSvg from "/src/assets/web-development.svg";
+import { FaWhatsapp } from "react-icons/fa";
+import PricingSection from "../fragments/PricingCard";
 
 const DetailService = () => {
   const { slug } = useParams();
@@ -90,7 +93,7 @@ const DetailService = () => {
       {/* Animated background elements */}
       <AnimatedBackground />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div className="relative py-32">
         {service.link == "kursus-komputer" ||
         service.link == "kursus-pemrograman" ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -153,7 +156,7 @@ const DetailService = () => {
             {/* Main content */}
             <section
               id="header"
-              className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8"
+              className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 max-w-7xl px-8 mx-auto"
             >
               <div className="space-y-5">
                 <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
@@ -163,7 +166,13 @@ const DetailService = () => {
                   {service.shortDescription}
                 </p>
                 <Button style={"w-fit!"}>
-                  <a href="#step">Buat Websitemu Sekarang</a>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20konsultasi%20tentang%20pembuatan%20website"
+                    target="_blank"
+                    className="flex items-center gap-2"
+                  >
+                    <FaWhatsapp /> Konsultasi Gratis
+                  </a>
                 </Button>
               </div>
               <LazyImage
@@ -172,61 +181,38 @@ const DetailService = () => {
               />
             </section>
 
-            {/* Steps */}
+            {/* Why Choose Us */}
             <section className="py-12" id="step">
               <div className="max-w-6xl mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 heading">
-                  Langkah Pembuatan Website
-                </h2>
+                <SectionHeading
+                  heading={"Mengapa Memilih Kami"}
+                  style={"text-center"}
+                />
+                <SectionSubHeading
+                  subHeading={
+                    "Solusi edukatif yang dirancang untuk memberikan hasil maksimal."
+                  }
+                />
 
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                  {webDevelopmentSteps.map((step, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center text-center"
-                    >
-                      <div className="heading text-6xl font-bold absolute opacity-10">
-                        {String(index + 1).padStart(2, "0")}
-                      </div>
-                      <step.icon className="text-sky-600 dark:text-slate-50 text-4xl mb-4" />
-                      <h3 className="text-lg font-semibold mt-2 heading">
-                        {step.title}
-                      </h3>
-                      <p className="color-description text-sm mt-2">
-                        {step.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <WhyChooseUsList
+                  choices={whychooseUsWeb}
+                  style={"grid-cols-3 text-left!"}
+                />
               </div>
             </section>
 
-            {/* Approach */}
-            <section id="approach" className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold heading">Pendekatan Kami</h2>
-                <p className="mt-2 color-description">
-                  Metode kerja yang terstruktur untuk menghasilkan solusi yang
-                  tepat dan berkelanjutan.
-                </p>
-              </div>
-
-              <ApproachList approaches={ourApproach} />
-            </section>
-
-            {/* Website Type */}
-            <section id="web-type" className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold heading">
-                  Pilihan Jenis Website yang Dapat Dibuat
-                </h2>
-                <p className="mt-2 color-description">
-                  Beragam jenis website yang dapat kami buat untuk mendukung
-                  kebutuhan Anda.
-                </p>
-              </div>
-
-              <WebsiteTypeList typeWebsite={websiteType} />
+            {/* Price */}
+            <section id="pricing">
+              <SectionHeading
+                heading={"Harga Jasa Pembuatan Website"}
+                style={"text-center"}
+              />
+              <SectionSubHeading
+                subHeading={
+                  "Alfatech menawarkan beberapa pilihan paket jasa pembuatan website yang dapat Anda sesuaikan dengan kebutuhan."
+                }
+              />
+              <PricingSection />
             </section>
           </div>
         )}
