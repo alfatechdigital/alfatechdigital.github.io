@@ -101,30 +101,32 @@ const Contact = () => {
                 Informasi Kontak
               </h2>
 
-              {contactInfo.map((item) => (
-                <div
-                  className="relative flex items-start space-x-4"
-                  key={item.title}
-                >
-                  <div className="flex-shrink-0">
-                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl gradient text-white shadow-md">
-                      <item.icon size={20} />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-1">
+                {contactInfo.map((item) => (
+                  <div
+                    className="relative flex items-start space-x-4"
+                    key={item.title}
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl gradient text-white shadow-md">
+                        <item.icon size={20} />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold heading mb-2">
+                        {item.title}
+                      </h3>
+                      <div className="space-y-1">
+                        {item.details.map((detail, idx) => (
+                          <p key={idx} className="color-description">
+                            {detail}
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold heading mb-2">
-                      {item.title}
-                    </h3>
-                    <div className="space-y-1">
-                      {item.details.map((detail, idx) => (
-                        <p key={idx} className="color-description">
-                          {detail}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
