@@ -196,13 +196,13 @@ const DetailService = () => {
 
                 <WhyChooseUsList
                   choices={whychooseUsWeb}
-                  style={"grid-cols-3 text-left!"}
+                  style={"grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-left!"}
                 />
               </div>
             </section>
 
             {/* Price */}
-            <section id="pricing">
+            <section id="pricing" className="px-5">
               <SectionHeading
                 heading={"Harga Jasa Pembuatan Website"}
                 style={"text-center"}

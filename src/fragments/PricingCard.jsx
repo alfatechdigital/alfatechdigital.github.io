@@ -29,8 +29,8 @@ const PricingCard = ({
       <p className="text-gray-500 text-sm">{subtitle}</p>
 
       <div className="mt-3">
-        <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-          HARGA SPESIAL
+        <span className="inline-block gradient text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+          HARGA MULAI
         </span>
       </div>
 
@@ -75,11 +75,11 @@ export default function PricingSection() {
       title: "Landing Page",
       subtitle: "Satu halaman profesional",
       price: 150000,
-      yearly: 100000,
+      yearly: 80000,
       features: [
         "1 Halaman Website",
         "1x Revisi",
-        "1 Hari Pengerjaan",
+        "Gratis domain .my.id",
         "Batas waktu revisi 3 hari setelah selesai",
       ],
       recommended: false,
@@ -89,48 +89,48 @@ export default function PricingSection() {
       title: "Personal",
       subtitle: "Cocok untuk pemakaian pribadi",
       price: 500000,
-      yearly: 400000,
+      yearly: 300000,
       features: [
         "5 Halaman Website",
         "2x Revisi",
-        "5 Hari Pengerjaan",
+        "Gratis domain .com",
         "Batas waktu revisi 5 hari setelah selesai",
       ],
       recommended: false,
       link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20personal",
     },
     {
-      title: "Usaha Kecil",
+      title: "Bisnis",
       subtitle: "Pas untuk UMKM dan toko online",
       price: 1500000,
       yearly: 1000000,
       features: [
         "8 Halaman Website",
         "2x Revisi",
-        "5 Hari Pengerjaan",
+        "Gratis Domain .com",
         "Batas waktu revisi 7 hari setelah selesai",
       ],
-      recommended: false,
+      recommended: true,
       link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20usaha%20kecil",
     },
-    {
-      title: "Bisnis",
-      subtitle: "Untuk kebutuhan skala besar",
-      price: 2500000,
-      yearly: 2000000,
-      features: [
-        "15 Halaman Website",
-        "2x Revisi",
-        "14 Hari Pengerjaan",
-        "Batas waktu revisi 10 hari setelah selesai",
-      ],
-      recommended: true,
-      link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20bisnis",
-    },
+    // {
+    //   title: "Bisnis",
+    //   subtitle: "Untuk kebutuhan skala besar",
+    //   price: 2500000,
+    //   yearly: 2000000,
+    //   features: [
+    //     "15 Halaman Website",
+    //     "2x Revisi",
+    //     "14 Hari Pengerjaan",
+    //     "Batas waktu revisi 10 hari setelah selesai",
+    //   ],
+    //   recommended: true,
+    //   link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20bisnis",
+    // },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto py-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto py-10">
       {data.map((plan, index) => (
         <PricingCard key={index} {...plan} />
       ))}

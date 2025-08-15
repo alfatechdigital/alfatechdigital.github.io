@@ -23,7 +23,6 @@ import {
   FaStore,
   FaPenFancy,
   FaGraduationCap,
-  FaGithub,
 } from "react-icons/fa6";
 import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
@@ -295,7 +294,6 @@ const socialLinks = [
   { name: "Facebook", url: "https://facebook.com", icon: FaFacebookF },
   { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
   { name: "LinkedIn", url: "https://linkedin.com", icon: FaLinkedinIn },
-  { name: "Github", url: "https://github.com/alfatechdigital", icon: FaGithub },
 ];
 
 const principles = [
