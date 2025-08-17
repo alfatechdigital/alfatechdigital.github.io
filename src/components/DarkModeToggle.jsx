@@ -32,7 +32,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <div className="fixed bottom-2 left-2 lg:bottom-5 lg:left-5 z-50">
+    <div className="fixed bottom-2 left-2 lg:bottom-5 lg:left-5 z-30">
       <button
         onClick={toggleTheme}
         className={`p-2 border rounded-xl shadow transition duration-300 ${

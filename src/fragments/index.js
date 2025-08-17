@@ -5,6 +5,7 @@ import CourseForm from "./CourseForm";
 import ContactForm from "./ContactForm";
 import ApproachList from "./ApproachList";
 import WebsiteTypeList from "./WebsiteTypeList";
+import TemplateList from "./TemplateList";
 
 export {
   ServicesList,
@@ -14,4 +15,5 @@ export {
   ContactForm,
   ApproachList,
   WebsiteTypeList,
+  TemplateList,
 };

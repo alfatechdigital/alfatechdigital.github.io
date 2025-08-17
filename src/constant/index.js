@@ -173,29 +173,6 @@ const services = [
   },
 ];
 
-const webDevelopmentSteps = [
-  {
-    icon: FaUsers,
-    title: "Konsultasi",
-    desc: "Diskusikan kebutuhan website Anda dengan tim developer kami.",
-  },
-  {
-    icon: FaMoneyCheck,
-    title: "Melakukan Payment",
-    desc: "Selesaikan pembayaran pembuatan website terlebih dahulu agar dapat diproses.",
-  },
-  {
-    icon: FaCode,
-    title: "Proses Pengerjaan",
-    desc: "Website sedang dalam proses pengerjaan. Waktu pengembangan website bervariasi tergantung kompleksitas proyek.",
-  },
-  {
-    icon: FaStar,
-    title: "Website Siap Digunakan",
-    desc: "Selamat! Website sudah jadi. Kami juga akan memberikan edukasi penggunaan website.",
-  },
-];
-
 const whychooseUsWeb = [
   {
     icon: MdOutlineDiscount,
@@ -212,49 +189,6 @@ const whychooseUsWeb = [
     label: "Desain Premium & Modern",
     description:
       "Website tampil profesional dengan desain terkini dan menarik.",
-  },
-];
-
-const websiteType = [
-  {
-    icon: FaBuilding,
-    label: "Website Profil Perusahaan",
-    shortDescription:
-      "Menampilkan informasi perusahaan, layanan, dan kontak secara profesional.",
-    features: ["Halaman profil & layanan", "Formulir kontak", "Peta lokasi"],
-  },
-  {
-    icon: FaStore,
-    label: "Website Toko Online",
-    shortDescription:
-      "Menjual produk secara online dengan tampilan yang menarik.",
-    features: ["Daftar produk", "Keranjang belanja", "Metode pembayaran"],
-  },
-  {
-    icon: FaLaptopCode,
-    label: "Website Aplikasi",
-    shortDescription:
-      "Aplikasi berbasis web yang dapat diakses dari berbagai perangkat.",
-    features: ["Tampilan dashboard", "Manajemen pengguna", "Integrasi data"],
-  },
-  {
-    icon: FaPenFancy,
-    label: "Blog",
-    shortDescription: "Media untuk menulis dan membagikan artikel atau berita.",
-    features: ["Posting artikel", "Kategori & tag", "Kolom komentar"],
-  },
-  {
-    icon: FaChalkboardTeacher,
-    label: "E-Course",
-    shortDescription:
-      "Platform pembelajaran online untuk membagikan materi dan video.",
-    features: ["Halaman kursus", "Materi video", "Quiz sederhana"],
-  },
-  {
-    icon: FaGraduationCap,
-    label: "E-Education",
-    shortDescription: "Sistem pembelajaran online untuk sekolah atau lembaga.",
-    features: ["Data siswa", "Materi pelajaran", "Pengumuman"],
   },
 ];
 
@@ -344,6 +278,61 @@ const choices = [
   },
 ];
 
+const websiteCategories = [
+  "Semua",
+  "Blog",
+  "E-Commerce",
+  "Landing Page",
+  "Portfolio",
+  "Lainnya",
+];
+
+const websiteTemplates = [
+  {
+    title: `Landing Page`,
+    demoUrl: `https://business-website-template.onrender.com/`,
+    description:
+      "Landing page untuk startup dengan desain clean & profesional.",
+    category: "Landing Page",
+  },
+  {
+    title: `Toko Online`,
+    demoUrl: `https://dounut-astro.vercel.app/`,
+    description: "Template e-commerce untuk produk digital maupun fisik.",
+    category: "E-Commerce",
+  },
+  {
+    title: `Website Sekolah`,
+    demoUrl: `https://school-coe.web.app/`,
+    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    category: "Lainnya",
+  },
+  {
+    title: `Undangan Pernikahan`,
+    demoUrl: `https://sakeenah.pages.dev/`,
+    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    category: "Lainnya",
+  },
+  {
+    title: `Travel & Wisata`,
+    demoUrl: `https://jadoo-travels.vercel.app/`,
+    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    category: "Lainnya",
+  },
+  {
+    title: `Portfolio Fotografi`,
+    demoUrl: `https://learning-zone.github.io/website-templates/amaze-photography-bootstrap-html5-template/`,
+    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    category: "Portfolio",
+  },
+  {
+    title: `Portfolio Pribadi`,
+    demoUrl: `https://soumyajit.vercel.app/`,
+    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    category: "Portfolio",
+  },
+];
+
 export {
   menuItems,
   contactInfo,
@@ -352,7 +341,7 @@ export {
   principles,
   stats,
   choices,
-  webDevelopmentSteps,
   whychooseUsWeb,
-  websiteType,
+  websiteCategories,
+  websiteTemplates,
 };

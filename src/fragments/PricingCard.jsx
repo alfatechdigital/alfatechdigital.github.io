@@ -51,7 +51,7 @@ const PricingCard = ({
         className="mt-3 text-blue-500 hover:underline text-sm cursor-pointer"
         onClick={() => setShowFeatures(!showFeatures)}
       >
-        {showFeatures ? "Tutup" : "Lihat Selengkapnya"}
+        {showFeatures ? "Tutup" : "Fitur Paket"}
       </button>
 
       <div

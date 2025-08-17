@@ -1,36 +1,23 @@
-import {
-  AnimatedBackground,
-  Button,
-  LazyImage,
-  SectionHeading,
-  SectionSubHeading,
-} from "../components";
-import { useParams } from "react-router-dom";
-import { services, whychooseUsWeb } from "../constant";
-import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import { useRef, useState } from "react";
-import { CourseForm, WhyChooseUsList } from "../fragments";
-import headingSvg from "/src/assets/web-development.svg";
-import { FaWhatsapp } from "react-icons/fa";
-import PricingSection from "../fragments/PricingCard";
+import { useParams } from "react-router-dom";
+import { FiCheckCircle, FiXCircle } from "react-icons/fi";
+import { AnimatedBackground } from "../components";
+import { services, websiteTemplates, whychooseUsWeb } from "../constant";
+import CourseDetail from "./CourseDetail";
+import WebDevelopmentDetail from "./WebDevelopmentDetail";
 
 const DetailService = () => {
   const { slug } = useParams();
-  const service = services.find((s) => s.link === slug);
+  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const form = useRef();
   const [kelas, setKelas] = useState("Reguler");
-
+  const service = services.find((s) => s.link === slug);
   const valueOptions = ["Reguler", "Privat"];
   const optionDescription = [
     "Kelas Reguler: Materi sesuai kurikulum, jadwal tetap, peserta gabungan.",
     "Kelas Privat: Jadwal fleksibel & materi bisa dikustom sesuai kebutuhan.",
   ];
-
-  if (!service) {
-    return <p className="text-center py-10">Layanan tidak ditemukan.</p>;
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -96,125 +83,24 @@ const DetailService = () => {
       <div className="relative py-32">
         {service.link == "kursus-komputer" ||
         service.link == "kursus-pemrograman" ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Information */}
-            <div className="flex flex-col justify-between p-6 sm:p-8">
-              {/* Heading */}
-              <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
-                {service.heading}
-              </h2>
-              <p className="color-description mt-6 text-lg leading-relaxed">
-                {service.longDescription}
-              </p>
-
-              {/* Daftar Materi */}
-              <h3 className="mt-10 mb-6 font-semibold text-2xl heading">
-                Apa yang Akan Dipelajari?
-              </h3>
-              <ul className="space-y-5">
-                {service.featuresDetail.map((item, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <FiCheckCircle className="h-7 w-7 text-green-500 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-lg heading">
-                        {item.title}
-                      </p>
-                      <p className="color-description text-base">{item.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Form */}
-            <div className="relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col space-y-4 h-fit">
-              <h2
-                className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2"
-                id="contact-form-title"
-              >
-                Segera Daftarkan Diri Anda
-              </h2>
-              <p className="text-slate-600 mb-4">
-                Jika tertarik mengikuti kursus ini, anda dapat mengisi form
-                berikut.
-              </p>
-
-              <StatusMessage status={submitStatus} />
-              <CourseForm
-                handleSubmit={handleSubmit}
-                form={form}
-                value={kelas}
-                setKelas={setKelas}
-                valueOptions={valueOptions}
-                optionDescription={optionDescription}
-                isSubmitting={isSubmitting}
-              />
-            </div>
-          </div>
+          <CourseDetail
+            service={service}
+            submitStatus={submitStatus}
+            handleSubmit={handleSubmit}
+            form={form}
+            kelas={kelas}
+            setKelas={setKelas}
+            valueOptions={valueOptions}
+            optionDescription={optionDescription}
+            isSubmitting={isSubmitting}
+            statusMessage={StatusMessage}
+          />
         ) : (
-          <div className="space-y-24 mx-auto">
-            {/* Main content */}
-            <section
-              id="header"
-              className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 max-w-7xl px-8 mx-auto"
-            >
-              <div className="space-y-5">
-                <h2 className="text-4xl md:text-5xl font-bold heading leading-tight mt-3">
-                  {service.heading}
-                </h2>
-                <p className="color-description text-lg leading-relaxed">
-                  {service.shortDescription}
-                </p>
-                <Button style={"w-fit!"}>
-                  <a
-                    href="https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20konsultasi%20tentang%20pembuatan%20website"
-                    target="_blank"
-                    className="flex items-center gap-2"
-                  >
-                    <FaWhatsapp /> Konsultasi Gratis
-                  </a>
-                </Button>
-              </div>
-              <LazyImage
-                src={headingSvg}
-                className={"md:w-3/4 justify-self-center lg:justify-self-end"}
-              />
-            </section>
-
-            {/* Why Choose Us */}
-            <section className="py-12" id="step">
-              <div className="max-w-6xl mx-auto px-4 text-center">
-                <SectionHeading
-                  heading={"Mengapa Memilih Kami"}
-                  style={"text-center"}
-                />
-                <SectionSubHeading
-                  subHeading={
-                    "Solusi edukatif yang dirancang untuk memberikan hasil maksimal."
-                  }
-                />
-
-                <WhyChooseUsList
-                  choices={whychooseUsWeb}
-                  style={"grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-left!"}
-                />
-              </div>
-            </section>
-
-            {/* Price */}
-            <section id="pricing" className="px-5">
-              <SectionHeading
-                heading={"Harga Jasa Pembuatan Website"}
-                style={"text-center"}
-              />
-              <SectionSubHeading
-                subHeading={
-                  "Alfatech menawarkan beberapa pilihan paket jasa pembuatan website yang dapat Anda sesuaikan dengan kebutuhan."
-                }
-              />
-              <PricingSection />
-            </section>
-          </div>
+          <WebDevelopmentDetail
+            service={service}
+            whychooseUsWeb={whychooseUsWeb}
+            websiteTemplates={websiteTemplates}
+          />
         )}
       </div>
     </article>
