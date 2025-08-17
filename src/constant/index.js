@@ -21,13 +21,24 @@ import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import { MdOutlineDiscount } from "react-icons/md";
 import { LuMonitorSmartphone } from "react-icons/lu";
-import { hoobank, hyperdrive, jadoo, picto, rosa2, sakeenah } from "../assets";
+import {
+  academia,
+  elearning,
+  hoobank,
+  hyperdrive,
+  jadoo,
+  picto,
+  rosa2,
+  sakeenah,
+  smk,
+  bazario,
+} from "../assets";
 
 const menuItems = [
   { name: "Beranda", url: "/" },
   { name: "Tentang Kami", url: "/about" },
   { name: "Layanan", url: "/services" },
-  { name: "Portofolio", url: "/portfolio" },
+  // { name: "Portofolio", url: "/portfolio" },
   { name: "Kontak", url: "/contact" },
 ];
 
@@ -273,6 +284,7 @@ const websiteCategories = [
   "E-Commerce",
   "Landing Page",
   "Portfolio",
+  "Edukasi",
   "Lainnya",
 ];
 
@@ -285,18 +297,6 @@ const websiteTemplates = [
     category: "Landing Page",
     img: hoobank,
   },
-  // {
-  //   title: `Toko Online`,
-  //   demoUrl: `https://dounut-astro.vercel.app/`,
-  //   description: "Template e-commerce untuk produk digital maupun fisik.",
-  //   category: "E-Commerce",
-  // },
-  // {
-  //   title: `Website Sekolah`,
-  //   demoUrl: `https://school-coe.web.app/`,
-  //   description: "Template website sekolah, kursus, atau lembaga pendidikan.",
-  //   category: "Lainnya",
-  // },
   {
     title: `Rosa2 Lite`,
     demoUrl: `https://demos.pixelgrade.com/rosa2-lite/`,
@@ -320,19 +320,13 @@ const websiteTemplates = [
     category: "E-Commerce",
     img: hyperdrive,
   },
-  // {
-  //   title: `Portfolio Pribadi`,
-  //   demoUrl: `https://soumyajit.vercel.app/`,
-  //   description: "Template website sekolah, kursus, atau lembaga pendidikan.",
-  //   category: "Portfolio",
-  // },
-  // {
-  //   title: `Astro Persona`,
-  //   demoUrl: `https://astro-theme-starter-hz9r.vercel.app/en/`,
-  //   description:
-  //     "A modern and clean Astro theme for personal portfolios and bilingual (French/English) blogs.",
-  //   category: "Portfolio",
-  // },
+  {
+    title: `Bazario`,
+    demoUrl: `https://bazario-omega.vercel.app/`,
+    description: "Simple online shop.",
+    category: "E-Commerce",
+    img: bazario,
+  },
   {
     title: `Sakeenah`,
     demoUrl: `https://sakeenah.pages.dev/`,
@@ -348,6 +342,28 @@ const websiteTemplates = [
       "Portfolio template designed for developers, freelancers, or any creative professionals.",
     category: "Portfolio",
     img: picto,
+  },
+  {
+    title: `E-Learning`,
+    demoUrl: `https://themewagon.github.io/E-learning/`,
+    description: "One-page educational website template with a minimal design.",
+    category: "Edukasi",
+    img: elearning,
+  },
+  {
+    title: `Academia`,
+    demoUrl: `https://scintillating-smakager-860376.netlify.app/`,
+    description: "Educational website template with a minimal design.",
+    category: "Edukasi",
+    img: academia,
+  },
+  {
+    title: `SMK School Website Template`,
+    demoUrl: `https://miawwh.github.io/smk-school-website-template/`,
+    description:
+      "Open‑source HTML/CSS/Bootstrap 5 template designed for vocational high schools (SMK)",
+    category: "Edukasi",
+    img: smk,
   },
 ];
 
