@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import { LazyImage } from "../components";
+import { LazyImage, Modal } from "../components";
 
 const TemplateList = ({ websiteTemplates, activeFilter }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -61,11 +61,11 @@ const TemplateList = ({ websiteTemplates, activeFilter }) => {
             <LazyImage
               className={"w-full object-cover"}
               alt={item.title}
-              src={`https://image.thum.io/get/width/600/crop/600/${item.demoUrl}`}
+              src={item.img}
             />
-            <div className="p-4 text-center font-medium text-gray-800 ">
+            {/* <div className="p-4 text-center font-medium text-gray-800 ">
               {item.title}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -93,41 +93,71 @@ const TemplateList = ({ websiteTemplates, activeFilter }) => {
 
       {/* Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg max-w-2xl w-full p-6 relative">
-            {/* Close button */}
-            <button
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
-            >
-              ✕
-            </button>
+        // <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+        //   <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg max-w-2xl w-full p-6 relative">
+        //     {/* Close button */}
+        //     <button
+        //       onClick={() => setSelectedItem(null)}
+        //       className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
+        //     >
+        //       ✕
+        //     </button>
 
-            <LazyImage
-              className={"w-full h-64 object-cover rounded-lg mb-4"}
-              alt={selectedItem.title}
-              src={`https://image.thum.io/get/width/600/crop/600/${selectedItem.demoUrl}`}
-            />
+        //     <LazyImage
+        //       className={"w-full h-64 object-cover rounded-lg mb-4"}
+        //       alt={selectedItem.title}
+        //       src={selectedItem.img}
+        //     />
 
-            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-              {selectedItem.title}
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              {selectedItem.description}
-            </p>
+        //     <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+        //       {selectedItem.title}
+        //     </h2>
+        //     <p className="text-gray-600 dark:text-gray-300 mb-4">
+        //       {selectedItem.description}
+        //     </p>
 
-            {/* Action buttons */}
-            <div className="flex justify-end space-x-3">
-              <a
-                href={selectedItem.demoUrl}
-                target="_blank"
-                className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-              >
-                Live Preview
-              </a>
+        //     {/* Action buttons */}
+        //     <div className="flex justify-end space-x-3">
+        //       <a
+        //         href={selectedItem.demoUrl}
+        //         target="_blank"
+        //         className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+        //       >
+        //         Live Preview
+        //       </a>
+        //     </div>
+        //   </div>
+        // </div>
+        <Modal
+          closeModal={() => setSelectedItem(null)}
+          data={
+            <div className="p-6">
+              <LazyImage
+                className={"w-full h-64 object-cover rounded-lg mb-4"}
+                alt={selectedItem.title}
+                src={selectedItem.img}
+              />
+
+              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+                {selectedItem.title}
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {selectedItem.description}
+              </p>
+
+              {/* Action buttons */}
+              <div className="flex justify-end space-x-3">
+                <a
+                  href={selectedItem.demoUrl}
+                  target="_blank"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                >
+                  Live Preview
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
+          }
+        />
       )}
     </div>
   );

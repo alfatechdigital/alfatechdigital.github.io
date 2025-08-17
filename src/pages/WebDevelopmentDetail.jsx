@@ -99,7 +99,7 @@ const WebDevelopmentDetail = ({
             <button
               onClick={() => setOpen((prev) => !prev)}
               className="flex items-center justify-between w-48 px-4 py-2 bg-white border border-gray-300 
-             rounded-lg shadow-sm hover:bg-gray-50 text-gray-700"
+             rounded-lg shadow-sm hover:bg-gray-50 text-gray-700 cursor-pointer"
             >
               {activeFilter}
               <FaChevronDown
@@ -120,7 +120,7 @@ const WebDevelopmentDetail = ({
                           setActiveFilter(category);
                           setOpen(false);
                         }}
-                        className={`block w-full text-left px-4 py-2 text-sm 
+                        className={`block w-full text-left px-4 py-2 text-sm cursor-pointer 
                   ${
                     activeFilter === category
                       ? "bg-blue-600 text-white"

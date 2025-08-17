@@ -6,12 +6,14 @@ const Modal = ({ closeModal, data }) => {
       <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
         <button
           onClick={closeModal}
-          className="p-2 rounded-full bg-transparent text-slate-600 absolute top-2 left-3 hover:bg-slate-400 hover:text-white transition-all duration-200 cursor-pointer"
+          className="p-2 rounded-full text-slate-50 absolute top-2 left-3 bg-red-500 hover:bg-red-600 hover:text-white transition-all duration-200 cursor-pointer"
         >
           <FaXmark size={25} />
         </button>
 
-        <div className="aspect-w-16 aspect-h-9">{data}</div>
+        <div className="aspect-w-16 aspect-h-9 bg-white dark:bg-gray-900">
+          {data}
+        </div>
       </div>
     </div>
   );

@@ -15,24 +15,13 @@ import {
   FaLaptopCode,
   FaComputer,
   FaChalkboardUser,
-  FaUsers,
-  FaCode,
-  FaStar,
   FaPaintbrush,
-  FaBuilding,
-  FaStore,
-  FaPenFancy,
-  FaGraduationCap,
 } from "react-icons/fa6";
 import { IoRocketOutline, IoEyeOutline } from "react-icons/io5";
 import { HiOutlineCommandLine } from "react-icons/hi2";
-import {
-  FaChalkboardTeacher,
-  FaDraftingCompass,
-  FaMoneyCheck,
-} from "react-icons/fa";
 import { MdOutlineDiscount } from "react-icons/md";
 import { LuMonitorSmartphone } from "react-icons/lu";
+import { hoobank, hyperdrive, jadoo, picto, rosa2, sakeenah } from "../assets";
 
 const menuItems = [
   { name: "Beranda", url: "/" },
@@ -280,7 +269,7 @@ const choices = [
 
 const websiteCategories = [
   "Semua",
-  "Blog",
+  "Bisnis",
   "E-Commerce",
   "Landing Page",
   "Portfolio",
@@ -289,47 +278,76 @@ const websiteCategories = [
 
 const websiteTemplates = [
   {
-    title: `Landing Page`,
+    title: `Hoobank`,
     demoUrl: `https://business-website-template.onrender.com/`,
     description:
       "Landing page untuk startup dengan desain clean & profesional.",
     category: "Landing Page",
+    img: hoobank,
+  },
+  // {
+  //   title: `Toko Online`,
+  //   demoUrl: `https://dounut-astro.vercel.app/`,
+  //   description: "Template e-commerce untuk produk digital maupun fisik.",
+  //   category: "E-Commerce",
+  // },
+  // {
+  //   title: `Website Sekolah`,
+  //   demoUrl: `https://school-coe.web.app/`,
+  //   description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+  //   category: "Lainnya",
+  // },
+  {
+    title: `Rosa2 Lite`,
+    demoUrl: `https://demos.pixelgrade.com/rosa2-lite/`,
+    description:
+      "Restaurant WordPress theme, built to help small businesses shape an appealing online experience.",
+    category: "Bisnis",
+    img: rosa2,
   },
   {
-    title: `Toko Online`,
-    demoUrl: `https://dounut-astro.vercel.app/`,
-    description: "Template e-commerce untuk produk digital maupun fisik.",
-    category: "E-Commerce",
-  },
-  {
-    title: `Website Sekolah`,
-    demoUrl: `https://school-coe.web.app/`,
-    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
-    category: "Lainnya",
-  },
-  {
-    title: `Undangan Pernikahan`,
-    demoUrl: `https://sakeenah.pages.dev/`,
-    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
-    category: "Lainnya",
-  },
-  {
-    title: `Travel & Wisata`,
+    title: `Jadoo`,
     demoUrl: `https://jadoo-travels.vercel.app/`,
-    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    description: "A travel agency landing web page",
+    category: "Landing Page",
+    img: jadoo,
+  },
+  {
+    title: `HyperDrive`,
+    demoUrl: `https://astro-hyperdrive.netlify.app/`,
+    description:
+      "Designed to provide a beautiful and functional starting point for your next car dealer website.",
+    category: "E-Commerce",
+    img: hyperdrive,
+  },
+  // {
+  //   title: `Portfolio Pribadi`,
+  //   demoUrl: `https://soumyajit.vercel.app/`,
+  //   description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+  //   category: "Portfolio",
+  // },
+  // {
+  //   title: `Astro Persona`,
+  //   demoUrl: `https://astro-theme-starter-hz9r.vercel.app/en/`,
+  //   description:
+  //     "A modern and clean Astro theme for personal portfolios and bilingual (French/English) blogs.",
+  //   category: "Portfolio",
+  // },
+  {
+    title: `Sakeenah`,
+    demoUrl: `https://sakeenah.pages.dev/`,
+    description:
+      "A beautiful, modern, and interactive Islamic Wedding Invitation Website.",
     category: "Lainnya",
+    img: sakeenah,
   },
   {
-    title: `Portfolio Fotografi`,
-    demoUrl: `https://learning-zone.github.io/website-templates/amaze-photography-bootstrap-html5-template/`,
-    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
+    title: `Picto`,
+    demoUrl: `https://themewagon.github.io/picto/`,
+    description:
+      "Portfolio template designed for developers, freelancers, or any creative professionals.",
     category: "Portfolio",
-  },
-  {
-    title: `Portfolio Pribadi`,
-    demoUrl: `https://soumyajit.vercel.app/`,
-    description: "Template website sekolah, kursus, atau lembaga pendidikan.",
-    category: "Portfolio",
+    img: picto,
   },
 ];
 
