@@ -71,26 +71,28 @@ const PricingCard = ({
 
 export default function PricingSection() {
   const data = [
-    {
-      title: "Lite",
-      subtitle: "punya website ga harus mahal",
-      price: 150000,
-      yearly: 80000,
-      features: [
-        "1 Halaman Website Statis",
-        "Batas waktu revisi 3 hari setelah selesai",
-      ],
-      recommended: false,
-      link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20landing%20page",
-    },
+    // {
+    //   title: "Lite",
+    //   subtitle: "punya website ga harus mahal",
+    //   price: 150000,
+    //   yearly: 80000,
+    //   features: [
+    //     "1 Halaman Website Statis",
+    //     "Batas waktu revisi 3 hari setelah selesai",
+    //   ],
+    //   recommended: false,
+    //   link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20landing%20page",
+    // },
     {
       title: "Basic",
       subtitle: "jadikan websitemu agar lebih professional",
       price: 500000,
-      yearly: 300000,
+      // yearly: 300000,
       features: [
         "up to 5 Halaman Website statis",
-        "Batas waktu revisi 5 hari setelah selesai",
+        "Revisi sampai oke",
+        "Free support 1 bulan",
+        "tidak bisa support langganan",
       ],
       recommended: false,
       link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20personal",
@@ -99,10 +101,12 @@ export default function PricingSection() {
       title: "premium",
       subtitle: "cocok untuk web custom dengan kebutuhan khusus",
       price: 1500000,
-      yearly: 1000000,
+      // yearly: 1000000,
       features: [
-        "8 Halaman Website",
-        "Batas waktu revisi 7 hari setelah selesai",
+        "10 Halaman Website",
+        "Revisi sampai oke",
+        "Free support 1 bulan",
+        "upport langganan 500K/tahun (opsional)",
       ],
       recommended: true,
       link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20usaha%20kecil",
