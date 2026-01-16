@@ -87,7 +87,7 @@ export default function PricingSection() {
       title: "Basic",
       subtitle: "jadikan websitemu agar lebih professional",
       price: 500000,
-      // yearly: 300000,
+      yearly: -,
       features: [
         "up to 5 Halaman Website statis",
         "Revisi sampai oke",
@@ -101,7 +101,7 @@ export default function PricingSection() {
       title: "premium",
       subtitle: "cocok untuk web custom dengan kebutuhan khusus",
       price: 1500000,
-      // yearly: 1000000,
+      yearly: 500000,
       features: [
         "10 Halaman Website",
         "Revisi sampai oke",
