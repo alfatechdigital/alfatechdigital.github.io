@@ -106,7 +106,7 @@ export default function PricingSection() {
         "10 Halaman Website",
         "Revisi sampai oke",
         "Free support 1 bulan",
-        "upport langganan 500K/tahun (opsional)",
+        "support langganan 500K/tahun opsional",
       ],
       recommended: true,
       link: "https://api.whatsapp.com/send?phone=6285183103693&text=Halo%20Alfatech,%20Mau%20beli%20paket%20website%20usaha%20kecil",
