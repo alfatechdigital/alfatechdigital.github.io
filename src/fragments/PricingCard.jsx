@@ -78,8 +78,6 @@ export default function PricingSection() {
       yearly: 80000,
       features: [
         "1 Halaman Website Statis",
-        "Gratis domain .my.id",
-        "1x Revisi gratis",
         "Batas waktu revisi 3 hari setelah selesai",
       ],
       recommended: false,
@@ -92,8 +90,6 @@ export default function PricingSection() {
       yearly: 300000,
       features: [
         "up to 5 Halaman Website statis",
-        "Gratis domain .com",
-        "2x Revisi gratis",
         "Batas waktu revisi 5 hari setelah selesai",
       ],
       recommended: false,
@@ -106,8 +102,6 @@ export default function PricingSection() {
       yearly: 1000000,
       features: [
         "8 Halaman Website",
-        "Gratis Domain .com",
-        "2x Revisi gratis",
         "Batas waktu revisi 7 hari setelah selesai",
       ],
       recommended: true,
