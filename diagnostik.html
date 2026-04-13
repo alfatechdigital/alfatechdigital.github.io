@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Observasi Karakteristik Siswa</title>
+    <title>OBSERVASI KARAKTERISTI SISWA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
@@ -21,7 +21,6 @@
             color: white;
             font-family: 'Courier New', Courier, monospace;
             overflow: hidden;
-            /* Menonaktifkan pemilihan teks */
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -39,9 +38,41 @@
             position: relative;
             z-index: 10;
             height: 100vh;
-            display: flex;
+            display: none; /* Sembunyikan sampai fullscreen aktif */
             flex-direction: column;
             padding: 20px;
+        }
+
+        /* Layar Mulai / Aktivasi Fullscreen */
+        #start-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: var(--dark-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .start-btn {
+            background: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+
+        .start-btn:hover {
+            background: var(--neon-blue);
+            color: black;
+            box-shadow: 0 0 30px var(--neon-blue);
         }
 
         /* Gaya HUD Header */
@@ -67,13 +98,12 @@
             flex: 1;
             position: relative;
             border: 2px solid rgba(0, 243, 255, 0.2);
-            background: #fff; /* Latar belakang putih untuk iframe non-filter */
+            background: #fff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
         }
 
-        /* Iframe tanpa filter tema gelap */
         .standard-frame {
             width: 100%;
             height: 100%;
@@ -93,28 +123,12 @@
         .bottom-left { bottom: -2px; left: -2px; border-right: 0; border-top: 0; }
         .bottom-right { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
 
-        .back-btn {
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid var(--neon-blue);
-            color: var(--neon-blue);
-            padding: 5px 15px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .back-btn:hover {
-            background: var(--neon-blue);
-            color: black;
-            box-shadow: 0 0 15px var(--neon-blue);
-        }
-
         /* Overlay Kunci (Lockdown) */
         #lock-overlay {
             position: fixed;
             inset: 0;
             background: rgba(2, 6, 23, 0.98);
-            z-index: 1000;
+            z-index: 3000;
             display: none; 
             flex-direction: column;
             align-items: center;
@@ -210,12 +224,21 @@
 
     <div id="particles-js"></div>
 
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-[#00f3ff] mb-2 tracking-[10px]">MASUK SISTEM</h1>
+            <p class="text-xs opacity-50">SISTEM KUIS AKAN MENGAKTIFKAN MODE LAYAR PENUH OTOMATIS</p>
+        </div>
+        <button class="start-btn" onclick="startQuiz()">[ INITIALIZE_KUIS ]</button>
+    </div>
+
     <!-- UI Lockdown -->
     <div id="lock-overlay">
         <div class="warning-box" id="warning-container">
             <div class="warning-text">!! AKSES TERKUNCI !!</div>
             <div class="text-xs text-red-500 mb-4 font-bold">DETEKSI PELANGGARAN INTEGRITAS</div>
-            <p class="text-sm opacity-80 mb-6">Sistem mendeteksi upaya meninggalkan halaman kuis atau tindakan ilegal. Masukkan Kode Akses Otoritas untuk membuka kembali sistem.</p>
+            <p class="text-sm opacity-80 mb-6">Sistem mendeteksi upaya keluar dari mode Fullscreen atau meninggalkan halaman. Masukkan Kode Akses Otoritas untuk melanjutkan.</p>
             
             <input type="password" id="access-code" class="access-input" placeholder="••••••••" maxlength="12" autocomplete="off">
             <div id="error-msg" class="text-[10px] text-red-400 mt-2 hidden">KODE AKSES TIDAK VALID - COBA LAGI</div>
@@ -225,13 +248,12 @@
         </div>
     </div>
 
-    <div class="main-container">
+    <div class="main-container" id="quiz-container">
         <header class="header-hud">
             <div>
-                <div class="title-glitch">OBSERVASI KARAKTERISTIK SISWA</div>
-                <div class="text-[10px] opacity-60">SISTEM ANTI-CHEATING: MEDIUM</div>
+                <div class="title-glitch">WAYGROUND_CORE: 2074 0225</div>
+                <div class="text-[10px] opacity-60">SISTEM ANTI-CHEATING: FULLSCREEN_LOCKED</div>
             </div>
-            <button class="back-btn" onclick="window.history.back()">KEMBALI</button>
         </header>
 
         <div class="quiz-frame-container">
@@ -253,12 +275,14 @@
 
         <footer class="mt-4 flex justify-between items-end opacity-50 text-[10px]">
             <div id="integrity-status">INTEGRITAS: 100%</div>
-            <div>STATUS: MONITORING_AKTIF | RIGHT_CLICK: DISABLED | CLIPBOARD: LOCKED</div>
+            <div>STATUS: FULLSCREEN_ACTIVE | RIGHT_CLICK: DISABLED | CLIPBOARD: LOCKED</div>
         </footer>
     </div>
 
     <script>
         const lockOverlay = document.getElementById('lock-overlay');
+        const startScreen = document.getElementById('start-screen');
+        const quizContainer = document.getElementById('quiz-container');
         const integrityStatus = document.getElementById('integrity-status');
         const accessInput = document.getElementById('access-code');
         const errorMsg = document.getElementById('error-msg');
@@ -281,40 +305,24 @@
         }
 
         function speakWarning() {
-            const msg = new SpeechSynthesisUtterance("Peringatan. Akses terkunci. Pelanggaran terdeteksi. Masukkan kode otorisasi.");
+            const msg = new SpeechSynthesisUtterance("Akses terkunci. Mode layar penuh dimatikan atau pelanggaran terdeteksi.");
             msg.lang = 'id-ID';
-            msg.rate = 0.8;
-            msg.pitch = 0.5;
+            msg.rate = 0.9;
             window.speechSynthesis.speak(msg);
         }
 
         function playAlarm() {
             initAudio();
             if (oscillator) try { oscillator.stop(); } catch(e) {}
-            
             oscillator = audioCtx.createOscillator();
             gainNode = audioCtx.createGain();
-            
             oscillator.type = 'sawtooth';
             oscillator.frequency.setValueAtTime(300, audioCtx.currentTime);
-            
             gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.8, audioCtx.currentTime + 1.5);
-            
+            gainNode.gain.exponentialRampToValueAtTime(0.5, audioCtx.currentTime + 1.5);
             oscillator.connect(gainNode);
             gainNode.connect(audioCtx.destination);
-            
             oscillator.start();
-            
-            const sirenInterval = setInterval(() => {
-                if (!isLocked) {
-                    clearInterval(sirenInterval);
-                    return;
-                }
-                const freq = oscillator.frequency.value <= 350 ? 900 : 300;
-                oscillator.frequency.exponentialRampToValueAtTime(freq, audioCtx.currentTime + 0.3);
-            }, 400);
-
             speakWarning();
         }
 
@@ -322,27 +330,53 @@
             window.speechSynthesis.cancel();
             if (gainNode) {
                 gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
-                setTimeout(() => {
-                    if (oscillator) try { oscillator.stop(); } catch(e) {}
-                }, 500);
+                setTimeout(() => { if (oscillator) try { oscillator.stop(); } catch(e) {} }, 500);
             }
         }
 
-        // Menonaktifkan Copy-Paste dan tombol khusus
+        // Fungsi Masuk Fullscreen
+        function startQuiz() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+            
+            startScreen.style.display = 'none';
+            quizContainer.style.display = 'flex';
+            window.focus();
+        }
+
+        // Pantau jika user keluar dari Fullscreen
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+
+        function handleFullscreenChange() {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && 
+                !document.mozFullScreenElement && !document.msFullscreenElement) {
+                if (quizContainer.style.display === 'flex') {
+                    triggerLock();
+                }
+            }
+        }
+
         function disableKeys(e) {
-            // Menonaktifkan Ctrl+C, Ctrl+V, Ctrl+U, Ctrl+S, Ctrl+P
             if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'u' || e.key === 's' || e.key === 'p')) {
                 e.preventDefault();
                 triggerLock();
                 return false;
             }
-            if (e.key === 'F12') {
+            if (e.key === 'F12' || (e.altKey && e.key === 'Tab')) {
                 e.preventDefault();
                 return false;
             }
         }
 
-        // Monitoring Events
         window.addEventListener('blur', () => {
             setTimeout(() => {
                 if (document.activeElement !== quizIframe) {
@@ -357,27 +391,13 @@
             }
         });
 
-        // Mencegah Copy melalui event listener
-        document.addEventListener('copy', (e) => {
-            e.preventDefault();
-            triggerLock();
-        });
-
-        // Mencegah Paste melalui event listener
-        document.addEventListener('paste', (e) => {
-            e.preventDefault();
-            triggerLock();
-        });
-
         function triggerLock() {
             if (isLocked) return;
             isLocked = true;
-            
             lockOverlay.style.display = 'flex';
             violations++;
             integrityStatus.innerText = `INTEGRITAS: ${Math.max(0, 100 - (violations * 15))}%`;
             integrityStatus.style.color = '#ff003c';
-            
             playAlarm();
             accessInput.focus();
         }
@@ -389,10 +409,7 @@
                 warningContainer.classList.add('error-shake');
                 errorMsg.classList.remove('hidden');
                 accessInput.value = "";
-                speakWarning();
-                setTimeout(() => {
-                    warningContainer.classList.remove('error-shake');
-                }, 500);
+                setTimeout(() => { warningContainer.classList.remove('error-shake'); }, 500);
             }
         }
 
@@ -402,7 +419,8 @@
             errorMsg.classList.add('hidden');
             accessInput.value = "";
             stopAlarm();
-            window.focus();
+            // Masuk kembali ke fullscreen
+            startQuiz();
         }
 
         accessInput.addEventListener('keypress', (e) => {
