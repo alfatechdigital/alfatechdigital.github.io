@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portofolio PPL UM - SMPN 28 Malang</title>
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+        }
+
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Particles Container */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Accordion Smoothness */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .accordion-content.active {
+            max-height: 5000px;
+            opacity: 1;
+            transform: translateY(0);
+            padding-bottom: 2rem;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 1.5rem;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-scroll::-webkit-scrollbar { width: 8px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 custom-scroll">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-[100] glass-morphism transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                    <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-blue-200 group-hover:rotate-12 transition-transform">UM</div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg tracking-tight leading-none">PPL SMPN 28</span>
+                        <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase">E-Portofolio</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#beranda" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">Beranda</a>
+                    <a href="#profil" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">Profil</a>
+                    <a href="#materi" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">Materi</a>
+                </div>
+                <button class="md:hidden p-2 text-slate-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t p-6 space-y-4 shadow-2xl" id="mobile-menu">
+            <a href="#beranda" class="block text-slate-700 font-bold text-lg">Beranda</a>
+            <a href="#profil" class="block text-slate-700 font-bold text-lg">Profil</a>
+            <a href="#materi" class="block text-slate-700 font-bold text-lg">Materi</a>
+        </div>
+    </nav>
+
+    <!-- Beranda / Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-50">
+        <!-- Particles -->
+        <div id="particles-js"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest mb-8 border border-blue-200">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                    </span>
+                    PPL Semester Genap 2024/2025
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1]">
+                    E-Portofolio <br><span class="gradient-text">SMPN 28 Malang</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-12 max-w-xl leading-relaxed">
+                    Dokumentasi digital hasil Praktik Pengalaman Lapangan (PPL) Universitas Negeri Malang. Platform interaktif untuk siswa cerdas di era digital.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#materi" class="group bg-blue-600 text-white px-10 py-5 rounded-2xl font-black hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 flex items-center gap-3">
+                        <i class="fas fa-rocket group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i> Mulai Belajar
+                    </a>
+                    <a href="#profil" class="bg-white text-slate-700 px-10 py-5 rounded-2xl font-black border-2 border-slate-100 hover:border-blue-100 hover:bg-slate-50 transition-all flex items-center gap-3">
+                        Mengenal Guru
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block relative" data-aos="zoom-in" data-aos-delay="200">
+                <div class="float-anim relative z-10">
+                    <div class="w-[500px] h-[500px] bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-[4rem] rotate-6 overflow-hidden shadow-2xl flex items-center justify-center p-4">
+                        <div class="w-full h-full bg-slate-900 rounded-[3rem] -rotate-6 flex items-center justify-center border-4 border-white/20">
+                            <i class="fas fa-graduation-cap text-white text-[10rem] opacity-20 absolute"></i>
+                            <div class="text-center z-10">
+                                <p class="text-white/60 font-bold tracking-widest uppercase text-sm mb-2">Welcome to</p>
+                                <h2 class="text-white text-4xl font-black">Digital Classroom</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Background decorative elements -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-400 rounded-full blur-3xl opacity-20"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profil" class="py-32 px-4 bg-white relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 relative" data-aos="fade-up">
+                    <div class="relative z-10 aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-slate-50">
+                        <img src="/img/faiz.png" alt="Profile" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                    </div>
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2rem] shadow-2xl z-20 border border-slate-100" data-aos="fade-left" data-aos-delay="400">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Mahasiswa</p>
+                                <p class="font-extrabold text-xl text-slate-900">PPL UM 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-blue-600 font-black uppercase tracking-[0.2em] text-sm mb-4">Profil Pengajar</h2>
+                    <h3 class="text-5xl font-black text-slate-900 mb-8 leading-tight">Muhammad Faiz Abdillah</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6 group">
+                            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                                <i class="fas fa-brain text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-xl text-slate-800 mb-1">Filosofi Mengajar</h4>
+                                <p class="text-slate-500 leading-relaxed text-lg">Menciptakan lingkungan belajar yang tidak hanya cerdas secara akademik, tapi juga adaptif terhadap teknologi.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6 group">
+                            <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                                <i class="fas fa-lightbulb text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-xl text-slate-800 mb-1">Visi Masa Depan</h4>
+                                <p class="text-slate-500 leading-relaxed text-lg">Menjadi jembatan bagi siswa dalam memahami keterkaitan antara ilmu pengetahuan dan kemandirian digital.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 bg-slate-50 rounded-[2.5rem] border-l-8 border-blue-600 relative overflow-hidden">
+                            <i class="fas fa-quote-right absolute -right-4 -bottom-4 text-8xl text-slate-200 opacity-50"></i>
+                            <p class="italic text-slate-700 text-xl leading-relaxed relative z-10 font-medium">
+                                "Pendidikan bukan sekadar mengisi wadah yang kosong, melainkan menyalakan api keingintahuan."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materi Section -->
+    <section id="materi" class="py-32 px-4 bg-slate-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-5xl font-black text-slate-900 mb-6 tracking-tight">Eksplorasi Materi</h2>
+                <div class="w-24 h-2 bg-blue-600 mx-auto rounded-full mb-8"></div>
+                <p class="text-slate-500 text-xl max-w-2xl mx-auto leading-relaxed">Akses modul pembelajaran, LKPD interaktif, dan kumpulkan tugasmu dalam satu tempat.</p>
+            </div>
+
+            <!-- Tabs Kelas -->
+            <div class="flex justify-center mb-16" data-aos="fade-up" data-aos-delay="200">
+                <div class="inline-flex bg-slate-200/50 p-2 rounded-[2rem] backdrop-blur-sm border border-white">
+                    <button onclick="switchTab('tab-kelas9')" id="btn-tab-kelas9" class="px-12 py-4 rounded-[1.5rem] font-black transition-all text-slate-600 hover:bg-white/50">Kelas 9</button>
+                    <button onclick="switchTab('tab-kelas8')" id="btn-tab-kelas8" class="px-12 py-4 rounded-[1.5rem] font-black transition-all active-tab bg-blue-600 text-white shadow-xl shadow-blue-200">Kelas 8</button>
+                    <button onclick="switchTab('tab-kelas7')" id="btn-tab-kelas7" class="px-12 py-4 rounded-[1.5rem] font-black transition-all text-slate-600 hover:bg-white/50">Kelas 7</button>
+                </div>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="tab-kelas7" class="tab-content hidden py-20 text-center" data-aos="zoom-in">
+                <div class="flex flex-col items-center">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                        <i class="fas fa-tools text-4xl text-slate-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-400">Materi Kelas 7 Sedang Dalam Proses</h3>
+                    <p class="text-slate-400 mt-2">Nantikan pembaharuan berikutnya!</p>
+                </div>
+            </div>
+
+            <div id="tab-kelas8" class="tab-content space-y-8">
+                <!-- Render Materi from JS -->
+                <div id="materi-container" class="space-y-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Submit -->
+    <div id="submitModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center px-4">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-md" onclick="closeSubmitModal()"></div>
+        <div class="bg-white rounded-[3rem] w-full max-w-lg p-10 relative shadow-2xl" id="modal-container">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center text-3xl mx-auto mb-6">
+                    <i class="fas fa-cloud-arrow-up"></i>
+                </div>
+                <h3 id="modalTitle" class="text-3xl font-black text-slate-900 mb-2">Unggah Tugas</h3>
+                <p class="text-slate-500">Pastikan file sudah dalam format yang benar.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="group border-3 border-dashed border-slate-200 rounded-[2rem] p-12 text-center hover:border-blue-400 transition-all cursor-pointer bg-slate-50">
+                    <i class="fas fa-file-circle-plus text-5xl text-slate-300 group-hover:text-blue-400 mb-4 block transition-colors"></i>
+                    <p class="text-slate-600 font-black">Pilih File Tugas</p>
+                    <p class="text-xs text-slate-400 mt-2">PDF, DOCX, atau ZIP (Maks. 10MB)</p>
+                </div>
+                
+                <div class="relative">
+                    <input type="text" placeholder="Tautan Google Drive (Opsional)" class="w-full p-5 bg-slate-100 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-100 border-none font-medium">
+                </div>
+                
+                <button onclick="confirmSubmit()" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100">
+                    Kirim Sekarang
+                </button>
+            </div>
+            <button onclick="closeSubmitModal()" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 transition-colors">
+                <i class="fas fa-circle-xmark text-3xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-10 py-5 rounded-[2rem] shadow-2xl z-[300] opacity-0 pointer-events-none flex items-center gap-4 border border-white/10 transition-all duration-500">
+        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white">
+            <i class="fas fa-check"></i>
+        </div>
+        <span id="toastMsg" class="font-bold">Aksi Berhasil!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white pt-32 pb-12 px-4 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-24">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black">UM</div>
+                        <span class="font-black text-2xl tracking-tight">PPL SMPN 28 Malang</span>
+                    </div>
+                    <p class="text-slate-400 text-lg leading-relaxed max-w-md">
+                        Membangun generasi cerdas melalui inovasi pendidikan digital dan keterlibatan aktif siswa dalam proses belajar mengajar.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-xl mb-8">Navigasi</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#beranda" class="text-slate-400 hover:text-blue-400 transition-colors font-bold">Beranda</a></li>
+                        <li><a href="#profil" class="text-slate-400 hover:text-blue-400 transition-colors font-bold">Profil</a></li>
+                        <li><a href="#materi" class="text-slate-400 hover:text-blue-400 transition-colors font-bold">Materi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-xl mb-8">Hubungi Kami</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-white/5"><i class="fab fa-whatsapp text-xl"></i></a>
+                        <a href="#" class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-white/5"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-white/5"><i class="fas fa-envelope text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 text-center">
+                <p class="text-slate-500 font-medium">
+                    &copy; 2024 PPL UM. Made with <i class="fas fa-heart text-red-500 animate-pulse"></i> by <span class="text-blue-400 font-black">Muhammad Faiz Abdillah</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        // Data Materi
+        const materiList = [
+            { 
+                id: 'materi1', 
+                title: 'Pengamanan perangkat dari malware', 
+                link: 'https://docs.google.com/presentation/d/e/2PACX-1vSb87UBayMPEw6wldDEaS3T1avJ9Wt84Vy3SJJGGwAGKNyRCP2qBVv8MhdUbQxL0PaL5_ltTpWv0Cgm/pubembed?start=false&loop=false&delayms=3000' 
+
+            },
+            { 
+                id: 'materi2', 
+                title: 'Pemilahan informasi', 
+                link: 'https://docs.google.com/presentation/d/e/2PACX-1vT78_texb_VgjdsOvTd0L4pa-nYiHvvgmiA9U9Mmakk7lvso1IKJZSBig8ZmdeM9_Th3LGadA3x40MP/pubembed?start=false&loop=false&delayms=3000' 
+            },
+            { 
+                id: 'materi3', 
+                title: 'Perlindungan pada data pribadi', 
+                link: 'https://docs.google.com/presentation/d/e/2PACX-1vT78_texb_VgjdsOvTd0L4pa-nYiHvvgmiA9U9Mmakk7lvso1IKJZSBig8ZmdeM9_Th3LGadA3x40MP/pubembed?start=false&loop=false&delayms=3000' 
+            },
+            { 
+                id: 'materi4', 
+                title: 'Pembuatan kata sandi yang kuat', 
+                link: 'https://docs.google.com/presentation/d/e/2PACX-1vT4cjDeFzvdToqVejn37Ve_LeEXVR7gHgr4LTZ_KilElqk0tx6yu-B4cXHw48burCeIyXOZQsTXDakF/pubembed?start=false&loop=false&delayms=3000' 
+            }
+        ];
+
+        // Init App
+        window.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 1000, once: true, offset: 100 });
+            initParticles();
+            renderMateri();
+            setupNavbar();
+        });
+
+        // Setup Navbar Scroll
+        function setupNavbar() {
+            const nav = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-xl', 'h-16');
+                    nav.querySelector('.max-w-7xl').classList.replace('h-20', 'h-16');
+                } else {
+                    nav.classList.remove('shadow-xl', 'h-16');
+                    nav.querySelector('.max-w-7xl').classList.replace('h-16', 'h-20');
+                }
+            });
+        }
+
+        // Render Materi Elements
+        function renderMateri() {
+            const container = document.getElementById('materi-container');
+            container.innerHTML = materiList.map((m, idx) => `
+                <div class="bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden" data-aos="fade-up" data-aos-delay="${idx * 100}">
+                    <button onclick="toggleMateri('${m.id}')" class="w-full p-8 flex justify-between items-center hover:bg-slate-50 transition-all group">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 font-black group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                ${idx + 1}
+                            </div>
+                            <span class="text-xl md:text-2xl font-black text-slate-800">${m.title}</span>
+                        </div>
+                        <i id="icon-${m.id}" class="fas fa-chevron-down text-slate-300 transition-transform duration-500"></i>
+                    </button>
+                    
+                    <div id="${m.id}" class="accordion-content px-8">
+                        <div class="grid lg:grid-cols-12 gap-10 py-6 border-t border-slate-50">
+                            <div class="lg:col-span-8 space-y-8">
+                                <div class="iframe-container shadow-2xl">
+                                    <iframe src="${m.link}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                                    <button class="action-btn flex items-center justify-center gap-3 bg-slate-900 text-white p-5 rounded-2xl hover:scale-105 transition-all font-black shadow-lg">
+                                        <i class="fas fa-file-pdf"></i> Modul
+                                    </button>
+                                    <button class="action-btn flex items-center justify-center gap-3 bg-blue-50 text-blue-700 p-5 rounded-2xl hover:scale-105 transition-all font-black border border-blue-100">
+                                        <i class="fas fa-clipboard-list"></i> LKPD
+                                    </button>
+                                    <button onclick="openSubmitModal('${m.title}')" class="action-btn flex items-center justify-center gap-3 bg-green-600 text-white p-5 rounded-2xl hover:scale-105 transition-all font-black shadow-lg shadow-green-100">
+                                        <i class="fas fa-paper-plane"></i> Submit
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-4 h-full">
+                                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 sticky top-24">
+                                    <div class="flex items-center gap-3 mb-8">
+                                        <div class="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center text-white">
+                                            <i class="fas fa-bolt"></i>
+                                        </div>
+                                        <h4 class="font-black text-slate-800 text-lg">Kuis Kilat</h4>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <div>
+                                            <p class="text-xs font-black text-blue-600 uppercase mb-3">Tantangan #1</p>
+                                            <p class="font-bold text-slate-800 mb-6 leading-relaxed">Apa inti utama dari pembahasan pada slide pertemuan ini?</p>
+                                            <div class="space-y-3">
+                                                <input type="text" placeholder="Ketik jawabanmu di sini..." class="w-full p-4 bg-slate-100 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-100 border-none font-medium">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Logic Functions
+        function toggleMateri(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            const isActive = content.classList.contains('active');
+
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.fa-chevron-down').forEach(i => i.style.transform = 'rotate(0deg)');
+
+            if (!isActive) {
+                content.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+                icon.classList.add('text-blue-600');
+                
+                // Anime.js animation for opening
+                anime({
+                    targets: content,
+                    translateY: [20, 0],
+                    opacity: [0, 1],
+                    duration: 800,
+                    easing: 'easeOutExpo'
+                });
+            }
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.classList.add('hidden');
+                c.style.opacity = '0';
+            });
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.remove('hidden');
+            
+            anime({
+                targets: activeTab,
+                opacity: [0, 1],
+                scale: [0.95, 1],
+                duration: 600,
+                easing: 'easeOutQuad'
+            });
+
+            const btn8 = document.getElementById('btn-tab-kelas8');
+            const btn7 = document.getElementById('btn-tab-kelas7');
+            
+            if(tabId === 'tab-kelas8') {
+                btn8.className = 'px-12 py-4 rounded-[1.5rem] font-black transition-all bg-blue-600 text-white shadow-xl shadow-blue-200';
+                btn7.className = 'px-12 py-4 rounded-[1.5rem] font-black transition-all text-slate-600 hover:bg-white/50';
+            } else {
+                btn7.className = 'px-12 py-4 rounded-[1.5rem] font-black transition-all bg-blue-600 text-white shadow-xl shadow-blue-200';
+                btn8.className = 'px-12 py-4 rounded-[1.5rem] font-black transition-all text-slate-600 hover:bg-white/50';
+            }
+        }
+
+        function checkAnswer(btn, isCorrect) {
+            const opts = btn.parentElement.querySelectorAll('.quiz-opt');
+            opts.forEach(o => {
+                o.className = 'quiz-opt w-full text-left p-4 rounded-xl border-2 border-white bg-white font-bold text-slate-600 shadow-sm opacity-50 pointer-events-none';
+            });
+
+            if(isCorrect) {
+                btn.className = 'quiz-opt w-full text-left p-4 rounded-xl border-2 border-green-500 bg-green-50 font-black text-green-700 shadow-lg scale-105 transition-all';
+                showToast("Bagus! Jawabanmu benar.");
+            } else {
+                btn.className = 'quiz-opt w-full text-left p-4 rounded-xl border-2 border-red-500 bg-red-50 font-black text-red-700 shadow-lg transition-all';
+                showToast("Coba lagi! Baca materinya ya.");
+            }
+        }
+
+        function openSubmitModal(title) {
+            document.getElementById('modalTitle').innerText = 'Submit: ' + title;
+            const modal = document.getElementById('submitModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            anime({
+                targets: '#modal-container',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                translateY: [100, 0],
+                duration: 800,
+                easing: 'easeOutElastic(1, .6)'
+            });
+        }
+
+        function closeSubmitModal() {
+            anime({
+                targets: '#modal-container',
+                scale: 0.8,
+                opacity: 0,
+                duration: 400,
+                easing: 'easeInBack',
+                complete: () => {
+                    document.getElementById('submitModal').classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        function confirmSubmit() {
+            closeSubmitModal();
+            setTimeout(() => showToast("Tugas berhasil terkirim ke sistem!"), 500);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            
+            anime({
+                targets: toast,
+                opacity: 1,
+                translateY: [-20, 0],
+                duration: 500,
+                easing: 'easeOutQuad'
+            });
+
+            setTimeout(() => {
+                anime({
+                    targets: toast,
+                    opacity: 0,
+                    translateY: 20,
+                    duration: 500,
+                    easing: 'easeInQuad'
+                });
+            }, 3000);
+        }
+
+        // Particle Init
+        function initParticles() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#2563eb" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.2, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#2563eb", "opacity": 0.1, "width": 1 },
+                    "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
+                },
+                "retina_detect": true
+            });
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            const isHidden = menu.classList.contains('hidden');
+            
+            if(isHidden) {
+                menu.classList.remove('hidden');
+                anime({
+                    targets: menu,
+                    translateY: [-20, 0],
+                    opacity: [0, 1],
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            } else {
+                anime({
+                    targets: menu,
+                    opacity: 0,
+                    duration: 300,
+                    complete: () => menu.classList.add('hidden')
+                });
+            }
+        });
+    </script>
+</body>
+</html>

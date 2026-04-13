@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Quiz Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-red: #ff003c;
+            --dark-bg: #020617;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Header HUD Style */
+        .header-hud {
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-glitch {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--neon-blue);
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        /* Iframe Container with Tech Border */
+        .quiz-frame-container {
+            flex: 1;
+            position: relative;
+            border: 2px solid rgba(0, 243, 255, 0.2);
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+        }
+
+        .corner {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid var(--neon-blue);
+            z-index: 20;
+        }
+        .top-left { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+        .top-right { top: -2px; right: -2px; border-left: 0; border-bottom: 0; }
+        .bottom-left { bottom: -2px; left: -2px; border-right: 0; border-top: 0; }
+        .bottom-right { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .back-btn {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 5px 15px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--neon-blue);
+            color: black;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        /* Lockdown Overlay */
+        #lock-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.98);
+            z-index: 1000;
+            display: none; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            backdrop-filter: blur(25px);
+        }
+
+        .warning-box {
+            border: 2px solid var(--neon-red);
+            padding: 40px;
+            background: rgba(255, 0, 60, 0.1);
+            box-shadow: 0 0 100px rgba(255, 0, 60, 0.4);
+            max-width: 550px;
+            animation: pulse-border 1s infinite alternate;
+        }
+
+        @keyframes pulse-border {
+            from { border-color: var(--neon-red); }
+            to { border-color: #ff5e84; }
+        }
+
+        .warning-text {
+            color: var(--neon-red);
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 15px var(--neon-red);
+        }
+
+        .access-input {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--neon-red);
+            color: var(--neon-red);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            outline: none;
+            letter-spacing: 5px;
+        }
+
+        .unlock-btn {
+            margin-top: 20px;
+            background: var(--neon-red);
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .unlock-btn:hover {
+            box-shadow: 0 0 30px var(--neon-red);
+            background: #ff2b5f;
+        }
+
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 243, 255, 0.1);
+            top: 0;
+            animation: scan 8s linear infinite;
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+
+        .error-shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <!-- Lockdown UI -->
+    <div id="lock-overlay">
+        <div class="warning-box" id="warning-container">
+            <div class="warning-text">!! AKSES TERKUNCI !!</div>
+            <div class="text-xs text-red-500 mb-4 font-bold">DETEKSI PELANGGARAN INTEGRITAS</div>
+            <p class="text-sm opacity-80 mb-6">Sistem mendeteksi upaya meninggalkan halaman kuis. Masukkan Kode Akses Otoritas untuk membuka kembali kontrol sistem.</p>
+            
+            <input type="password" id="access-code" class="access-input" placeholder="••••••••" maxlength="12">
+            <div id="error-msg" class="text-[10px] text-red-400 mt-2 hidden">KODE AKSES TIDAK VALID - COBA LAGI</div>
+            
+            <button class="unlock-btn" onclick="validateCode()">OTORISASI ULANG</button>
+            <p class="mt-4 text-[9px] opacity-40 italic">HINT: p@55w0rD</p>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <header class="header-hud">
+            <div>
+                <div class="title-glitch">MISSION: QUIZ_4UAPCU</div>
+                <div class="text-[10px] opacity-60">SISTEM ANTI-CHEATING: TINGKAT MAKSIMAL</div>
+            </div>
+            <button class="back-btn" onclick="window.history.back()">[ KEMBALI ]</button>
+        </header>
+
+        <div class="quiz-frame-container">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <div class="scan-line"></div>
+            
+            <iframe 
+                id="quiz-iframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfsvmM8CAZA6ADTjeW_Q6MTJ_Qr7ynHo3dGhjGW-4E3N2McqQ/viewform?embedded=true" 
+                title="QuestionWell Quiz"
+                allow="autoplay; camera; microphone">
+            </iframe>
+        </div>
+
+        <footer class="mt-4 flex justify-between items-end opacity-50 text-[10px]">
+            <div id="integrity-status">INTEGRITAS: 100%</div>
+            <div>STATUS: MONITORING_AUDIO_AKTIF | ALARM_LEVEL: HIGH</div>
+        </footer>
+    </div>
+
+    <script>
+        const lockOverlay = document.getElementById('lock-overlay');
+        const integrityStatus = document.getElementById('integrity-status');
+        const accessInput = document.getElementById('access-code');
+        const errorMsg = document.getElementById('error-msg');
+        const warningContainer = document.getElementById('warning-container');
+        
+        let violations = 0;
+        let isLocked = false;
+        const SECRET_CODE = "p@55w0rD";
+
+        // Audio System
+        let audioCtx;
+        let oscillator;
+        let gainNode;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function speakWarning() {
+            const msg = new SpeechSynthesisUtterance("Peringatan. Akses terkunci. Pelanggaran terdeteksi. Masukkan kode otorisasi.");
+            msg.lang = 'id-ID';
+            msg.rate = 0.8;
+            msg.pitch = 0.5;
+            window.speechSynthesis.speak(msg);
+        }
+
+        function playAlarm() {
+            initAudio();
+            if (oscillator) oscillator.stop();
+            
+            oscillator = audioCtx.createOscillator();
+            gainNode = audioCtx.createGain();
+            
+            oscillator.type = 'sawtooth';
+            oscillator.frequency.setValueAtTime(300, audioCtx.currentTime);
+            
+            // Volume naik secara agresif
+            gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.8, audioCtx.currentTime + 1.5);
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            oscillator.start();
+            
+            // Efek suara sirene agresif
+            const sirenInterval = setInterval(() => {
+                if (!isLocked) {
+                    clearInterval(sirenInterval);
+                    return;
+                }
+                const freq = oscillator.frequency.value <= 350 ? 900 : 300;
+                oscillator.frequency.exponentialRampToValueAtTime(freq, audioCtx.currentTime + 0.3);
+            }, 400);
+
+            speakWarning();
+        }
+
+        function stopAlarm() {
+            window.speechSynthesis.cancel();
+            if (gainNode) {
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+                setTimeout(() => {
+                    if (oscillator) oscillator.stop();
+                }, 500);
+            }
+        }
+
+        // Monitoring Events
+        window.addEventListener('blur', () => {
+            triggerLock();
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                triggerLock();
+            }
+        });
+
+        function triggerLock() {
+            if (isLocked) return;
+            isLocked = true;
+            
+            lockOverlay.style.display = 'flex';
+            violations++;
+            integrityStatus.innerText = `INTEGRITAS: ${Math.max(0, 100 - (violations * 15))}%`;
+            integrityStatus.style.color = '#ff003c';
+            
+            playAlarm();
+            accessInput.focus();
+        }
+
+        function validateCode() {
+            if (accessInput.value === SECRET_CODE) {
+                resumeQuiz();
+            } else {
+                // Efek Error
+                warningContainer.classList.add('error-shake');
+                errorMsg.classList.remove('hidden');
+                accessInput.value = "";
+                // Putar suara peringatan lagi jika kode salah
+                speakWarning();
+                setTimeout(() => {
+                    warningContainer.classList.remove('error-shake');
+                }, 500);
+            }
+        }
+
+        function resumeQuiz() {
+            isLocked = false;
+            lockOverlay.style.display = 'none';
+            errorMsg.classList.add('hidden');
+            accessInput.value = "";
+            stopAlarm();
+        }
+
+        // Allow 'Enter' key to submit code
+        accessInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') validateCode();
+        });
+
+        particlesJS("particles-js", {
+          "particles": {
+            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#00f3ff" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.2, "random": true },
+            "size": { "value": 1, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#00f3ff", "opacity": 0.1, "width": 1 },
+            "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+          },
+          "retina_detect": true
+        });
+    </script>
+</body>
+</html>
