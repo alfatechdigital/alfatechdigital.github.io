@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Absensi Digital Terverifikasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        #reader { width: 100% !important; border: none !important; border-radius: 12px; overflow: hidden; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- LOGIN SECTION -->
+    <div id="loginSection" class="w-full max-w-md">
+        <div class="glass-card p-8 rounded-2xl shadow-xl">
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800">Absensi Siswa</h1>
+                <p class="text-sm text-gray-500 mt-1">Silakan login untuk memulai absensi</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Username</label>
+                    <input type="text" id="username" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder="admin">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder="admin">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all active:scale-95">Masuk Ke Sistem</button>
+            </form>
+            <p class="mt-6 text-center text-xs text-gray-400 italic">User: admin | Pass: admin</p>
+        </div>
+    </div>
+
+    <!-- SCAN QR SECTION -->
+    <div id="scanSection" class="w-full max-w-lg hidden">
+        <div class="glass-card p-6 rounded-2xl shadow-xl">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Pindai QR Absensi</h2>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Verifikasi Lokasi & Waktu Aktif</p>
+                </div>
+                <button onclick="logout()" class="text-gray-400 hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" /></svg></button>
+            </div>
+
+            <div class="relative bg-black rounded-xl overflow-hidden mb-6 aspect-video flex items-center justify-center">
+                <div id="reader"></div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <div id="timeStatusIcon" class="w-2 h-2 rounded-full bg-gray-400"></div>
+                    <p class="text-xs text-gray-600">Jadwal: <span class="font-bold">07:00 - 17:00 WIB</span></p>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <div id="locStatusIcon" class="w-2 h-2 rounded-full bg-gray-400"></div>
+                    <p class="text-xs text-gray-600">Radius Lokasi: <span id="distInfo" class="font-bold">Mengecek GPS...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Modal -->
+    <div id="statusModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[100] p-4 backdrop-blur-sm">
+        <div id="modalBox" class="bg-white rounded-2xl p-8 max-w-xs w-full text-center shadow-2xl">
+            <div id="modalIcon" class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <h3 id="modalTitle" class="text-xl font-bold text-gray-800"></h3>
+            <p id="modalDesc" class="text-gray-500 text-sm mt-2 mb-6"></p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl font-bold transition-all" id="modalBtn"></button>
+        </div>
+    </div>
+
+    <script>
+        // KONFIGURASI VALIDASI
+        const CONFIG = {
+            allowedTime: { start: 7, end: 17 }, // Jam 7 pagi sampai 5 sore
+            officeCoords: { lat: -6.200000, lng: 106.816666 }, // Contoh koordinat Jakarta
+            maxRadiusMeter: 100, // Maksimal 100 meter dari titik koordinat
+            secretCode: "admin"
+        };
+
+        let userCoords = null;
+        let html5QrCode;
+
+        // Mendapatkan lokasi saat ini
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(pos => {
+                userCoords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+                updateLocationUI();
+            });
+        }
+
+        function updateLocationUI() {
+            const distInfo = document.getElementById('distInfo');
+            const icon = document.getElementById('locStatusIcon');
+            if (!userCoords) return;
+
+            const dist = calculateDistance(userCoords.lat, userCoords.lng, CONFIG.officeCoords.lat, CONFIG.officeCoords.lng);
+            distInfo.innerText = `${Math.round(dist)} meter dari titik pusat`;
+            
+            if (dist <= CONFIG.maxRadiusMeter) {
+                icon.className = "w-2 h-2 rounded-full bg-green-500 animate-pulse";
+            } else {
+                icon.className = "w-2 h-2 rounded-full bg-red-500";
+            }
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371e3; // metres
+            const φ1 = lat1 * Math.PI/180;
+            const φ2 = lat2 * Math.PI/180;
+            const Δφ = (lat2-lat1) * Math.PI/180;
+            const Δλ = (lon2-lon1) * Math.PI/180;
+            const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ/2) * Math.sin(Δλ/2);
+            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            if (document.getElementById('username').value === CONFIG.secretCode && 
+                document.getElementById('password').value === CONFIG.secretCode) {
+                document.getElementById('loginSection').classList.add('hidden');
+                document.getElementById('scanSection').classList.remove('hidden');
+                checkTime();
+                startScanner();
+            } else {
+                alert('Gagal! Username/Pass salah.');
+            }
+        }
+
+        function checkTime() {
+            const hour = new Date().getHours();
+            const icon = document.getElementById('timeStatusIcon');
+            if (hour >= CONFIG.allowedTime.start && hour < CONFIG.allowedTime.end) {
+                icon.className = "w-2 h-2 rounded-full bg-green-500 animate-pulse";
+                return true;
+            }
+            icon.className = "w-2 h-2 rounded-full bg-red-500";
+            return false;
+        }
+
+        function startScanner() {
+            html5QrCode = new Html5Qrcode("reader");
+            html5QrCode.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 }, (text) => {
+                html5QrCode.stop().then(() => validateAbsence(text));
+            }).catch(() => {
+                document.getElementById('reader').innerHTML = `<button onclick="validateAbsence('QR-TEST')" class="bg-blue-600 text-white p-4 rounded-xl">Klik Simulasi Scan</button>`;
+            });
+        }
+
+        function validateAbsence(qrData) {
+            const isTimeValid = checkTime();
+            const dist = userCoords ? calculateDistance(userCoords.lat, userCoords.lng, CONFIG.officeCoords.lat, CONFIG.officeCoords.lng) : 9999;
+            const isLocValid = dist <= CONFIG.maxRadiusMeter;
+
+            if (!isTimeValid) {
+                showModal("Gagal", "Diluar jam operasional absensi.", "error");
+            } else if (!isLocValid) {
+                showModal("Gagal", "Anda berada diluar radius lokasi yang diizinkan.", "error");
+            } else {
+                showModal("Berhasil", "Absensi Anda telah tercatat.", "success");
+            }
+        }
+
+        function showModal(title, desc, type) {
+            const modal = document.getElementById('statusModal');
+            const icon = document.getElementById('modalIcon');
+            const btn = document.getElementById('modalBtn');
+            
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            
+            if (type === 'success') {
+                icon.className = "w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4";
+                icon.innerHTML = '<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                btn.className = "w-full py-3 rounded-xl font-bold bg-green-600 text-white";
+                btn.innerText = "Selesai";
+            } else {
+                icon.className = "w-16 h-16 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-4";
+                icon.innerHTML = '<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                btn.className = "w-full py-3 rounded-xl font-bold bg-gray-800 text-white";
+                btn.innerText = "Coba Lagi";
+            }
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('statusModal').style.display = 'none';
+            if (document.getElementById('modalTitle').innerText === "Gagal") startScanner();
+        }
+
+        function logout() { location.reload(); }
+    </script>
+</body>
+</html>
